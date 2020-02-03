@@ -4,7 +4,6 @@ Feel free to contact me via E-mail and Twitter:-
 - Twitter:- @soumya1995j
 - 
 
-
-[![Python 3.6+](https://img.shields.io/badge/Python%20-3.6%2B-orange)](https://www.python.org/downloads/)
+[![forthebadge made-with-fast.ai](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.fast.ai/)
  
  
