@@ -30,11 +30,11 @@ https://s.codepen.io/soumya1995/debug/PxpgyO/ZoMBaKZmJYqk
 
 Press the replay button to start a new game.
 A Minimax algorithm can be best defined as a recursive function that does the following things:
-1.     return a value if a terminal state is found (+10, 0, -10)
-2.     go through available spots on the board
-3.     call the minimax function on each available spot (recursion)
-4.     evaluate returning values from function calls
-5.     and return the best value
+- return a value if a terminal state is found (+10, 0, -10)
+- go through available spots on the board
+- call the minimax function on each available spot (recursion)
+- evaluate returning values from function calls
+- and return the best value
 
 Now, the algorithm that I have used is in my Github profile: 
 The link to the full source codes is: https://github.com/soumyadip1995/tictactoe/tree/master/tictactoe.
@@ -42,12 +42,12 @@ The link to the full source codes is: https://github.com/soumyadip1995/tictactoe
 Now, the explanation is in a few parts:
 
 Declaration of variables  and starting the AI using JavaScript.
-1)     In the beginning we try to declare all the variables, we define the human player as “O”  and the AI player as ‘X’ and arrange all the winning combinations in an array. We then use a loop to traverse through all the winning combinations .
-2)     Then we use a turn function to check for the squares in the board using squareId for the human players. We check for both  ties and Win. If the AI wins or the game is tied then the game is over.
-3)      We declare all the functions that is necessary to check if the AI player won or the human player won (needed later on in the minmax algorithm).
-4)      In this game we also need to check for the spaces that are available for both the AI player and the human player. Only, the available space needs to be filled in by both the Human player and the AI player.
-5)     Also, the best spaces needs to be checked in order to be filled in by both the human player and the AI player.
-6)     We need to declare the winner in the end which will always be the AI player using the minmax algorithm described below.
+- In the beginning we try to declare all the variables, we define the human player as “O”  and the AI player as ‘X’ and arrange all the winning combinations in an array. We then use a loop to traverse through all the winning combinations .
+- Then we use a turn function to check for the squares in the board using squareId for the human players. We check for both  ties and Win. If the AI wins or the game is tied then the game is over.
+- We declare all the functions that is necessary to check if the AI player won or the human player won (needed later on in the minmax algorithm).
+- In this game we also need to check for the spaces that are available for both the AI player and the human player. Only, the available space needs to be filled in by both the Human player and the AI player.
+- Also, the best spaces needs to be checked in order to be filled in by both the human player and the AI player.
+- We need to declare the winner in the end which will always be the AI player using the minmax algorithm described below.
 
 ### **MINMAX ALGORITHM EXPLANATION**
 
