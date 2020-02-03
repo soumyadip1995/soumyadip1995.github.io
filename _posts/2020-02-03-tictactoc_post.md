@@ -22,11 +22,11 @@ At the same time, the algorithm evaluates the moves that lead to a terminal stat
 It will choose the move with maximum score when it is the AI’s turn and choose the move with the minimum 
 score when it is the human player’s turn. Using this strategy, Minimax avoids losing to the human player. 
 You can play the game that I have developed using the link : 
-https://codepen.io/soumya1995/pen/PxpgyO
+[https://codepen.io/soumya1995/pen/PxpgyO](here)
 
 Or
 
-https://s.codepen.io/soumya1995/debug/PxpgyO/ZoMBaKZmJYqk 
+[https://s.codepen.io/soumya1995/debug/PxpgyO/ZoMBaKZmJYqk ](here)
 
 
 Press the replay button to start a new game.
@@ -37,7 +37,7 @@ Press the replay button to start a new game.
 - evaluate returning values from function calls
 - and return the best value
 
-Now, the algorithm that I have used is in my Github profile: The link to the full source codes is: https://github.com/soumyadip1995/tictactoe/tree/master/tictactoe.
+Now, the algorithm that I have used is in my Github profile: The link to the full source codes is: [https://github.com/soumyadip1995/tictactoe/tree/master/tictactoe.](here)
 
 Now, the explanation is in a few parts:
 
