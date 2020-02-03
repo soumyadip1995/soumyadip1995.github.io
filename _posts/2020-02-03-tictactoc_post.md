@@ -1,4 +1,4 @@
-### **BUILDING AN UNBEATABLE TIC TAC TOE GAME USING MINMAX ALGORITHM**
+### **Building an Unbeatable Tic-Tac-Toe Game using the MinMax Algorithm**
 
 Originally Written on:- November,2018.
 
