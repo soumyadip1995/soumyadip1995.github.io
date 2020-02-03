@@ -1,9 +1,10 @@
 *Hey this is Soumyadip Nandi. Welcome to the Blog..!!* 
-Feel free to contact me:- 
+Feel free to contact me via E-mail and Twitter:- 
 - E-mail:- elatednandi@gmail.com, 
 - Twitter:- @soumya1995j
+- 
 
 
-![robot walk](https://cdn.dribbble.com/users/1718721/screenshots/3851382/robot_walk_cycle.gif)
+![[robot walk](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9Wn0ByZdhlP1bizmXtv0eAp1tgwRFy-3VA05sqb2SWN_dlbh2)](https://github.com/soumyadip1995/)]
  
  
