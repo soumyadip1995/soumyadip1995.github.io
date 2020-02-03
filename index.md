@@ -5,6 +5,6 @@ Feel free to contact me via E-mail and Twitter:-
 - 
 
 
-![[robot walk](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9Wn0ByZdhlP1bizmXtv0eAp1tgwRFy-3VA05sqb2SWN_dlbh2)](https://github.com/soumyadip1995/)]
+[![Python 3.6+](https://img.shields.io/badge/Python%20-3.6%2B-orange)](https://www.python.org/downloads/)
  
  
