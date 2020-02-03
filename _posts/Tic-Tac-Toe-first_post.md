@@ -1,6 +1,7 @@
 ### **BUILDING AN UNBEATABLE TIC TAC TOE GAME USING MINMAX ALGORITHM**
 
 
+Originally Written on:- November, 2018.
 
 Tic tac toe is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid traditionally.
 The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game. 
