@@ -1,4 +1,4 @@
-![Github Image](images/github%20(4).png)
+![Github Image](https://media0.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif)
 
 
 *Hey this is Soumyadip. Welcome to the Blog..!!* 
