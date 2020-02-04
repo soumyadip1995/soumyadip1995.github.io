@@ -15,7 +15,7 @@ email: elatednandi@gmail.com
 twitter_username:
 
 # Set this to true to get LaTeX math equation support
-use_math:
+use_math: True
 
 # Add your Google Analytics ID here if you have one and want to use it
 google_analytics:
@@ -36,7 +36,7 @@ titles_from_headings:
 highlighter: rouge
 markdown: kramdown
 kramdown:
-  math_engine: latex
+  math_engine: katex
   input: GFM
   auto_ids: true
   hard_wrap: false
