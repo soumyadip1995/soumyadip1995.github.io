@@ -448,15 +448,20 @@ Self-attention, also known as intra-attention, is an attention mechanism relatin
 ### **Neural Turing Machine**
 
 
-A Turing machine is a mathematical model of computation that defines an abstract machine. The Turing Machine was proposed by Alan Turing in 1936.  The machine operates on an infinite memory tape . The tape has countless number of "discrete cells" on it, each filled with a symbol: 0, 1 or blank (“ “). The operation head can move left/right on the tape.
+A Turing machine is a mathematical model of computation that defines an abstract machine.
+The Turing Machine was proposed by Alan Turing in 1936.  The machine operates on an infinite memory tape . 
+The tape has countless number of "discrete cells" on it, each filled with a symbol: 0, 1 or blank (“ “). The operation head can move left/right on the tape.
 
 ![alt text](https://i1.wp.com/makezine.com/wp-content/uploads/2010/03/turingfull560.jpg?resize=1200%2C670&strip=all&ssl=1)
 
 *Img:- Turing machine: a tape + a head that handles the tape. Img source: i1.wp.com/makezine.com/*
 
- With this model, Turing was able to answer two questions in the negative: (1) Does a machine exist that can determine whether any arbitrary machine on its tape is "circular" (e.g., freezes, or fails to continue its computational task); similarly, (2) does a machine exist that can determine whether any arbitrary machine on its tape ever prints a given symbol.
+ With this model, Turing was able to answer two questions in the negative: 
+ (1) Does a machine exist that can determine whether any arbitrary machine on its tape is "circular" (e.g., freezes, or fails to continue its computational task); similarly,
+ (2) does a machine exist that can determine whether any arbitrary machine on its tape ever prints a given symbol.
 
-Theoretically a Turing machine can simulate any computer algorithm, irrespective of how complex or expensive the procedure might be. The infinite memory gives a Turing machine an edge to be mathematically limitless. However, infinite memory is not feasible in real modern computers and then we only consider Turing machine as a mathematical model of computation.
+Theoretically a Turing machine can simulate any computer algorithm, irrespective of how complex or expensive the procedure might be.
+The infinite memory gives a Turing machine an edge to be mathematically limitless. However, infinite memory is not feasible in real modern computers and then we only consider Turing machine as a mathematical model of computation.
 
 ### **NTM**
 
@@ -478,4 +483,21 @@ In one update iteration, the controller processes the input and interacts with t
 *Credits for NTM:- Wikipedia, lilianweng.github.io*
 
 
+### **Credits/Citations**
 
+1) [Statistical Machine Translations- Wikipedia](https://en.wikipedia.org/wiki/Statistical_machine_translation#Language_models)
+2) [Lilianweng.github.io](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#definition)
+3) [Neural Machine Translation- Wikipedia](https://en.wikipedia.org/wiki/Neural_machine_translation)
+4) [NMT- Machine Learning Mastery](https://machinelearningmastery.com/introduction-neural-machine-translation/)
+5) [Machine Talk- NMT Code (Machinetalk.org)](https://machinetalk.org/2019/03/29/neural-machine-translation-with-attention-mechanism/)
+6) [Tensorflow NMT with Attention](https://www.tensorflow.org/tutorials/text/nmt_with_attention)
+7) [Leonardoraujosantos.github.io](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/recurrent_neural_networks/machine-translation-using-rnn.html)
+8) [Understanding Encoding to Decoding Sequence Modeling- Medium post](https://towardsdatascience.com/understanding-encoder-decoder-sequence-to-sequence-model-679e04af4346)
+9) [lmthang thesis on Machine Translation- Github.](https://github.com/lmthang/thesis/blob/master/thesis.pdf)
+10) [NMT Tensorflow Github](https://github.com/tensorflow/nmt#inference--how-to-generate-translations)
+11) [NextJournal](https://nextjournal.com/gkoehler/machine-translation-seq2seq-cpu)
+12) [ Bahdanau et al., 2015.](https://arxiv.org/pdf/1409.0473.pdf)
+13) [Luong, et al., 2015; ](https://arxiv.org/pdf/1508.04025.pdf)
+14) [Britz et al., 2017:](https://arxiv.org/abs/1703.03906)
+15) [Vaswani et al., 2017](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
+16) [Cheng et al., 2016](https://arxiv.org/pdf/1601.06733.pdf)
