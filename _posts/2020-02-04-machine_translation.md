@@ -139,8 +139,8 @@ between Human and Machine Translation, 2016.
 The idea behind statistical machine translation comes from information theory.
 A document is translated according to the probability distribution 
 
-$${\p(e|f)}p(e|f)$$ that a string ${\e}$ in the target language
-(for example, English) is the translation of a string ${\f}$ in the source language (for example, German).
+$${p(e|f)}p(e|f)$$ that a string ${e}$ in the target language
+(for example, English) is the translation of a string ${f}$ in the source language (for example, German).
 
 
 
@@ -306,9 +306,6 @@ Now, the decoder has a hidden state. $\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y
 
 $$\begin{aligned}
 \mathbf{c}_t &= \sum_{s=1}^n \alpha_{t,s} \boldsymbol{h}_s & \small{\text{; Context vector for output }y_t}\end{aligned}$$
-
-
-
 
 
 
