@@ -1,7 +1,7 @@
 # **Machine Translation in Recurrent Neural Networks**
-{: class="table-of-content"}
 
-- TOC {:toc}
+   TOC
+{:toc}
 
 
 ### **What is Sequence To Sequence Modeling**
@@ -197,4 +197,210 @@ NMT models vary in terms of their exact architectures. A natural choice for sequ
 network (RNN), used by most NMT models. 
 
 *Also Note:- I am basing this NMT portion on the thesis of Thang Luong , 2016 on Neural Machine Translation and the Tensorflow Tutorial associated with it*
+
+
+## **The Attention Mechanism**
+
+To build state-of-the-art neural machine translation systems, we will need more "secret ingredient": 
+the attention mechanism, which was first introduced by Bahdanau et al., 2015, then later refined by Luong et al., 2015 and others. 
+The key idea of the attention mechanism is to establish direct short-cut connections between the target and the source by paying "attention" to relevant source content as one translates. 
+
+The Attention Mechanism in Deep Learning is based on directing your focus to certain factors when the data is being processed.
+To get you up to speed you can check [this blog](https://towardsdatascience.com/word-level-english-to-marathi-neural-machine-translation-using-seq2seq-encoder-decoder-lstm-model-1a913f2dc4a7)
+
+
+A nice by product of the attention mechanism is an **alignment score** between the source and target sentences
+(as shown in the Figure below). This shows the correlation between source and target words.
+
+The relevant equations will be explained later on.
+
+![alt text](https://github.com/tensorflow/nmt/raw/master/nmt/g3doc/img/attention_vis.jpg)
+
+*Figure:-Attention visualization – example of the alignments between source and target sentences.
+Image is taken from (Bahdanau et al., 2015).*
+
+In a vanilla seq2seq model, the last source state is passed from the encoder to the decoder when the decoding process starts.
+This procedure works well for short and medium-length sentences; however, for long sentences, 
+the single fixed-size hidden state becomes an information bottleneck.
+So,  instead of discarding all of the hidden states computed in the source RNN, the attention mechanism provides an
+approach that allows the decoder to "peek" at them (treating them as a dynamic memory of the source information).
+By doing so, the attention mechanism improves the translation of longer sentences. 
+
+
+**Disadvantage of fixed size context vector**
+
+A critical and apparent disadvantage of fixed-length context vector design is the incapability of remembering long sentences.
+Often times it is seen that it has forgotten the first part once it completes processing the whole input.
+The attention mechanism was born (Bahdanau et al., 2015) to resolve this problem.
+
+
+### **Definition of Attention Mechanisms**
+
+Now lets try and understand what exactly does all of the above mean and try to define attention mechanisms. 
+Lets say that we have an input sequence of a certain length and we are trying  to output a sequence of a certain length. 
+
+- The encoder is a Bidirectional RNN with a forward hidden state and the backward hidden state.
+-  A concatenation of these two states, represents the current encoder state. 
+- The idea is to include the preceding word and the following word while annoting one word.(which you will see when we try and understand the equations of attention mechanisms). 
+
+- The context vector is a summation of hidden states of the encoder or the input sequence and the alignment weight (weighted by alignment scores).
+- The decoder has hidden states for the output at output positions, say $t$.
+
+- The alignment model assigns a score to the pair based on encoder state and the hidden decoder states. 
+(explained in more detail in the equations).
+
+- In Bahdanau’s paper, the alignment score is parametrized by a feed-forward network with a single hidden layer.
+
+- In the score function, tanh is used as the non-linear activation function:
+
+Now, look at the above figure to see the correlation between the source and the target words.
+
+
+
+### **Different types of Attention Mechanisms**
+
+An instance of the attention mechanism proposed in (Luong et al., 2015), which has been used in several state-of-the-art systems including open-source toolkits such as OpenNMT.
+
+![alt text](https://opennmt.net/simple-attn.png)
+
+*Img taken from:-//opennmt.net/*
+
+With the help of the attention, the dependencies between source and target sequences are not restricted by the in-between distance. Given the big improvement by attention in machine translation, it soon got extended into the computer vision field (Xu et al. 2015) and people started exploring various other forms of attention mechanisms (Luong, et al., 2015; Britz et al., 2017; Vaswani, et al., 2017).
+
+### **The Encoder and Decoder model**
+
+The current target hidden state is compared with all source states to derive attention weights can be visualized as in Figure:- Attention Visualization- Above).
+
+![alt text](https://github.com/tensorflow/nmt/raw/master/nmt/g3doc/img/attention_mechanism.jpg)
+
+*Figure 5. Attention mechanism – example of an attention-based NMT system as described in (As in Luong et al., 2015).*
+
+
+As illustrated in Figure 5, the attention computation happens at every decoder time step. It consists of the following stages:
+
+- The current target hidden state is compared with all source states to derive attention weights (can be visualized  in the Attention Visualization picture).
+- Based on the attention weights we compute a context vector as the weighted average of the source states.
+- Combine the context vector with the current target hidden state to yield the final attention vector.
+The attention vector is fed as an input to the next time step (input feeding).
+
+## **Explanation of Attention Mechanisms**
+
+
+Now, allow me to try and explain what exactly is going on here. I am going to use lilianweng.github.io's [blog post](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#definition) about Attention Mechanism to try and explain the equations in detail.
+
+Let's assume that we have a source sequence $\mathbf{x}$ of length $n$ and an output sequence $\mathbf{y}$ of length $m$.
+
+
+\begin{aligned}
+\mathbf{x} &= [x_1, x_2, \dots, x_n] \\
+\mathbf{y} &= [y_1, y_2, \dots, y_m]
+\end{aligned} 
+
+Here, $\mathbf{x}$ and $\mathbf{y}$ are vectors. The encoder is a RNN with a forward hidden state $\overrightarrow{\boldsymbol{h}}_s$ and a backward one $\overleftarrow{\boldsymbol{h}}_s$
+. Concatenation of the two represents the encoder state. **The idea is to include the preceding word and the following word while annoting one word.** So, $\boldsymbol{h}_s$ will be.
+
+ $$\boldsymbol{h}_s = [\overrightarrow{\boldsymbol{h}}_s^\top; \overleftarrow{\boldsymbol{h}}_s^\top]^\top, s=1,\dots,n$$
+
+Now, the decoder has a hidden state. $\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y_{t-1}, \mathbf{c}_t)$ . for the output word at position $t$, where $t=0,1,2...,m$. where the context vector $\mathbf{c}_t$ is a sum of hidden states of the input sequence, weighted by alignment scores:
+
+
+$$\begin{aligned}
+\mathbf{c}_t &= \sum_{s=1}^n \alpha_{t,s} \boldsymbol{h}_s & \small{\text{; Context vector for output }y_t}\end{aligned}$$
+
+
+
+
+
+
+The alignment model assigns a score $\alpha_{t,s}$ in the above equation to the pair of source at position $s$ and output/target at position $t$, based on how well they match.
+
+ **The set of $\{\alpha_{t, s}\}$ are weights defining how much of each source hidden state should be considered for each output.**
+
+
+$$\begin{aligned}\alpha_{t,s} &= \text{align}(y_t, x_s) & \small{\text{; How well two words }y_t\text{ and }x_s\text{ are aligned.}}\\
+&= \frac{\exp(\text{score}(\boldsymbol{h}_{t-1}, \boldsymbol{h}_s))}{\sum_{s'=1}^n \exp(\text{score}(\boldsymbol{h}_{t-1}, \boldsymbol{h}_{s'}))} & \small{\text{; Softmax of some predefined alignment score.}}.
+\end{aligned}$$
+
+
+
+The score function is therefore in the following form, given that tanh is used as the non-linear activation function: (Bahdanau's additive style as seen in the equation below).
+
+
+![alt text](https://github.com/tensorflow/nmt/raw/master/nmt/g3doc/img/attention_equation_1.jpg)
+
+*Image taken from Github/Tensorflow/nmt*
+
+*Credits go to:- Github/Tensorflow/nmt, lilianweng.github.io*
+
+$$\text{score}(\boldsymbol{s}_t, \boldsymbol{h}_i) = \mathbf{v}_a^\top \tanh(\mathbf{W}_a[\boldsymbol{s}_t; \boldsymbol{h}_i])$$
+
+
+**[Additive/concat]**
+
+
+where both $\mathbf{v}_a$  and $\mathbf{W}_a$ are weight matrices to be learned in the alignment model.
+
+**So, the Three Equations are:-**
+
+- **Context Vector for Output $y_{t}$**
+
+$$\begin{aligned}
+\mathbf{c}_t &= \sum_{s=1}^n \alpha_{t,s} \boldsymbol{h}_s\end{aligned}$$
+
+- **Attention Weights:-**
+
+$$\begin{aligned}\alpha_{t,s} &= \text{align}(y_t, x_s)\
+&= \frac{\exp(\text{score}(\boldsymbol{h}_{t-1}, \boldsymbol{h}_s))}{\sum_{s'=1}^n \exp(\text{score}(\boldsymbol{h}_{t-1}, \boldsymbol{h}_{s'}))} .
+\end{aligned}$$
+
+- **Attention Vector:-**
+
+$$\begin{aligned}a_{t} &= \text{f}(c_t, h_t)\end{aligned}$$
+
+
+
+### **A summary of Popular Attention Mechanisms**
+
+
+Below is a summary of popular attention mechanisms and corresponding alignment score functions:
+
+- Name:- **Content-base attention**
+  - Citation:- 	Graves et.al 2014
+  - Alignment score function:-
+$$\text{score}(\boldsymbol{s}_t, \boldsymbol{h}_i) = \text{cosine}[\boldsymbol{s}_t, \boldsymbol{h}_i]$$
+
+- Name:- **Additive/concat**
+  - Citation:- 	Bahdanau2015
+  - Alignment Score Function:-
+$$\text{score}(\boldsymbol{s}_t, \boldsymbol{h}_i) = \mathbf{v}_a^\top \tanh(\mathbf{W}_a[\boldsymbol{s}_t; \boldsymbol{h}_i])$$
+
+- Name:- **Location**
+  - Citation:- Luong2015
+  - Alignment Score Function:-
+$$\alpha_{t,i} = \text{softmax}(\mathbf{W}_a \boldsymbol{s}_t)$$
+
+- Name:- **General**
+  - Citation:- 	Luong2015
+  - Alignment Score Function:-
+
+$$\text{score}(\boldsymbol{s}_t, \boldsymbol{h}_i) = \boldsymbol{s}_t^\top\mathbf{W}_a\boldsymbol{h}_i$$ where $\boldsymbol{W}_a$
+  is a trainable weight matrix in the attention layer.
+
+
+## **PseudoCode for Luong StyleAttention Mechanism**
+
+- Bahdanau attention mechanism proposed only the concat score function
+- Luong-style attention uses the current decoder output to compute the alignment vector, whereas
+Bahdanau’s uses the output of the previous time step.
+
+
+In case of Luong , we need to take the dot product of the weight matrix  $\mathbf{W}$ and the hidden state of the Encoder. What layer can do a dot product? It’s the Dense layer:
+
+Below is the code by Machinetalk.org, just the LuongAttention function. See the full code in details in the MachineTalk.org blog on [Neural Machine Translation with Attention Mechanism](https://machinetalk.org/2019/03/29/neural-machine-translation-with-attention-mechanism/)
+
+For Bahdanau's Attention Mechanism visit Tensorflow's NMT [blog](https://www.tensorflow.org/tutorials/text/nmt_with_attention#top_of_page)
+
+*credits=Machinetalk.org*
+
+
 
