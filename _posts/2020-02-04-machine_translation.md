@@ -36,7 +36,7 @@ If we are given a sequence of text in a source language, there is no single best
 text to another language. This is because of the natural flexibility of human language. 
 This is one of the greater challenges in Automatic Machine Translation, perhaps the most difficult in Artificial Intelligence.
 
-### **How the Sequence To Sequence Model Works**
+## **How the Sequence To Sequence Model Works**
 
 The model consists of 3 parts: 
 * Encoder.
