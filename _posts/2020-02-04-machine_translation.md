@@ -1,10 +1,10 @@
-# **Machine Translation in Recurrent Neural Networks**
+## **Machine Translation in Recurrent Neural Networks**
 
 1. TOC
 {:toc}
 
 
-### **What is Sequence To Sequence Modeling**
+## **What is Sequence To Sequence Modeling**
 
 > "Recurrent networks with recurrent connections between hidden units, 
 that read an entire sequence and then produce a single output."— Page 372, Deep Learning, 2016.
@@ -436,7 +436,7 @@ class LuongAttention(tf.keras.Model):
         return context, alignment
 ```
 
-### **Self Attention**
+## **Self Attention**
 
 Self-attention, also known as intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the same sequence. A self-attention module takes in $n$ inputs, and returns $n$ outputs. What happens in this module? In layman’s terms, the self-attention mechanism allows the inputs to interact with each other (“self”) and find out who they should pay more attention to (“attention”). The outputs are aggregates of these interactions and attention scores. It has been shown to be very useful in machine reading or image description generation.
 
@@ -445,7 +445,7 @@ Self-attention, also known as intra-attention, is an attention mechanism relatin
 *The current word is in red and the size of the blue shade indicates the activation level. (Image source: Cheng et al., 2016, lilianweng.github.io)*
 
 
-### **Neural Turing Machine**
+## **Neural Turing Machine**
 
 
 A Turing machine is a mathematical model of computation that defines an abstract machine.
@@ -483,7 +483,7 @@ In one update iteration, the controller processes the input and interacts with t
 *Credits for NTM:- Wikipedia, lilianweng.github.io*
 
 
-### **Credits/Citations**
+## **Credits/Citations**
 
 - [Statistical Machine Translations- Wikipedia](https://en.wikipedia.org/wiki/Statistical_machine_translation#Language_models)
 - [Lilianweng.github.io](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#definition)
