@@ -87,7 +87,7 @@ $h_t= f(W^{(hh)}h_{t-1})...(2)$
 
 As seen from the Equation (2), the previous hidden state is being used to compute the next one.
 
-The output $y_t$ at time step $t$ is computed using the formula:
+The output  $y_t$ at time step $t$ is computed using the formula:
 
 $y_{t} = softmax(W^Sh_{t})$
 
