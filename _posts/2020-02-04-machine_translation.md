@@ -299,7 +299,7 @@ Here, $\mathbf{x}$ and $\mathbf{y}$ are vectors. The encoder is a RNN with a for
 
  $$\boldsymbol{h}_s = [\overrightarrow{\boldsymbol{h}}_s^\top; \overleftarrow{\boldsymbol{h}}_s^\top]^\top, s=1,\dots,n$$
 
-Now, the decoder has a hidden state.$$\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y_{t-1}, \mathbf{c}_t)$$ 
+Now, the decoder has a hidden state $$\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y_{t-1}, \mathbf{c}_t)$$ 
 
 for the output word at position  $t$, where $t=0,1,2...,m$. where the context vector $\mathbf{c}_t$
 
@@ -383,9 +383,9 @@ $$\alpha_{t,i} = \text{softmax}(\mathbf{W}_a \boldsymbol{s}_t)$$
 - Name:- **General**
   - Citation:- 	Luong2015
   - Alignment Score Function:-
+$$\text{score}(\boldsymbol{s}_t, \boldsymbol{h}_i) = \boldsymbol{s}_t^\top\mathbf{W}_a\boldsymbol{h}_i$$ 
 
-$$\text{score}(\boldsymbol{s}_t, \boldsymbol{h}_i) = \boldsymbol{s}_t^\top\mathbf{W}_a\boldsymbol{h}_i$$ where $\boldsymbol{W}_a$
-  is a trainable weight matrix in the attention layer.
+where $$\boldsymbol{W}_a$$  is a trainable weight matrix in the attention layer.
 
 
 ## **PseudoCode for Luong StyleAttention Mechanism**
@@ -402,6 +402,76 @@ Below is the code by Machinetalk.org, just the LuongAttention function. See the 
 For Bahdanau's Attention Mechanism visit Tensorflow's NMT [blog](https://www.tensorflow.org/tutorials/text/nmt_with_attention#top_of_page)
 
 *credits=Machinetalk.org*
+
+
+```
+class LuongAttention(tf.keras.Model):
+    def __init__(self, rnn_size):
+        super(LuongAttention, self).__init__()
+        self.wa = tf.keras.layers.Dense(rnn_size)
+        ## We need to implement the forward pass. Note that we have to pass in the encoder’s output this time around. 
+        ## The first thing to do is to compute the score.
+        ## It’s the dot product of the current decoder’s output and the output of the Dense layer. 
+
+
+   def call(self, decoder_output, encoder_output):
+        # Dot score: h_t (dot) Wa (dot) h_s
+        # encoder_output shape: (batch_size, max_len, rnn_size)
+        # decoder_output shape: (batch_size, 1, rnn_size)
+        # score will have shape: (batch_size, 1, max_len)
+        score = tf.matmul(decoder_output, self.wa(encoder_output), transpose_b=True)
+  
+        ## We then compute the Alignment Vector
+        # alignment vector a_t
+        alignment = tf.nn.softmax(score, axis=2)
+
+        ## We compute the context vector
+        # context vector c_t is the average sum of encoder output
+        context = tf.matmul(alignment, encoder_output)
+
+        return context, alignment
+```
+
+### **Self Attention**
+
+Self-attention, also known as intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the same sequence. A self-attention module takes in $n$ inputs, and returns $n$ outputs. What happens in this module? In layman’s terms, the self-attention mechanism allows the inputs to interact with each other (“self”) and find out who they should pay more attention to (“attention”). The outputs are aggregates of these interactions and attention scores. It has been shown to be very useful in machine reading or image description generation.
+
+![alt text](https://lilianweng.github.io/lil-log/assets/images/cheng2016-fig1.png)
+
+*The current word is in red and the size of the blue shade indicates the activation level. (Image source: Cheng et al., 2016, lilianweng.github.io)*
+
+
+### **Neural Turing Machine**
+
+
+A Turing machine is a mathematical model of computation that defines an abstract machine. The Turing Machine was proposed by Alan Turing in 1936.  The machine operates on an infinite memory tape . The tape has countless number of "discrete cells" on it, each filled with a symbol: 0, 1 or blank (“ “). The operation head can move left/right on the tape.
+
+![alt text](https://i1.wp.com/makezine.com/wp-content/uploads/2010/03/turingfull560.jpg?resize=1200%2C670&strip=all&ssl=1)
+
+*Img:- Turing machine: a tape + a head that handles the tape. Img source: i1.wp.com/makezine.com/*
+
+ With this model, Turing was able to answer two questions in the negative: (1) Does a machine exist that can determine whether any arbitrary machine on its tape is "circular" (e.g., freezes, or fails to continue its computational task); similarly, (2) does a machine exist that can determine whether any arbitrary machine on its tape ever prints a given symbol.
+
+Theoretically a Turing machine can simulate any computer algorithm, irrespective of how complex or expensive the procedure might be. The infinite memory gives a Turing machine an edge to be mathematically limitless. However, infinite memory is not feasible in real modern computers and then we only consider Turing machine as a mathematical model of computation.
+
+### **NTM**
+
+**Neural Turing Machine** (NTM, Graves, Wayne & Danihelka, 2014) is a model architecture for coupling a neural network with external memory storage. The memory mimics the Turing machine tape and the neural network controls the operation heads to read from or write to the tape. However, the memory in NTM is finite, and thus it probably looks more like a “Neural von Neumann Machine”.
+
+NTM contains two major components, a controller neural network and a memory bank. 
+- Controller: is in charge of executing operations on the memory. It can be any type of neural network, feed-forward or recurrent.
+-  Memory: stores processed information. It is a matrix of size 
+$N * M$
+, containing $N$ vector rows and each has *M*
+ dimensions.
+
+In one update iteration, the controller processes the input and interacts with the memory bank accordingly to generate output. The interaction is handled by a set of parallel read and write heads.
+
+![alt text](https://lilianweng.github.io/lil-log/assets/images/NTM.png)
+
+*A neural Turing Machine:- Image used from lilianweng.github.io*
+
+*Credits for NTM:- Wikipedia, lilianweng.github.io*
 
 
 
