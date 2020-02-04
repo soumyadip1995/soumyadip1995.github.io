@@ -2,10 +2,12 @@
 
 Originally Written on:- November,2018.
 
-Tic tac toe is a game for two players, X and O, 
+> Tic tac toe is a game for two players, X and O, 
 who take turns marking the spaces in a 3×3 grid traditionally. 
 The player who succeeds in placing three of their marks in a horizontal, vertical, 
-or diagonal row wins the game. Tic Tac Toe can be used as a way of teaching artificial intelligence
+or diagonal row wins the game.
+
+Tic Tac Toe can be used as a way of teaching artificial intelligence
 that deals with the searching of game trees. Now, in the traditional way Tic tac toe can be made to play 
 against other players, but let’s try to develop one that is unbeatable . 
 In this blog post I will try to explain as much as possible about building an AI tic tac toe game that is unbeatable. 
@@ -43,9 +45,11 @@ Now, the algorithm that I have used is in my Github profile: The link to the ful
 Now, the explanation is in a few parts:
 
 Declaration of variables  and starting the AI using JavaScript.
-- In the beginning we try to declare all the variables, we define the human player as “O”  and the AI player as ‘X’ and arrange all the winning combinations in an array. We then use a loop to traverse through all the winning combinations .
+- In the beginning we try to declare all the variables, we define the human player as “O”  and the
+AI player as ‘X’ and arrange all the winning combinations in an array. We then use a loop to traverse through all the winning combinations .
 - Then we use a turn function to check for the squares in the board using squareId for the human players. We check for both  ties and Win. If the AI wins or the game is tied then the game is over.
-- We declare all the functions that is necessary to check if the AI player won or the human player won (needed later on in the minmax algorithm).
+- We declare all the functions that is necessary to check if the AI player won or the human player won
+(needed later on in the minmax algorithm).
 - In this game we also need to check for the spaces that are available for both the AI player and the human player. Only, the available space needs to be filled in by both the Human player and the AI player.
 - Also, the best spaces needs to be checked in order to be filled in by both the human player and the AI player.
 - We need to declare the winner in the end which will always be the AI player using the minmax algorithm described below.
