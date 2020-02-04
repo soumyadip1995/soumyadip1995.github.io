@@ -1,7 +1,7 @@
 ## **Machine Translation in Recurrent Neural Networks**
 1. TOC
 {:toc}
-
+{: class="table-of-content"}
 
 
 ### **What is Sequence To Sequence Modeling**
@@ -139,7 +139,8 @@ between Human and Machine Translation, 2016.
 The idea behind statistical machine translation comes from information theory.
 A document is translated according to the probability distribution 
 
-$${\displaystyle p(e|f)}p(e|f)$$ that a string ${\displaystyle e}$ in the target language (for example, English) is the translation of a string ${\displaystyle f}$ in the source language (for example, German).
+$${\p(e|f)}p(e|f)$$ that a string ${\e}$ in the target language
+(for example, English) is the translation of a string ${\f}$ in the source language (for example, German).
 
 
 
