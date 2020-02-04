@@ -136,7 +136,7 @@ or phrases where the lengths may differ." — Google’s Neural Machine Translat
 between Human and Machine Translation, 2016.
 
 The idea behind statistical machine translation comes from information theory.
-A document is translated according to the probability distribution 
+A document is translated according to the probability distribution:- 
 
 $${p(e|f)}p(e|f)$$ that a string ${e}$ in the target language
 (for example, English) is the translation of a string ${f}$ in the source language (for example, German).
@@ -299,8 +299,13 @@ Here, $\mathbf{x}$ and $\mathbf{y}$ are vectors. The encoder is a RNN with a for
 
  $$\boldsymbol{h}_s = [\overrightarrow{\boldsymbol{h}}_s^\top; \overleftarrow{\boldsymbol{h}}_s^\top]^\top, s=1,\dots,n$$
 
-Now, the decoder has a hidden state. $\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y_{t-1}, \mathbf{c}_t)$   for the output word at 
-position $t$, where $t=0,1,2...,m$. where the context vector $\mathbf{c}_t$ is a sum of hidden states of the input sequence, 
+Now, the decoder has a hidden state. 
+
+$\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y_{t-1}, \mathbf{c}_t)$ 
+
+for the output word at position  $t$, where $t=0,1,2...,m$. where the context vector $\mathbf{c}_t$ 
+
+is a sum of hidden states of the input sequence, 
 weighted by alignment scores:
 
 
@@ -312,7 +317,8 @@ $$\begin{aligned}
 
 The alignment model assigns a score $\alpha_{t,s}$ in the above equation to the pair of source at position $s$ and output/target at position $t$, based on how well they match.
 
- **The set of $\{\alpha_{t, s}\}$ are weights defining how much of 
+ **The set of  $\{\alpha_{t, s}\}$
+ are weights defining how much of 
  each source hidden state should be considered for each output.**
 
 
