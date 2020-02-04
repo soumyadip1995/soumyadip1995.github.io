@@ -1,4 +1,9 @@
 ## **Machine Translation in Recurrent Neural Networks**
+1. TOC
+{:toc}
+
+
+
 ### **What is Sequence To Sequence Modeling**
 
 > "Recurrent networks with recurrent connections between hidden units, 
@@ -94,3 +99,101 @@ $y_{t} = softmax(W^Sh_{t})$
 The outputs using the hidden state at the current time step together 
 with the respective weight $W(S)$ is calculated. Softmax is used to create a probability vector which will help 
 determine the final output.
+
+
+### **Improvements on the current model**
+
+What are the changes that can be done if improving the current model is in question.
+
+Train different RNN weights for encoding and decoding. In the model above, the same RNN node doing
+both encoding and decoding which is clearly not optimal for learning.
+
+At decoder stage rather than just have the previous hidden stage as input, like in the above, 
+the last hidden stage of the encoder (call this C in the diagram below) can also be included. 
+The last predicted output word vector is also included. This should help the model to know it 
+just output a certain word and not to output that word again. This C vector is known as the context vector, 
+which we will see when we talk about attention mechanisms later on.
+
+![alt text](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/assets/rnn3.PNG)
+
+*Img:- Encoder-Decoder Recurrent Neural Network Model.
+Taken from “Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation Img Credits:-leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/assets/rnn3.PNG”*
+
+Now,  the decoder node will  have 3 weight matrices in it ( one of previous hidden state h,
+one for last predicted word vector y and one for the last encoder hidden state c) which is multiplied by the corresponding input and then sum up to get the decoder output.
+
+*Also Note:-Important to remember that the weight matrix that is used to multiply the inputs in each step of the encoder is the exact same, it is not different for different time steps.*
+
+### **Statistical Machine Translation**
+
+Statistical machine translation, or SMT for short, is the use of statistical models that
+learn to translate text from an input or a source language to a target language by analyzing
+existing human translations (known as bilingual text corpora). In contrast to the
+Rules Based Machine Translation (RBMT) approach that is usually word based, most mondern SMT systems are phrased based
+
+> "Statistical Machine Translation (SMT) has been the dominant translation paradigm for decades.
+Practical implementations of SMT are generally phrase-based systems (PBMT) which translate sequences of words
+or phrases where the lengths may differ." — Google’s Neural Machine Translation System: Bridging the Gap
+between Human and Machine Translation, 2016.
+
+The idea behind statistical machine translation comes from information theory.
+A document is translated according to the probability distribution 
+
+$${\displaystyle p(e|f)}p(e|f)$$ that a string ${\displaystyle e}$ in the target language (for example, English) is the translation of a string ${\displaystyle f}$ in the source language (for example, German).
+
+
+
+![alt text](https://www.researchgate.net/profile/Karan_Singla/publication/279181014/figure/fig2/AS:294381027381252@1447197314391/Basic-Statistical-Machine-Translation-Pipeline.png)
+
+***A Basic Statistical Machine Translation Pipeline** 
+
+*Img Credits:- researchgate.net/profile/Karan_Singla/publication/279181014/figure/fig2/AS:294381027381252@1447197314391/Basic-Statistical-Machine-Translation-Pipeline.png*
+
+
+Where such corpora are available, good results can be achieved translating similar texts, 
+but such corpora are still rare for many language pairs. The first statistical machine translation software was 
+CANDIDE from IBM. Google used SYSTRAN (Founded by Dr. Peter Toma in 1986, is one of the oldest Machine Translation Companies) for several years, but switched to a statistical translation method in 2007.
+
+In 2005, Google improved its internal translation capabilities by using approximately 200 billion words
+from United Nations materials to train their system.
+
+SMT's biggest downfall includes it being dependent upon huge amounts of parallel texts.
+
+### **BackGround on Neural Machine Translations**
+
+Back in the day, traditional phrase-based translation systems performed their task by breaking up 
+sentences into multiple chunks and then translating them phrase-by-phrase. This led to disfluency in the 
+translation outputs and was not quite like how humans translate. Humans read the entire source sentence, 
+understand its meaning, and then produce a translation. Neural Machine Translation (NMT) mimics this method.
+
+![alt text](https://github.com/tensorflow/nmt/raw/master/nmt/g3doc/img/encdec.jpg)
+
+*Figure:-Encoder-decoder architecture – example of a general approach for NMT. An encoder converts a source sentence into a "meaning" vector which is passed through a decoder to produce a translation.Img taken from :- github.com/tensorflow/nmt*
+
+Specifically, an NMT system first reads the source sentence using an encoder to build a "thought" vector. (context vector)
+
+> " Thought vectors, Geoffrey Hinton explained, work at a higher level by extracting something closer to
+actual meaning. The technique works by ascribing each word a set of numbers (or vector) that define its position
+in a theoretical “meaning space” or cloud. A sentence can be looked at as a path between these words, which can
+in turn be distilled down to its own set of numbers, or thought vector." —theguardian.com/science/2015/may/21/google-a-step-closer-to-developing-machines-with-human-like-intelligence
+
+
+- Usually an RNN is used for both the encoder and decoder.
+
+- A sequence of numbers represents the sentence meaning; 
+A decoder then, processes the sentence vector to emit a translation, as shown in the above Figure. 
+This is often referred to as the encoder-decoder architecture. 
+
+- In this manner, NMT addresses the translation problem in the traditional phrase-based approach: it can
+capture long-range dependencies in languages, e.g., syntax structures; etc., and produce much more fluent
+translations as demonstrated by Google Neural Machine Translation systems.
+
+![alt text](https://1.bp.blogspot.com/-TAEq5oc14jQ/V-qWTeqaA7I/AAAAAAAABPo/IEmOBO6x7nIkzLqomgk_DwVtzvpEtJF1QCLcB/s640/img3.png)
+
+*An example of a translation produced by our system for an input sentence sampled from a news site. Go here for more examples of translations for input sentences sampled randomly from news sites and books. Img Credit:- ai.googleblog.com/2016/09/a-neural-network-for-machine.html*
+
+NMT models vary in terms of their exact architectures. A natural choice for sequential data is the recurrent neural 
+network (RNN), used by most NMT models. 
+
+*Also Note:- I am basing this NMT portion on the thesis of Thang Luong , 2016 on Neural Machine Translation and the Tensorflow Tutorial associated with it*
+
