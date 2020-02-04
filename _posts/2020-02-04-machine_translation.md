@@ -485,6 +485,7 @@ In one update iteration, the controller processes the input and interacts with t
 
 ## **Credits/Citations**
 
+
 - [Statistical Machine Translations- Wikipedia](https://en.wikipedia.org/wiki/Statistical_machine_translation#Language_models)
 - [Lilianweng.github.io](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#definition)
 - [Neural Machine Translation- Wikipedia](https://en.wikipedia.org/wiki/Neural_machine_translation)
@@ -495,9 +496,10 @@ In one update iteration, the controller processes the input and interacts with t
 - [Understanding Encoding to Decoding Sequence Modeling- Medium post](https://towardsdatascience.com/understanding-encoder-decoder-sequence-to-sequence-model-679e04af4346)
 - [lmthang thesis on Machine Translation- Github.](https://github.com/lmthang/thesis/blob/master/thesis.pdf)
 - [NMT Tensorflow Github](https://github.com/tensorflow/nmt#inference--how-to-generate-translations)
-- [NextJournal- Machine Translations](https://nextjournal.com/gkoehler/machine-translation-seq2seq-cpu)
-- [ Bahdanau et al., 2015.](https://arxiv.org/pdf/1409.0473.pdf)
-- [Luong, et al., 2015; ](https://arxiv.org/pdf/1508.04025.pdf)
-- [Britz et al., 2017:](https://arxiv.org/abs/1703.03906)
-- [Vaswani et al., 2017](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
-- [Cheng et al., 2016](https://arxiv.org/pdf/1601.06733.pdf)
+- [NextJournal- Machine Translation](https://nextjournal.com/gkoehler/machine-translation-seq2seq-cpu)
+- Neural Machine Translation by jointly learning to align and translate - [ Bahdanau et al., 2015.](https://arxiv.org/pdf/1409.0473.pdf)
+- Effective Approaches to Attention-based Neural Machine Translation- [Luong, et al., 2015; ](https://arxiv.org/pdf/1508.04025.pdf)
+- Massive Exploration of Neural Machine Translation Architectures- [Britz et al., 2017:](https://arxiv.org/abs/1703.03906)
+- Attention Is All You Need- [Vaswani et al., 2017](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
+- Long Short-Term Memory-Networks for Machine Reading- [Cheng et al., 2016](https://arxiv.org/pdf/1601.06733.pdf)
+- [Neural Turing Machine](https://en.wikipedia.org/wiki/Neural_Turing_machine)
