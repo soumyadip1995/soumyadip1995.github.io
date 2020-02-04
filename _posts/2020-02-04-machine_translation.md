@@ -1,7 +1,6 @@
 # **Machine Translation in Recurrent Neural Networks**
 
-   TOC
-{:toc}
+
 
 
 ### **What is Sequence To Sequence Modeling**
@@ -290,18 +289,20 @@ Now, allow me to try and explain what exactly is going on here. I am going to us
 
 Let's assume that we have a source sequence $\mathbf{x}$ of length $n$ and an output sequence $\mathbf{y}$ of length $m$.
 
-
-\begin{aligned}
+$$\begin{aligned}
 \mathbf{x} &= [x_1, x_2, \dots, x_n] \\
 \mathbf{y} &= [y_1, y_2, \dots, y_m]
-\end{aligned} 
+\end{aligned}$$
 
 Here, $\mathbf{x}$ and $\mathbf{y}$ are vectors. The encoder is a RNN with a forward hidden state $\overrightarrow{\boldsymbol{h}}_s$ and a backward one $\overleftarrow{\boldsymbol{h}}_s$
 . Concatenation of the two represents the encoder state. **The idea is to include the preceding word and the following word while annoting one word.** So, $\boldsymbol{h}_s$ will be.
 
  $$\boldsymbol{h}_s = [\overrightarrow{\boldsymbol{h}}_s^\top; \overleftarrow{\boldsymbol{h}}_s^\top]^\top, s=1,\dots,n$$
 
-Now, the decoder has a hidden state. $\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y_{t-1}, \mathbf{c}_t)$ . for the output word at position $t$, where $t=0,1,2...,m$. where the context vector $\mathbf{c}_t$ is a sum of hidden states of the input sequence, weighted by alignment scores:
+Now, the decoder has a hidden state. $\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y_{t-1}, \mathbf{c}_t)$   for the output word at 
+position $t$, where $t=0,1,2...,m$. where the context vector $\mathbf{c}_t$ is a sum of hidden states of the input sequence, 
+weighted by alignment scores:
+
 
 
 $$\begin{aligned}
@@ -311,7 +312,8 @@ $$\begin{aligned}
 
 The alignment model assigns a score $\alpha_{t,s}$ in the above equation to the pair of source at position $s$ and output/target at position $t$, based on how well they match.
 
- **The set of $\{\alpha_{t, s}\}$ are weights defining how much of each source hidden state should be considered for each output.**
+ **The set of $\{\alpha_{t, s}\}$ are weights defining how much of 
+ each source hidden state should be considered for each output.**
 
 
 $$\begin{aligned}\alpha_{t,s} &= \text{align}(y_t, x_s) & \small{\text{; How well two words }y_t\text{ and }x_s\text{ are aligned.}}\\
