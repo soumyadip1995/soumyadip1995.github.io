@@ -76,7 +76,6 @@ It acts as the initial hidden state of the decoder part of the model.
 ### **Decoder**
 
 Once the stop token is reached, the decoder RNN node will begin producing output vectors.
-
 A decoder is a stack of several recurrent units where each predicts an output $y_t$ at a time step $t$.
 Each recurrent unit accepts a hidden state from the previous unit and produces and output as well as its own hidden state.
 In a question-answering problem, the output sequence is a collection of all words from the answer.
