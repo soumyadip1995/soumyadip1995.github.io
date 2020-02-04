@@ -1,7 +1,7 @@
 ![Github Image](images/github%20(3).png)
 
 
-*Hey this is Soumyadip Nandi. Welcome to the Blog..!!* 
+*Hey this is Soumyadip. Welcome to the Blog..!!* 
 Feel free to contact me via E-mail and Twitter:- 
 - E-mail:- elatednandi@gmail.com, 
 - Twitter:- @soumya1995j ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FSoumya1995j)
