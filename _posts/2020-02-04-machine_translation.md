@@ -1,7 +1,7 @@
-## **Machine Translation in Recurrent Neural Networks**
-1. TOC
-{:toc}
+# **Machine Translation in Recurrent Neural Networks**
 {: class="table-of-content"}
+
+- TOC {:toc}
 
 
 ### **What is Sequence To Sequence Modeling**
@@ -124,7 +124,7 @@ one for last predicted word vector y and one for the last encoder hidden state c
 
 *Also Note:-Important to remember that the weight matrix that is used to multiply the inputs in each step of the encoder is the exact same, it is not different for different time steps.*
 
-### **Statistical Machine Translation**
+## **Statistical Machine Translation**
 
 Statistical machine translation, or SMT for short, is the use of statistical models that
 learn to translate text from an input or a source language to a target language by analyzing
@@ -160,7 +160,7 @@ from United Nations materials to train their system.
 
 SMT's biggest downfall includes it being dependent upon huge amounts of parallel texts.
 
-### **BackGround on Neural Machine Translations**
+## **BackGround on Neural Machine Translations**
 
 Back in the day, traditional phrase-based translation systems performed their task by breaking up 
 sentences into multiple chunks and then translating them phrase-by-phrase. This led to disfluency in the 
