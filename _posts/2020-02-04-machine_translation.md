@@ -148,7 +148,9 @@ $${p(e|f)}p(e|f)$$ that a string ${e}$ in the target language
 
 ***A Basic Statistical Machine Translation Pipeline** 
 
-*Img Credits:- researchgate.net/profile/Karan_Singla/publication/279181014/figure/fig2/AS:294381027381252@1447197314391/Basic-Statistical-Machine-Translation-Pipeline.png*
+*Img Credits:- researchgate.net/profile/Karan_Singla
+/publication/279181014/figure
+/fig2/AS:294381027381252@1447197314391/Basic-Statistical-Machine-Translation-Pipeline.png*
 
 
 Where such corpora are available, good results can be achieved translating similar texts, 
