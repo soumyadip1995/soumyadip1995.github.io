@@ -299,7 +299,7 @@ Here, $\mathbf{x}$ and $\mathbf{y}$ are vectors. The encoder is a RNN with a for
 
  $$\boldsymbol{h}_s = [\overrightarrow{\boldsymbol{h}}_s^\top; \overleftarrow{\boldsymbol{h}}_s^\top]^\top, s=1,\dots,n$$
 
-Now, the decoder has a hidden state. $\boldsymbol{h}_t=f(\boldsymbol{h}_{t-1}, y_{t-1},\mathbf{c}_t)$ 
+Now, the decoder has a hidden state. \boldsymbol{s}_t=f(\boldsymbol{s}_{t-1}, y_{t-1}, \mathbf{c}_t)
 
 for the output word at position  $t$, where $t=0,1,2...,m$. where the context vector $\mathbf{c}_t$ 
 
@@ -315,9 +315,7 @@ $$\begin{aligned}
 
 The alignment model assigns a score $\alpha_{t,s}$ in the above equation to the pair of source at position $s$ and output/target at position $t$, based on how well they match.
 
- **The set of  $\{{\alpha_{t, s}}\}$
- are weights defining how much of 
- each source hidden state should be considered for each output.**
+**The set of $\{\alpha_{t, s}\}$ are weights defining how much of each source hidden state should be considered for each output.**
 
 
 $$\begin{aligned}\alpha_{t,s} &= \text{align}(y_t, x_s) & \small{\text{; How well two words }y_t\text{ and }x_s\text{ are aligned.}}\\
