@@ -502,4 +502,4 @@ In one update iteration, the controller processes the input and interacts with t
 - Massive Exploration of Neural Machine Translation Architectures- [Britz et al., 2017:](https://arxiv.org/abs/1703.03906)
 - Attention Is All You Need- [Vaswani et al., 2017](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
 - Long Short-Term Memory-Networks for Machine Reading- [Cheng et al., 2016](https://arxiv.org/pdf/1601.06733.pdf)
-- [Neural Turing Machine](https://en.wikipedia.org/wiki/Neural_Turing_machine)
+- [Neural Turing Machine- Wikipedia](https://en.wikipedia.org/wiki/Neural_Turing_machine)
