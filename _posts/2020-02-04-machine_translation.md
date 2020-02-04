@@ -1,6 +1,7 @@
 # **Machine Translation in Recurrent Neural Networks**
 
-
+1. TOC
+{:toc}
 
 
 ### **What is Sequence To Sequence Modeling**
@@ -409,9 +410,11 @@ class LuongAttention(tf.keras.Model):
     def __init__(self, rnn_size):
         super(LuongAttention, self).__init__()
         self.wa = tf.keras.layers.Dense(rnn_size)
-        ## We need to implement the forward pass. Note that we have to pass in the encoder’s output this time around. 
+        ## We need to implement the forward pass.
+        ## Note that we have to pass in the encoder’s output this time around. 
         ## The first thing to do is to compute the score.
-        ## It’s the dot product of the current decoder’s output and the output of the Dense layer. 
+        ## It’s the dot product of the current decoder’s output..
+        ##.. and the output of the Dense layer. 
 
 
    def call(self, decoder_output, encoder_output):
@@ -419,7 +422,8 @@ class LuongAttention(tf.keras.Model):
         # encoder_output shape: (batch_size, max_len, rnn_size)
         # decoder_output shape: (batch_size, 1, rnn_size)
         # score will have shape: (batch_size, 1, max_len)
-        score = tf.matmul(decoder_output, self.wa(encoder_output), transpose_b=True)
+        score = tf.matmul(decoder_output, self.wa(encoder_output),
+                transpose_b=True)
   
         ## We then compute the Alignment Vector
         # alignment vector a_t
