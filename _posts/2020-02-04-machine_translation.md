@@ -4,6 +4,9 @@
 {:toc}
 
 
+> - Updates:- Updated Explanation of Attention Mechanisms.
+  - Updates:- Updated Self Attention
+
 ## **What is Sequence To Sequence Modeling**
 
 > "Recurrent networks with recurrent connections between hidden units, 
@@ -297,7 +300,9 @@ $$\begin{aligned}
 \mathbf{y} &= [y_1, y_2, \dots, y_m]
 \end{aligned}$$
 
-Here, $\mathbf{x}$ and $\mathbf{y}$ are vectors. The encoder is a RNN with a forward hidden state $\overrightarrow{\boldsymbol{h}}_s$ and a backward one $\overleftarrow{\boldsymbol{h}}_s$
+Here, $\mathbf{x}$ and $\mathbf{y}$ are vectors. The encoder is a RNN with a forward hidden state $\overrightarrow{\boldsymbol{h}}_s$ and a backward one $\overleftarrow{\boldsymbol{h}}_s$. 
+
+Considering $s$ as the source position where, $s=1,2...,n$
 . Concatenation of the two represents the encoder state. **The idea is to include the preceding word and the following word while annoting one word.** So, $\boldsymbol{h}_s$ will be.
 
  $$\boldsymbol{h}_s = [\overrightarrow{\boldsymbol{h}}_s^\top; \overleftarrow{\boldsymbol{h}}_s^\top]^\top, s=1,\dots,n$$
@@ -440,12 +445,17 @@ class LuongAttention(tf.keras.Model):
 
 ## **Self Attention**
 
-Self-attention, also known as intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the same sequence. A self-attention module takes in $n$ inputs, and returns $n$ outputs. What happens in this module? In layman’s terms, the self-attention mechanism allows the inputs to interact with each other (“self”) and find out who they should pay more attention to (“attention”). The outputs are aggregates of these interactions and attention scores. It has been shown to be very useful in machine reading or image description generation.
+Self-attention, also known as intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the same sequence. A self-attention module takes in $n$ inputs, and returns $n$ outputs. In layman’s terms, the self-attention mechanism allows the inputs to interact with each other (“self”) and find out who they should pay more attention to (“attention”). The outputs are aggregates of these interactions and attention scores. Self Attention has been shown to be very useful in machine reading or image description generation. 
+
+In Self-Attention if the input is, for example, a sentence, then each word in the sentence needs to undergo Attention computation. The goal is to learn the dependencies between the words in the sentence and use that information to capture the internal structure of the sentence. Self attention has really improved the ability of context derivation. [B.Yang, et al., 2018:](https://www.aclweb.org/anthology/D18-1475.pdf)
 
 ![alt text](https://lilianweng.github.io/lil-log/assets/images/cheng2016-fig1.png)
 
 *The current word is in red and the size of the blue shade indicates the activation level. (Image source: Cheng et al., 2016, lilianweng.github.io)*
 
+
+
+We'll cover more ground on self attention when we are discussing Transformer networks.
 
 ## **Neural Turing Machine**
 
