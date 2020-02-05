@@ -459,10 +459,11 @@ We'll cover more ground on self attention when we are discussing Transformer net
 
 ## **Neural Turing Machine**
 
+### **Turing Machine**
 
 A Turing machine is a mathematical model of computation that defines an abstract machine.
 The Turing Machine was proposed by Alan Turing in 1936.  The machine operates on an infinite memory tape . 
-The tape has countless number of "discrete cells" on it, each filled with a symbol: 0, 1 or blank (“ “). The operation head can move left/right on the tape.
+The tape has countless number of "discrete cells" on it, each filled with a symbol: 0, 1 or blank (“ “). The operation head can move left/right on the tape. [Turing Machine Explained - Computerphile](https://www.youtube.com/watch?v=dNRDvLACg5Q)
 
 ![alt text](https://i1.wp.com/makezine.com/wp-content/uploads/2010/03/turingfull560.jpg?resize=1200%2C670&strip=all&ssl=1)
 
