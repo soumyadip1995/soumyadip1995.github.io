@@ -5,7 +5,7 @@
 
 
 > - Updates:- Updated Explanation of Attention Mechanisms.
-  - Updates:- Updated Self Attention
+> - Updates:- Updated Self Attention
 
 ## **What is Sequence To Sequence Modeling**
 
