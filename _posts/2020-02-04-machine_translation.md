@@ -1,4 +1,4 @@
-## **Machine Translation in Recurrent Neural Networks**
+## **Machine Translation with Recurrent Neural Networks**
 
 1. TOC
 {:toc}
