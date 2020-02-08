@@ -4,8 +4,9 @@
 {:toc}
 
 
-> - Updates:- Updated Explanation of Attention Mechanisms.
-> - Updates:- Updated Self Attention
+> - Updates:- Updated Explanation of Attention Mechanisms.(Feb 5,2020)
+> - Updates:- Updated Self Attention.(Feb 5, 2020)
+> - Updates:- Updated Explanation of Attention Mechanisms.(Feb 8,2020)
 
 ## **What is Sequence To Sequence Modeling**
 
