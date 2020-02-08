@@ -303,7 +303,7 @@ $$\begin{aligned}
 Here, $\mathbf{x}$ and $\mathbf{y}$ are vectors. The encoder is a RNN with a forward hidden state $\overrightarrow{\boldsymbol{h}}_s$ and a backward one $\overleftarrow{\boldsymbol{h}}_s$. 
 
 Considering $s$ as the source position where, $s=1,2...,n$
-. Concatenation of the two represents the encoder state. **The idea is to include the preceding word and the following word while annoting one word.** So, $\boldsymbol{h}_s$ will be.
+. Concatenation of the two, (the preceding word and the next word) represents the encoder state. **The idea is to include the preceding word and the following word while annoting one word.** So, $\boldsymbol{h}_s$ will be.
 
  $$\boldsymbol{h}_s = [\overrightarrow{\boldsymbol{h}}_s^\top; \overleftarrow{\boldsymbol{h}}_s^\top]^\top, s=1,\dots,n$$
 
