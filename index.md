@@ -1,5 +1,5 @@
-![Github Image](https://media0.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif)
 
+## Soumyadip's Blog
 
 *Hey this is Soumyadip. Welcome to the Blog..!!* 
 Feel free to contact me via E-mail and Twitter:- 
