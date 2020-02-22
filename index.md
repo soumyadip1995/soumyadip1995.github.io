@@ -1,5 +1,4 @@
 
-## Soumyadip's Blog
 
 *Hey this is Soumyadip. Welcome to the Blog..!!* 
 Feel free to contact me via E-mail and Twitter:- 
