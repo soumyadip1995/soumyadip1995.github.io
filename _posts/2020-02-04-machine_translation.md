@@ -1,5 +1,9 @@
 ## **Machine Translation with Recurrent Neural Networks**
 
+![alt_text](https://1.bp.blogspot.com/-jwgtcgkgG2o/WDSBrwu9jeI/AAAAAAAABbM/2Eobq-N9_nYeAdeH-sB_NZGbhyoSWgReACLcB/s1600/image01.gif)
+
+## **Table of Contents**
+
 1. TOC
 {:toc}
 
