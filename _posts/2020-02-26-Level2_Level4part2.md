@@ -1,4 +1,4 @@
-#  Level 2 vs Level 4 Autonomous Driving Systems (Featuring :- Tesla, Waymo):- Perception Systems and Neural Network vs Tesla AutoPilot Part 2
+#  Level 2 vs Level 4 Autonomous Driving Systems (Featuring :- Tesla, Waymo):- Perception Systems and Neural Network vs The Tesla AutoPilot Part 2
 
 ![alt_text](https://miro.medium.com/max/1000/1*paN5hOlhUTKwyFYAkLdxRg.gif)
 
