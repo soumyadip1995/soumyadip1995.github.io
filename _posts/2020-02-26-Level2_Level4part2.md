@@ -41,6 +41,10 @@ Visit [DeepScale](http://deepscale.ai/)
 One of the main challenges for developing a more robust perception system is to take into consideration, the amount of power neural networks are going to use while making real time predictions.
 
  Although , the rise of Neural Networks has significantly improved semantic segmentation (*Semantic segmentation refers to the process of linking each pixel in an image to a class label. These labels could include a person, car, flower, piece of furniture, etc., just to mention a few.*), 3D reconstruction, it still needs a lot of power. (8 GPUs, 250 watts each and then about 500 watts of CPUs, hard drives etc)
+ 
+![alt_text](https://1.bp.blogspot.com/-m1EFWvMVWrY/XlZ9gxGj8HI/AAAAAAAAKdA/n4ynCIfLb1IOCWl2toF4KlO_OmNc7q8XgCNcBGAsYHQ/s1600/Screenshot%2B%2528308%2529.png)
+
+*Image from the Deepscale Video.[DeepScale Video- Perception Systems for Autonomous Vehicles using Efficient Deep Neural Networks](https://www.youtube.com/watch?v=Knvl-vHzlUc&t=1s)*
 
 According to Tesla's estimation of how much power they use on the highway and a Model S if you have five kilowatts of compute in the trunk running you  actually diminish your 
 electric vehicle range by at least 25 percent. 
@@ -130,7 +134,7 @@ The study at MIT for semi- autonomous vehicles includes perception on both sides
 
 The camera feeds the video stream as one drives in real time to the Jetson TX2 and the neural network predicts the Steering commands.
 
-![alt_text](https://github.com/soumyadip1995/Autonomous-Driving-System/blob/master/images%20part%202/Screenshot%20(307).png)
+![alt_text](https://1.bp.blogspot.com/-JM1N4Q5_q3A/XlZ9fvpVuUI/AAAAAAAAKc8/iU6L2-0b7ys-_hXOjKnImmhNkoYxyljwwCNcBGAsYHQ/s1600/Screenshot%2B%2528307%2529.png)
 
 *Implementation and evaluation of the system presented in the paper. Image from the paper*
 
@@ -138,7 +142,7 @@ So, now we have two perception control systems, the Tesla AutoPilot vs the Neura
 
 #### **How the Disagreement is detected**
 
-![alt_text](https://github.com/soumyadip1995/Autonomous-Driving-System/blob/master/images%20part%202/Screenshot%20(309).png)
+![alt_text](https://1.bp.blogspot.com/-CcU5m0pzl3o/XlZ-fqm7wRI/AAAAAAAAKdc/F0VpPZAStnIMlZ838RRRcjfzEdXv6oHswCNcBGAsYHQ/s1600/Screenshot%2B%2528309%2529.png)
 
 *Image of the LCD Display in the front. Image from the paper*
 
@@ -162,7 +166,7 @@ The reason why the disagreement is interesting can be summed up in two parts:-
 
 1) **In the case of manual interference**, if one tries to operate the vehicle i.e, try and manoveur the vehicle which is already on Autopilot, the neural network disagrees, which means that the driver's steering commands are divergent to the neural network's steering commands and hence the driver should pay extra attention to his own steering decision. This happens around 3:42 and 6:33 in the [video](https://www.youtube.com/watch?v=YBvcKtLKNAw) where Prof Fridman tries to take control of the vehicle on Autopilot, the neural network disagrees with his steering decision and the Disgreement is displayed on the LCD display in the front. 
 
-![alt_text](https://github.com/soumyadip1995/Autonomous-Driving-System/blob/master/images%20part%202/Screenshot%20(304).png?raw=true)
+![alt_text](https://1.bp.blogspot.com/-DqkrkT_Itq4/XlZ9eqpTVkI/AAAAAAAAKc4/phw72qyiRPoqGpRVxI9SydpiYlIsN9-6ACNcBGAsYHQ/s1600/Screenshot%2B%2528304%2529.png)
 
 *In the above image you can see the Disagreement detected sign light up a little bit. A ScreenGrab from the Lex Fridman video*
 
