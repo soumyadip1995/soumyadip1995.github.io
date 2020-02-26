@@ -67,7 +67,7 @@ we propose a small CNN architecture called SqueezeNet. SqueezeNet achieves AlexN
 
 An autonomous car should be able to detect trafﬁc participants and drivable areas, particularly in urban areas where a wide variety of object appearances and occlusions may appear. Deep learning based perception, in particular Convolutional Neural Networks (CNNs), became the standard in Object Detection. AlexNet shifted the focus towards object Detection.
 
-1) Image based Object Detection
+1) **Image based Object Detection**
 
 State-of-the-art methods that can be applied to Autonomous Driving Systems rely generally on DCNNs, there currently exist a clear distinction between them:
 
@@ -77,7 +77,7 @@ State-of-the-art methods that can be applied to Autonomous Driving Systems rely 
 
 In general, single stage detectors do not provide the same performances as double stage detectors, but are signiﬁcantly faster.
 
-2) Semantic and Instance Segmentation
+2) **Semantic and Instance Segmentation**
 
 "Instance Segmentation: Identify each object instance of each pixel for every known object within an image"
 
@@ -130,13 +130,17 @@ The study at MIT for semi- autonomous vehicles includes perception on both sides
 
 The camera feeds the video stream as one drives in real time to the Jetson TX2 and the neural network predicts the Steering commands.
 
-[insert figure 8 from paper]
+![alt_text](https://github.com/soumyadip1995/Autonomous-Driving-System/blob/master/images%20part%202/Screenshot%20(307).png)
+
+*Implementation and evaluation of the system presented in the paper. Image from the paper*
 
 So, now we have two perception control systems, the Tesla AutoPilot vs the Neural Network. We will see the Autopliot arguing against the Neural Network.
 
 #### **How the Disagreement is detected**
 
-[insert picture from screenshot ]
+![alt_text](https://github.com/soumyadip1995/Autonomous-Driving-System/blob/master/images%20part%202/Screenshot%20(309).png)
+
+*Image of the LCD Display in the front. Image from the paper*
 
 There is an LCD display inside the car that shows the steering commands from both the control systems, the temporal difference input to the neural network, and (in red text) a notice to the driver when a disagreement is detected. If you Look closely there are two lines. A pink line and a cyan line. If the two control systems disagree, the LCD display indicates that there is a disagreement. The magnitude of the disagreement varies with increasing or decreasing levels of disagreement between the two systems.
 
@@ -148,9 +152,7 @@ The pink line is the steering commands from the neural network and the cyan line
 
 Watch as Prof Fridman takes the Tesla S model down the Highway and explains the reasons behind the disagreements in the video below.
 
-[insert Fridman Video]
-
-
+[![alt_text](https://i.ytimg.com/vi/YBvcKtLKNAw/maxresdefault.jpg)](https://www.youtube.com/watch?v=YBvcKtLKNAw)
 
 The reason why the disagreement is interesting can be summed up in two parts:-
 
@@ -158,14 +160,18 @@ The reason why the disagreement is interesting can be summed up in two parts:-
 - vision perpection.
 - driving scene interpretation
 
-1) **In the case of manual interference**, if one tries to operate the vehicle i.e, try and manoveur the vehicle which is already on Autopilot, the neural network disagrees, which means that the driver's steering commands are divergent to the neural network's steering commands and hence the driver should pay extra attention to his own steering decision. This happens around 3:42 and 6:33 in the video where Prof Fridman tries to take control of the vehicle on Autopilot, the neural network disagrees with his steering decision and the Disgreement is displayed on the LCD display in the front. 
+1) **In the case of manual interference**, if one tries to operate the vehicle i.e, try and manoveur the vehicle which is already on Autopilot, the neural network disagrees, which means that the driver's steering commands are divergent to the neural network's steering commands and hence the driver should pay extra attention to his own steering decision. This happens around 3:42 and 6:33 in the [video](https://www.youtube.com/watch?v=YBvcKtLKNAw) where Prof Fridman tries to take control of the vehicle on Autopilot, the neural network disagrees with his steering decision and the Disgreement is displayed on the LCD display in the front. 
+
+![alt_text](https://github.com/soumyadip1995/Autonomous-Driving-System/blob/master/images%20part%202/Screenshot%20(304).png?raw=true)
+
+*In the above image you can see the Disagreement detected sign light up a little bit. A ScreenGrab from the Lex Fridman video*
 
 2) **Vision Perception**:- From a computer Vision Standpoint, it is interesting because a divergence between the steering commands of the Neural Network and the Tesla Autopilot means that there is a chance of detecting edge cases on which the neural networks can be further trained on in order to improve the secondary system  so as to reduce overall system error (Look at the Figure 1). (Prof Fridman explains this around the 5:00 mark). 
 
 3) **Driving scene interpretation**:- Let's say that from a driving scene perception the neural network and the AutoPilot are disgreeing a lot or disagreeing at a greater magnitude , then the indication might be that it is the driver's turn to retreive control from the Autopilot and take charge . (Prof Fridman explains this around the 4:00 mark) 
 
 
-**Dataset**:- For the 2nd application, the video stream is fed to the Jetson TX2 in real time and steering commands are predicted by the end to end Neural Network.
+**Dataset**:- For the 2nd application, the video stream is fed to the Jetson TX2 in real time and steering commands are predicted by the end to end Neural Network. Read the quoted lines below and then take a look at the graph below
 
 > "We perform two evaluations in our application of arguing
 machines to semi-autonomous driving. First, we evaluate
@@ -183,7 +189,9 @@ complex lane mergers, light variations) were better handled
 by a human operator. Therefore, we chose to evaluate the
 disagreement function by its ability to predict these disengagements, which it is able to do with 90.4% accuracy" - From the paper, Section 4.Arguing Machines for Semi Autonomus driving.
 
-[insert screenshot of graph from fridman video]
+![alt_text](https://github.com/soumyadip1995/Autonomous-Driving-System/blob/master/images%20part%202/Screenshot%20(305).png)
+
+*The tradeoff between false accept rate (FAR) and false reject rate (FRR). ScreenGrab from the Lex Fridman video*
 
 This result shows that there is a lot of signal in this disagreement even when the disagreement
 is based on a simple threshold.-[Arguing Machines](https://hcai.mit.edu/arguing-machines/)
