@@ -193,7 +193,7 @@ complex lane mergers, light variations) were better handled
 by a human operator. Therefore, we chose to evaluate the
 disagreement function by its ability to predict these disengagements, which it is able to do with 90.4% accuracy" - From the paper, Section 4.Arguing Machines for Semi Autonomus driving.
 
-![alt_text](https://github.com/soumyadip1995/Autonomous-Driving-System/blob/master/images%20part%202/Screenshot%20(305).png)
+![alt_text](https://1.bp.blogspot.com/-QI05rklKHtk/XlZ_mqhU3VI/AAAAAAAAKdk/lhnciIv1woMjVwYCgp3D7dquHHjqSFHnACNcBGAsYHQ/s1600/Screenshot%2B%2528305%2529.png)
 
 *The tradeoff between false accept rate (FAR) and false reject rate (FRR). ScreenGrab from the Lex Fridman video*
 
