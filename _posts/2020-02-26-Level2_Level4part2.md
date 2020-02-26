@@ -63,8 +63,8 @@ we propose a small CNN architecture called SqueezeNet. SqueezeNet achieves AlexN
 - Kernel Reduction:- Figuring out ways of Reducing the height and Width of the Filters, while retaining information.
 
 
-Deep Learning based Perception
-Driving Scene Understanding using vision Techniques
+#### **Deep Learning based Perception
+Driving Scene Understanding using vision Techniques**
 
 An autonomous car should be able to detect trafﬁc participants and drivable areas, particularly in urban areas where a wide variety of object appearances and occlusions may appear. Deep learning based perception, in particular Convolutional Neural Networks (CNNs), became the standard in Object Detection. AlexNet shifted the focus towards object Detection.
 
@@ -133,7 +133,7 @@ The camera feeds the video stream as one drives in real time to the Jetson TX2 a
 
 So, now we have two perception control systems, the Tesla AutoPilot vs the Neural Network. We will see the Autopliot arguing against the Neural Network.
 
-**How the Disagreement is detected**
+#### **How the Disagreement is detected**
 
 [insert picture from screenshot ]
 
@@ -142,7 +142,7 @@ There is an LCD display inside the car that shows the steering commands from bot
 The pink line is the steering commands from the neural network and the cyan line is the Tesla Autopilot. 
 
 
-**Why is the disagreement interesting**
+#### **Why is the disagreement interesting**
 
 
 Watch as Prof Fridman takes the Tesla S model down the Highway and explains the reasons behind the disagreements in the video below.
@@ -187,4 +187,13 @@ disagreement function by its ability to predict these disengagements, which it i
 This result shows that there is a lot of signal in this disagreement even when the disagreement
 is based on a simple threshold.-[Arguing Machines](https://hcai.mit.edu/arguing-machines/)
 
+## Credits/Citations
 
+- [DeepScale Video- Perception Systems for Autonomous Vehicles using Efficient Deep Neural Networks](https://www.youtube.com/watch?v=Knvl-vHzlUc&t=1s)
+- [SqueezeNet Paper](https://arxiv.org/abs/1602.07360). [	arXiv:1602.07360 [cs.CV]](https://arxiv.org/abs/1602.07360)
+- [Lex Fridman Video on Arguing Machines](https://www.youtube.com/watch?v=YBvcKtLKNAw)
+- [A Survey of Deep Learning Techniques for Autonomous Driving](https://arxiv.org/abs/1910.07738). [	arXiv:1910.07738 [cs.LG]](https://arxiv.org/abs/1910.07738)
+- [Self Driving cars:- A survey](https://arxiv.org/abs/1901.04407). [	arXiv:1901.04407 [cs.RO]](https://arxiv.org/abs/1901.04407)
+- [Arguing Machines: Human Supervision of Black Box
+AI Systems That Make Life-Critical Decisions](https://arxiv.org/pdf/1710.04459.pdf). [	arXiv:1710.04459 [cs.AI]](https://arxiv.org/abs/1710.04459)
+- [Arguing Machines:- MIT Human Centred Autonomy](https://hcai.mit.edu/arguing-machines/)
