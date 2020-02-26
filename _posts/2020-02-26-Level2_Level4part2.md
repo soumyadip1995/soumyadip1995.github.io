@@ -63,8 +63,7 @@ we propose a small CNN architecture called SqueezeNet. SqueezeNet achieves AlexN
 - Kernel Reduction:- Figuring out ways of Reducing the height and Width of the Filters, while retaining information.
 
 
-#### **Deep Learning based Perception
-Driving Scene Understanding using vision Techniques**
+#### **Deep Learning based Perception Driving Scene Understanding using vision Techniques**
 
 An autonomous car should be able to detect trafﬁc participants and drivable areas, particularly in urban areas where a wide variety of object appearances and occlusions may appear. Deep learning based perception, in particular Convolutional Neural Networks (CNNs), became the standard in Object Detection. AlexNet shifted the focus towards object Detection.
 
@@ -88,7 +87,9 @@ The advantages of using Mask-RCNN are:-
 
 It is simple, flexible, and a general framework for object instance segmentation.
 Efficiently detects objects in an image while simultaneously generating a high-quality segmentation mask for each instance.
-"Driving scene understanding can also be achieved using semantic segmentation, representing the categorical labeling of each pixelin an image. In the autonomous driving context,pixels can be marked with categorical labels representing drivable area,pedestrians,trafﬁc participants,buildings,etc. It is one of the high-level tasks that paves the way towards complete scene understanding, being used in applications such as autonomous driving"- from section 4.2, A survey of Deep Learning Techniques for Autonomous Driving
+
+> "Driving scene understanding can also be achieved using semantic segmentation, representing the categorical labeling of each pixelin an image. In the autonomous driving context,pixels can be marked with categorical labels representing drivable area,pedestrians,trafﬁc participants,buildings,etc. It is one of the high-level tasks that paves the way towards complete scene understanding, being used in applications such as autonomous driving"- from section 4.2, [A survey of Deep Learning Techniques for Autonomous Driving](https://arxiv.org/abs/1910.07738)
+
 
 So, we talked about The Tesla Autopilot in the Previous Blog Post. As you can see the above ideas corressponds to Level 2.
 
@@ -187,7 +188,7 @@ disagreement function by its ability to predict these disengagements, which it i
 This result shows that there is a lot of signal in this disagreement even when the disagreement
 is based on a simple threshold.-[Arguing Machines](https://hcai.mit.edu/arguing-machines/)
 
-## Credits/Citations
+## **Credits/Citations**
 
 - [DeepScale Video- Perception Systems for Autonomous Vehicles using Efficient Deep Neural Networks](https://www.youtube.com/watch?v=Knvl-vHzlUc&t=1s)
 - [SqueezeNet Paper](https://arxiv.org/abs/1602.07360). [	arXiv:1602.07360 [cs.CV]](https://arxiv.org/abs/1602.07360)
