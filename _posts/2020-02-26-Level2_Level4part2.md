@@ -12,6 +12,10 @@
 
 > - Updates:- Feb 25,2020.
 > - Updates:- Credits and Citations,Feb 26, 2020
+> - Updates:- Updated Driving Scene Perception, Feb 27,2020.
+
+
+[Link to the 1st Part](https://soumyadip1995.github.io/2020/02/20/Level2_Level4.html)
 
 ## **Perception Based Systems for Level 2**
 
@@ -65,6 +69,8 @@ we propose a small CNN architecture called SqueezeNet. SqueezeNet achieves AlexN
 
 - Replace Fully Connected Layers with Convolutions. Because in models like Alexnet or VGG-Net, the majority of parametres are in the FC layer
 - Kernel Reduction:- Figuring out ways of Reducing the height and Width of the Filters, while retaining information.
+
+Now, Perception Control Systems is extensible over all levels of Autonomous Driving Systems. In this post, we are ging to limit ourselves to talking only about the Deep Learning based Perception [Image based Object Detection and Semantic and Instance Segmentation]. We will reserve localization, trajectory generation etc for later posts.
 
 
 #### **Deep Learning based Perception Driving Scene Understanding using vision Techniques**
