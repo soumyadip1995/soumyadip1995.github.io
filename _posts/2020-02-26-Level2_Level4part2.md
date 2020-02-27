@@ -24,6 +24,9 @@ In the previous Blog post we looked into the Various levels of autonomous drivin
 Now, let us look into something known as perception based systems. How an autonomous vehicle sees the external world and its surrounding environment depends on Perception. Perception in an autonomous driving system is integral for both Level 2 and Level 4  systems. The purpose of Perceptual Systems can range in anything from Driving Perception i.e, Object detection, driving scene, Trajectory Generation to Localization and Mapping. Any system that improves the robustness of the overall perception of an autonomous vehicle , can be consituted as a perception system or a perception model. Hence, the Tesla Autopilot as we had talked about in the previous Blog Post, it can also be constituted as A perception system.
 
 
+[Github Repository](https://github.com/soumyadip1995/Autonomous-Driving-System)
+
+
  But, since we are still continuing with Level 2, the rest (Level 4) will be covered later on. 
 
 One of the things mentioned in the previous Blog post is that for Tesla (Level 2) , Deep Learning is the cake and not the icing on the cake. Hence, the main focus for Perception Systems for Level 2 is going to be Deep Learning. 
@@ -103,7 +106,7 @@ Efficiently detects objects in an image while simultaneously generating a high-q
 
 So, we talked about The Tesla Autopilot in the Previous Blog Post. As you can see the above ideas corressponds to Level 2.
 
-In the next Section , we will see what happens in a competition between the Tesla AutoPilot and a Neural Network..!!
+In the next Section , we will see what happens when the Tesla AutoPilot and a Neural Network goes head to head...!!. This is a system that predicts disengagements which require human supervision.
 
 
 ### **Neural Network vs the Tesla Autopilot**
