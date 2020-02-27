@@ -167,7 +167,7 @@ Watch as Prof Fridman takes the Tesla S model down the Highway and explains the 
 
 [![alt_text](https://i.ytimg.com/vi/YBvcKtLKNAw/maxresdefault.jpg)](https://www.youtube.com/watch?v=YBvcKtLKNAw)
 
-The reason why the disagreement is interesting can be summed up in two parts:-
+The reason why the disagreement is interesting can be summed up in three parts:-
 
 - manual interference, and
 - vision perpection.
