@@ -184,7 +184,7 @@ The reason why the disagreement is interesting can be summed up in two parts:-
 3) **Driving scene interpretation**:- Let's say that from a driving scene perception the neural network and the AutoPilot are disgreeing a lot or disagreeing at a greater magnitude , then the indication might be that it is the driver's turn to retreive control from the Autopilot and take charge . (Prof Fridman explains this around the 4:00 mark) 
 
 
-**Dataset**:- For the 2nd application, the video stream is fed to the Jetson TX2 in real time and steering commands are predicted by the end to end Neural Network. Read the quoted lines below and then take a look at the graph below
+**Dataset**:- For the 2nd application, the video stream is fed to the Jetson TX2 in real time and steering commands are predicted by the end to end Neural Network. Read the quoted lines below and then take a look at the graph underneath.
 
 > "We perform two evaluations in our application of arguing
 machines to semi-autonomous driving. First, we evaluate
