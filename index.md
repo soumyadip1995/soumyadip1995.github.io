@@ -9,4 +9,5 @@ Feel free to contact me via E-mail and Twitter:-
 
 
 <!-- Alignment options!!!!! -->
+
 <img align="centre" width="500" height="300" src="https://www.ateamindia.com/wp-content/uploads/2019/03/maxresdefault.jpg">
