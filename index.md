@@ -1,7 +1,7 @@
 
 
-*Hey there..!! This is Soumyadip. Welcome to the Blog.* 
-Feel free to contact me via E-mail and Twitter:- 
+*Hey there..!! This is Soumyadip. Welcome to the Blog.* Feel free to contact me via E-mail and Twitter:- 
+
 - E-mail:- elatednandi@gmail.com, 
 - [Twitter](https://twitter.com/Soumya1995j):- @Soumya1995j ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FSoumya1995j)
 
@@ -11,3 +11,6 @@ Feel free to contact me via E-mail and Twitter:-
 <!-- Alignment options!!!!! -->
 
 <img align="centre" width="500" height="300" src="https://www.ateamindia.com/wp-content/uploads/2019/03/maxresdefault.jpg">
+
+
+
