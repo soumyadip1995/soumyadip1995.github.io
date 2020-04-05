@@ -3,7 +3,7 @@
 *Hey there..!! This is Soumyadip. Welcome to the Blog.* Feel free to contact me via E-mail and Twitter. 
 
 - E-mail:- elatednandi@gmail.com, 
-- ![Twitter](https://img.shields.io/twitter/follow/Soumya1995j?label=Follow&style=social)- [Twitter](https://twitter.com/Soumya1995j):- 
+-  [Twitter](https://twitter.com/Soumya1995j) ![Twitter](https://img.shields.io/twitter/follow/Soumya1995j?label=Follow&style=social) 
 
 
 ![GitHub followers](https://img.shields.io/github/followers/soumyadip1995?label=follow&style=social)
