@@ -200,7 +200,10 @@ Therefore,
 
 Therefore we needed the Dirac equation for the first order derivative, which also works for spin 1/2 particles and has positive probability densities.
 
+
 $\mathcal{L}_{\text{Dirac}} = \bar{\psi}(i\gamma^\mu \partial_\mu - m)\psi$
+
+
 
 To construct such field theories we need to prove that these theories remain invariant under lorentz transformation.
 
@@ -225,3 +228,60 @@ $\phi(x) \rightarrow \phi^{'}(x) = \phi(\lambda^{-1}x)$
 
 The inverse  appears in the argument because we are dealing with an active transformation in which the field is truly shifted.
 
+## Mathematical formalism for gauge principle
+
+
+The gauge principle is a fundamental concept in theoretical physics that states that the laws of physics should be invariant under local transformations of a certain group. In the context of gauge theories, such as electromagnetism and the weak and strong nuclear forces, the gauge principle underlies the symmetries and interactions of elementary particles.
+
+### Mathematical Formalism:
+
+1. **Gauge Transformations:**
+   Let's consider a complex scalar field $\psi(x)$ as an example. Under a gauge transformation, the field  $\psi(x)$ undergoes a local phase transformation:
+
+   $\psi(x) \rightarrow \psi'(x) = e^{i\alpha(x)} \psi(x)$
+
+   Here, $\alpha(x)$ is an arbitrary real-valued function of spacetime $\(x\)$.
+
+2. **Gauge Invariance:**
+   The gauge principle demands that the physical predictions of the theory remain unchanged under such local gauge transformations. Mathematically, this can be expressed as:
+
+   $\mathcal{L}(\psi, \partial_\mu \psi, A_\mu) = \mathcal{L}(\psi', \partial_\mu \psi', A_\mu)$
+  where the gauge field   $A_\mu$ representing the interaction.
+
+3. **Introduction of Gauge Field:**
+   To ensure gauge invariance, we introduce a gauge field  $A_\mu(x)$
+    
+   that transforms under gauge transformations such that the gauge-invariant derivative is preserved. This is done by replacing ordinary derivatives with covariant derivatives:
+
+   $D_\mu = \partial_\mu - iqA_\mu $
+
+   where \(q\) is a coupling constant associated with the interaction.
+
+4. **Covariant Derivative:**
+   Under a gauge transformation, the gauge field  $A_\mu$  transforms as:
+
+   $A_\mu \rightarrow A_\mu' = A_\mu - \frac{1}{q}\partial_\mu \alpha(x)$
+
+   which can be derived from
+
+   $\partial_\mu\psi  = \frac{1}{e}(\psi(x +  \epsilon. n) -  \psi(x)) $
+
+   (the two fields are subtracted because of different transformations and $n^\mu$  is the direction vector)
+   
+   where $\epsilon$  is an infinitesmal change which tends to zero. This can  be transformed under an Unitary transformation, which gives us the covariant derivative as,
+
+    $D_\mu\psi ( x ) = d_\mu\psi( x ) - iqA_\mu\psi(x)$
+   
+   We derive the covariant derivative to get the above  gauge field $A_\mu$ transformation  as the above.
+
+
+
+   The covariant derivative  ensures  gauge invariance of the Lagrangian.
+
+
+
+5. **Gauge Symmetry Group:**
+   The gauge principle is associated with a gauge symmetry group, such as \(U(1)\) for electromagnetism or \(SU(2)\) for the weak force. The choice of gauge group depends on the specific theory being considered.
+
+
+The gauge principle is a fundamental concept, underlying the formulation of gauge theories and the understanding of fundamental interactions between elementary particles. It ensures the consistency and invariance of physical laws under local transformations, leading to the introduction of gauge fields and the covariant derivatives that preserve gauge invariance.
