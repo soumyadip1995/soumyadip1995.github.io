@@ -7,7 +7,7 @@
 
 
 
-<a href="https://soumyadip1995.github.io/blob/master/images/writeups/The_need_for_Gauge_Field_Theories.pdf" target="_blank">PDF.</a>
+
 
 
 
