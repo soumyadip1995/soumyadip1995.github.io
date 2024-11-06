@@ -1,6 +1,10 @@
 ### The need for Gauge field theories
 
-## Introduction
+
+(Written:- July, 2024)
+
+
+## **Introduction**
 
 Let's begin by trying to understand the necessity of studying a field
 theory approach to quantum mechanics and as the title suggests why we
@@ -28,7 +32,7 @@ am assuming that you as the reader are familiar with concepts like
 principle of least action, four vectors, Lagrangian and Hamiltonian
 formalism. If not, check out any MIT OCW playlist. 
 
-##  How gauge theory was formalized
+##  **How gauge theory was formalized**
 
 
 If we consider the dynamics of a particle as Sir Issac Newton had formulated in classical mechanics, it was carried into perfection by both Lagrange and Hamilton. The space-time distinction still remained vivid. In field theories, if we consider a field $ϕ(x, t)$ the spatial variables x have joined the temporal time variable t. The concept of “Spacetime” has come into being as the 4-dimensional
@@ -75,7 +79,7 @@ where  $A_{\mu}$ is the gauge field representing interactions and $A_\mu$ can b
 let's talk about invariance for a second:-
 
 
-## Invariance
+## **Invariance**
 
   
 1. Definition:
@@ -97,4 +101,127 @@ let's talk about invariance for a second:-
    - Invariance is often expressed mathematically using transformation rules or equations that remain unchanged after a specified transformation.
 
 
+
+## **Lagrangian Invariance:**
+
+
+
+The Lagrangian formalism in physics is based on the principle of least action, where the dynamics of a system are described by minimizing the action integral. The action ( S ) of a system is defined as the integral of the Lagrangian $( \mathcal{L} \$) over time (\( t \)):
+
+$S = \int_{t_1}^{t_2} \mathcal{L}(q, \dot{q}, t) \, dt$
+
+where:
+- $\mathcal{L}$ is the Lagrangian function, which depends on the generalized coordinates $q$, their time derivatives $\dot{q}$ , and possibly time $t$.
+
+
+- $t_1$ and  $t_2$
+ are the initial and final times of the system's motion.
+
+The principle of least action states that the true trajectory of a system between two points in configuration space is the one that minimizes the action integral.
+
+The Lagrangian formalism is invariant under certain transformations, such as:
+
+1. **Time Translation Invariance**:
+   If the Lagrangian $\mathcal{L}$   does not depend explicitly on time (\( t \)), i.e., $\frac{\partial \mathcal{L}}{\partial t} = 0 $, then the system is invariant under time translations. This implies that the equations of motion derived from the Lagrangian are unchanged if the system's initial time is shifted by a constant.
+
+2. **Generalized Coordinate Transformations**:
+   The Lagrangian formalism is invariant under transformations of the generalized coordinates $q$. If the Lagrangian remains invariant under such transformations, the resulting equations of motion are equivalent. This property is related to the principle of relativity in physics.
+
+3. **Symmetry Transformations**:
+   If the Lagrangian remains unchanged under certain symmetry transformations, such as translations, rotations, or gauge transformations, then the resulting equations of motion are invariant under those transformations. This leads to conservation laws, such as conservation of momentum or energy, arising from Noether's theorem.
+
+Mathematically, the invariance of the Lagrangian under a transformation can be expressed as:
+
+$[ \delta S = \int_{t_1}^{t_2} \delta \mathcal{L} \, dt = 0 ]$
+
+where $\delta \mathcal{L}$ represents the variation of the Lagrangian under the transformation. This condition leads to the Euler-Lagrange equations of motion, which govern the dynamics of the system.
+
+Overall, the Lagrangian formalism provides a powerful framework for describing the dynamics of physical systems, and its invariance under various transformations plays a crucial role in understanding the underlying symmetries and conservation laws of nature.  
+
+But, since we are interested in field theory, we are going to take a look at lagrangian invariance from a field theory perspective.
+
+
+
+### **Invariance for relativistic field equations**
+
+
+
+From a real scalar field, we can develop its lagrangian density
+
+
+$L(t) = \int_{} d^3x \mathcal{L}(\phi, \partial_\mu \phi )$
+
+
+Therefore, the action will be:
+
+$S = \int_{t_{2}}^{t_{1}} dt \int \ d^3 x \mathcal{L} = \int_{} d^4 x  \mathcal{L}$......eq(1)
+
+Recall that in particle mechanics L depends on $q$ and  $q\cdot$.. Similarly, here in field theory it depends on $\phi$ and $\phi^{.}$
+
+
+We can determine the equations of motion by the principle of least action. We vary
+the path, keeping the end points fixed and require $\delta_S$= 0
+
+
+
+
+Considering a real scalar field, we can consider its lagrangian. That is the change in action at a distance and thus derive the euler lagrange equations of motion.
+
+
+The equations of motion when we expand on eq (1).
+
+
+$\delta S  =  \int \partial^4x [\frac{\partial\mathcal{L}}{\partial\phi}.\delta\phi  + \frac{\delta\mathcal{L}}{\partial(\partial_\mu\phi))}. \delta(\partial_\mu\phi)]$
+
+ Requiring   $\delta_S = 0$, we get the Euler lagrange equations of motions for the path
+
+
+$\frac{d}{dt}\left(\frac{\partial L}{\partial(\partial_\mu\phi)}\right) - \frac{\partial L}{\partial \phi} = 0$
+
+
+ We can derive our first relativistic field equation from the lagrangian density called the Klein Gordon equation.
+
+ From the lagrangian density
+
+$\mathcal{L} = \frac{1}{2}\partial_\mu\phi\partial^\mu\phi - \frac{1}{2}m^2 \phi^2$
+
+
+(You can derive it from $E = mc^2 + p^2c^4$)
+we can determine the klein gordon equation by subsituting the value of the lagrangian density in the euler lagrange equation of motion
+
+We are going to get,
+
+$-m^2\phi - \partial_\mu\phi\partial^\mu\phi = 0$
+Therefore,
+
+= $\phi(m^2 + \partial_\mu\phi\partial^\mu\phi) =0$
+
+ But there are certain disadvantages like:- negative energy solutions, negative probability densities because it is a second order derivatives and only works for spin 0 particles.
+
+Therefore we needed the Dirac equation for the first order derivative, which also works for spin 1/2 particles and has positive probability densities.
+
+$\mathcal{L}_{\text{Dirac}} = \bar{\psi}(i\gamma^\mu \partial_\mu - m)\psi$
+
+To construct such field theories we need to prove that these theories remain invariant under lorentz transformation.
+
+But, the dirac lagrangian density needs to remain invariant, which we will get to in a moment
+
+
+
+
+The laws of Nature are relativistic, and one of the main motivations to develop quantum field theory is to reconcile quantum mechanics with special relativity. To this end, we
+want to construct field theories in which space and time are placed on an equal footing
+and the theory is invariant under Lorentz transformations.
+
+$x^{µ }\rightarrow (x^{'})^{\mu}  = \lambda$
+
+where $\lambda$ is a function of space time.
+
+
+
+The Lorentz transformations have a representation on the fields. The simplest example is the scalar field which, under the Lorentz transformation .
+
+$\phi(x) \rightarrow \phi^{'}(x) = \phi(\lambda^{-1}x)$
+
+The inverse  appears in the argument because we are dealing with an active transformation in which the field is truly shifted.
 
