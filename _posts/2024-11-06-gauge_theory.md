@@ -6,6 +6,12 @@
 [Need for Gauge Field Theories](https://github.com/soumyadip1995/soumyadip1995.github.io/blob/master/images/writeups/The_need_for_Gauge_Field_Theories.pdf)
 
 
+
+<a href="https://soumyadip1995.github.io/blob/master/images/writeups/The_need_for_Gauge_Field_Theories.pdf" target="_blank">PDF.</a>
+
+
+
+
 ## **Introduction**
 
 Let's begin by trying to understand the necessity of studying a field
