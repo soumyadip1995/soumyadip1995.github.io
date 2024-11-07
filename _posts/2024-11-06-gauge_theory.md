@@ -1,16 +1,11 @@
 ### The need for Gauge field theories
 
 
-(Written:- July, 2024). Full write-up is below.
-
-[Need for Gauge Field Theories](https://github.com/soumyadip1995/soumyadip1995.github.io/blob/master/images/writeups/The_need_for_Gauge_Field_Theories.pdf)
+(Written:- July, 2024). 
 
 
 
-
-
-
-
+[The Need for Gauge Field Theories](https://soumyadip1995.github.io/images/writeups/The_need_for_Gauge_Field_Theories.pdf)
 
 ## **Introduction**
 
@@ -40,5 +35,4 @@ am assuming that you as the reader are familiar with concepts like
 principle of least action, four vectors, Lagrangian and Hamiltonian
 formalism. If not, check out any MIT OCW playlist. 
 
-
-
+For the full write-up, download the pdf above.
