@@ -1,3 +1,5 @@
+## **Effective Accelerationism**
+
 ## **Introduction**
 
 The main idea for Accelerationism comes from Nick Land. One of my all time favourite quotes from him - "Nothing human makes it out of the near-future". For me, it is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ, cognitive abilities and therefore, we no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy. It is just our minds will be transferred into a different evolving vessel. But then again, this is all wishful thinking. It is also terrifying thinking that we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
@@ -106,25 +108,25 @@ I would like to have a few more significant days like these.
 Now, let us think about a quantum mechanical system, and how to measure the state of a Quantum system. We can guess a wave function which is evolving with time, in this case a time dependent schrodinger equation according to some energy operator/ hamiltonian.
 
 
-$\mathrm {i} \hbar {\frac {d}{dt}}|\psi (t)\rangle ={\hat {H}}|\psi (t)\rangle$
+$\mathrm{i}\hbar{\frac{d}{dt}}|\psi(t)\rangle={\hat{H}}|\psi(t)\rangle$
 
 
 
 Suppose , we have two  energy states, in that case, we can represent the wave function as linear combination of two states. There may not be a definite value  for either 0 or 1 at a given point in time, but we can consider a general superposition of the two states, where $\alpha$ and $\beta$ are two complex numbers
 
 
-$|\psi\rangle = \alpha|\psi _{1}\rangle + \beta{|\psi _{2}\rangle}$
+$|\psi\rangle=\alpha|\psi_{1}\rangle+\beta{|\psi_{2}\rangle}$
 
 
 
 and the states are:-
 
 
-$|\psi _{1}\rangle  and {|\psi _{2}\rangle}$
+$|\psi_{1}\rangle and {|\psi _{2}\rangle}$
 
 Subsequently for  2 Qbits:
 
-$|\psi\rangle = \alpha|00\rangle + \beta|01\rangle + \gamma|10\rangle + ...$
+$|\psi\rangle=\alpha|00\rangle+\beta|01\rangle+\gamma|10\rangle+...$
 
 
 
@@ -237,6 +239,13 @@ As mentioned above that loss in coherence can lead to inefficient algorithms, th
 
 One such way is [quantum annealing](https://en.wikipedia.org/wiki/Quantum_annealing):
 
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Quantum_Annealing_Analogy.svg/495px-Quantum_Annealing_Analogy.svg.png)
+
+Source:- wiki 
+
+
+The blue line leverages quantum tunneling to find global minimum.
+
 Thermal fluctuations in isolated systems can result in the system exploring different minima in the landscape before settling down
 in a high-quality minimum.
 
@@ -323,24 +332,26 @@ So, the algorithm can be devised as :
 
 #### Algo 1 (steepest descent):-
 
----
 
 
+```
 $x ∈ R^{n}$
 
 $k =0, 1, 2...$
 
 $x_{k+1} \longleftarrow x_k - \epsilon_k\nabla f(x_k)$
-
+```
 
 ---
 
 #### Algo 2 (Gradient Descent)
 
----
+```
  for $k =0, 1, 2...$
 
 $x_{k+1} \longleftarrow x_k + \epsilon_kd_k$
+
+```
 
 ---
 
@@ -358,11 +369,11 @@ $\nabla_{d} f(x) = \lim_{\epsilon \to 0}  \frac{f(x + \epsilon d) - f(x)}{\epsil
 So, at each step size k, the function will be:-
 
 
-$\lim_{\epsilon \to 0} f(x_k + \epsilon d_k)$
+$\lim_{\epsilon \to 0}f(x_k + \epsilon d_k)$
 
 And the optimal rate will be:
 
-$\epsilon_{k} = \textrm{argmin}_{\epsilon_{\ge 0}}  f(x_k + \epsilon d_k)$
+$\epsilon_{k} = \textrm{argmin}_{\epsilon_{\ge 0}}f(x_k + \epsilon d_k)$
 
 
 But, this is a little bit costly, hence the Armijo rule to reduce complexity [[6]](https://www.google.com/url?q=https%3A%2F%2Fkatselis.web.engr.illinois.edu%2FECE586%2FLecture3.pdf).
