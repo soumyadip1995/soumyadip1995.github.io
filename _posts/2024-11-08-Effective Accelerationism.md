@@ -47,6 +47,9 @@ Here, if the inputs A,B is compressed to one OUT, the xor gate waits for input A
 
 For a Xor gate NN, we can use quantization as a compression technique. 
 
+![alt_text](https://www.researchgate.net/profile/A-Salameh-Walid-2/publication/267839030/figure/fig1/AS:295357566210049@1447430139845/nitial-Weights-for-XOR-2-2-1-problem-Table-63-shows-the-parameters-to-solve-the-XOR.png)
+
+Source:- Research gate
 
 The error in the XOR problem , varies as a function of a single weight. In larger networks, any single weight has a relatively low contribution to the output. In low dimensional spaces, this can be an issue, but when we consider higher dimensions, the network becomes less likely to get trapped in a global minima and converge quickly. Hence, compress . If the error is low, then the model is likely converge quickly to a non-global minima. 
 
@@ -102,27 +105,28 @@ I would like to have a few more significant days like these.
 
 Now, let us think about a quantum mechanical system, and how to measure the state of a Quantum system. We can guess a wave function which is evolving with time, in this case a time dependent schrodinger equation according to some energy operator/ hamiltonian.
 
-$\displaystyle \mathrm {i} \hbar {\frac {d}{dt}}|\psi (t)\rangle ={\hat {H}}|\psi (t)\rangle$
+
+$\mathrm {i} \hbar {\frac {d}{dt}}|\psi (t)\rangle ={\hat {H}}|\psi (t)\rangle$
 
 
 
 Suppose , we have two  energy states, in that case, we can represent the wave function as linear combination of two states. There may not be a definite value  for either 0 or 1 at a given point in time, but we can consider a general superposition of the two states, where $\alpha$ and $\beta$ are two complex numbers
 
 
-$|\psi\rangle = \alpha|\psi _{1}\rangle + \beta
-{\displaystyle |\psi _{2}\rangle}$
+$|\psi\rangle = \alpha|\psi _{1}\rangle + \beta{|\psi _{2}\rangle}$
 
 
 
 and the states are:-
 
 
-$|\psi _{1}\rangle  and
-{\displaystyle |\psi _{2}\rangle}$
+$|\psi _{1}\rangle  and {|\psi _{2}\rangle}$
 
 Subsequently for  2 Qbits:
 
-$|\psi⟩ = \alpha|00⟩ + \beta|01⟩ + \gamma|10⟩ + ...$
+$|\psi\rangle = \alpha|00\rangle + \beta|01\rangle + \gamma|10\rangle + ...$
+
+
 
 where, we basically mean, that if we want to know the probability of the 1st particle , we don't need to know what the other particles are doing . When we have separable states, measuring one Qbit says nothing about the next Qbit.
 
@@ -198,7 +202,11 @@ $\Delta S_c = -\Delta S$
 
 and thus the generalized second law as was given by jacob bekenstein. [[21]](https://www.google.com/url?q=https%3A%2F%2Fjournals.aps.org%2Fprd%2Fabstract%2F10.1103%2FPhysRevD.7.2333)
 
+![alt_text](https://www.researchgate.net/publication/308980984/figure/fig8/AS:473944387002368@1490008555147/Black-Hole-entropy-and-Bekeinstein-Hawking-idea.png)
 
+Black hole entropy(bekenstein bound)
+
+Source:-wiki, researchgate
 
 Similarly in probabilistic systems,  uncertainty can be introduced as a measurement of efficiency. If we consider it to be a thermodynamic system, the measurement in statistical fluctutations in common entropy can give us an accurate estimation of training/inference in ML algorithms. We can gain a speedup in training, because the core is evolving along with evolving uncertainty.
 
