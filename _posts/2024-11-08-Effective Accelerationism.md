@@ -136,14 +136,261 @@ $\mid\psi _{1}\rangle  and  {\mid\psi _{2}\rangle}$
 
 Subsequently for  2 Qubits:
 
-$|\psi⟩ = \alpha\mid 00⟩ + \beta\mid 01⟩ + \gamma\mid 10⟩ + ...$
+$\mid\psi⟩ = \alpha\mid 00⟩ + \beta\mid 01⟩ + \gamma\mid 10⟩ + ...$
 
 
 where, we basically mean, that if we want to know the probability of the 1st particle , we don't need to know what the other particles are doing . When we have separable states, measuring one Qbit says nothing about the next Qbit.
 
 Now, let's think about a classical computer that works on a binary 0 or 1 bits. So, if we wanted to represent N number of bits,  ${0, 1}^N$  will be the word length represented by the processor. Let's say we want to build a system where we take a string of binary bits 0011 and apply an inverter NOT gate to it, we will get 1100. The word length will be 16 bits.
 
-If we want to build a quantum system to represent N number of quantum bits or Qubits, we have to represent $2^N$ complex numbers.  So, if we wanted to simulate the quantum configuration of a system which has N number of bits on a classical system , it presents a frustrating reality  in terms of memory , because we have to represent $2^N$ complex numbers. Richard Feynman in the 1980s had addressed this specific  problem [22]
+If we want to build a quantum system to represent N number of quantum bits or Qubits, we have to represent $2^N$ complex numbers.  So, if we wanted to simulate the quantum configuration of a system which has N number of bits on a classical system , it presents a frustrating reality  in terms of memory , because we have to represent $2^N$ complex numbers. Richard Feynman in the 1980s had addressed this specific  problem [[22]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F2106.10522%23%3A%7E%3Atext%3DIn%2520May%25201981%252C%2520Feynman%2520spoke%2Cusing%2520conventional%2520classical%2520digital%2520computers).
+
+
 But, we shouldn't be using quantum computers to simulate classical machine learning, it is just inefficient. Quantum computers are great at representing quantum interference patterns, entanglement, superposition but not much for probabilistic algorithms.
+
+
+
+## **Deterministic vs Probabilistic systems**
+
+Now, if you think about how NNs work, at its core it is probabilistic and  meanwhile classical computers at its core, are deterministic systems. Deterministic systems lacks the randomness, the transistors are either firing a 0 or a 1. This becomes kind of frustrating especially during error correction when a transistor misfires. Another drawback of a deterministic Turing machine is that there is only one possible action. This seems highly inefficient.
+
+The advantage of deep learning is that it can take the randomness of a multi dimensional data and give a concise probabilistic prediction of what the data represents. Whether it be text classification , feature analysis etc [[17]](https://www.youtube.com/watch?v=OwDWOtFNsKQ&t=1898s&pp=ygUXdGhlcm1vZHluYW1pYyBjb21wdXRpbmc%3D) .
+
+ There seems to be an energy cost, if we consider deterministic systems especially if there is noise or any adversarial element. GPUs have solved this issue to a certain  degree by leveraging  matrix multiplication ( the matmul function) , until you are encountering atypical distributions , GPUs won't be good at sampling those unless you are willing to throw a lot of compute at it. GPUs are pretty good at accelerating matmul , but more complex distributions need a more top down vertical kind of acceleration instead of limiting ourselves to a horizontal left to right sort of acceleration.
+
+ Higher Dimensionality reduction still remains a problem. As we will see later, I will outline a way to use sophisticated  optimizers to solve just that.
+
+The only thing I can compare it with was when during the early days of RNNs, LSTMs and transformer models, was that of number of parametres was the talk of the town. The focus was solely on building bigger brains. Who could come up with models with more parametres.   The parameter count between GPT, GPT-2 and other models  were the primary focus. As the years went on , we developed better attention mechanisms with the transformer models, found out ways to perform inference on 70B, 405B parameter models by using different kinds of approximation methods,  precision methods, FLOP utilization techniques and the focus shifted from just the number of parametres to performance on  benchmarks.  It has also helped us to build and understand GPTs on a much more granular level.
+
+
+This is the same kind of attention shift that we need from using deterministic systems to probabilistic systems.
+
+
+Lets understand it with an example:
+
+
+## **Sampling issue**
+
+
+Assume, that there are distributions of let's say 1 dimension. You can sample it in n distributions and store it in memory and now you can have your NNs learn that representation. If you have two dimensions, it takes up n^2 chunks (memory) to sample and for d dimensions , n^d memory is needed. Therefore, the complexity to represent  the probability  distributions is exponential, if you try to do it on a deterministic system , you will get screwed. This is partly the reason why you had to rely on quantum computers in the first place.
+
+
+
+
+A  leap is needed in terms of representing the exponential nature of complexity, and therefore we need a much more evolvable core, which would not only would can produce that sort of compute which is an order of magnitude higher than we what we have today , but also use the energy offset to its advantage. We will get to it down the line.
+
+
+## **Entropy and information theory**
+
+The connection between entropy and information theory is well known. As mentioned earlier,  the entropy of a system can be defined as the lack of information or uncertainty in the system. Assuming all that we know about the internal configuration of a system can be denoted by the probability $P_n$ for the nth state, then Shannon's entropy [[5]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1604.07450) would be:
+
+$S = -\sum_{n}^{}P_n \ln P_n$
+
+We can also say that the information in some of the cases of $P_n$ may be zero, so in that case, such a constraint can result in the decrease of entropy.
+
+$ΔI = -ΔS$
+
+where $\Delta I$ can be said as the new information which corresponds to the decrease in entropy, i.e, a decrease in uncertainty in the internal state of the system.
+
+Assume, that an ideal gas is isothermally compressed in a container. It's entropy will decrease and we will gain information because the molecules are more localized.
+
+An exterior agent can cause a decrease in entropy. Maxwell's demon is a good example of that. But, information is never free. Therefore while gaining new information , it causes a decrease in entropy of the system, but causes an increase in the overall entropy of the universe.
+
+
+Now, the question is how does all of this relate to probabilistic systems ?
+
+Let me explain,
+
+As we had talked about an exterior agent can cause certain fluctuations in the amount of entropy, we can use it to offset the amount of energy that a classical computer uses to maintain its determinism. Hence, there will a boost in its efficiency. Considering the fact that a probabilistic system is in thermodynamic equilibrium, the change in uncertainty by the gain in new  information can lead to a system being more energy efficient.
+
+Think of Black Holes as probabilistic systems.
+
+
+### Black Holes
+
+Taking a little bit of a de-tour, let's think of Black holes as objects that are in thermodynamic equilibrium.
+
+
+So, if any exterior object is thrown into a black hole carrying an entropy S, we can measure the difference in entropy once the object is outside the black hole vs when it is inside. (In a probabilistic system , as evidenced by Shannon's entropy $ P_n$  - may or may not be known). Therefore, the change in the common entropy ($\Delta S_c$) of a black hole can be measured by
+
+$\Delta S_c = -\Delta S$
+
+and thus the generalized second law as was given by jacob bekenstein. [[21]](https://www.google.com/url?q=https%3A%2F%2Fjournals.aps.org%2Fprd%2Fabstract%2F10.1103%2FPhysRevD.7.2333)
+
+
+
+<p align="center">
+  <img src="https://www.researchgate.net/publication/308980984/figure/fig8/AS:473944387002368@1490008555147/Black-Hole-entropy-and-Bekeinstein-Hawking-idea.png"/>
+</p>
+
+<p style="text-align:center;">Black hole entropy(bekenstein bound), source:- wiki, Research gate</p>
+
+
+Similarly in probabilistic systems,  uncertainty can be introduced as a measurement of efficiency. If we consider it to be a thermodynamic system, the measurement in statistical fluctutations in common entropy can give us an accurate estimation of training/inference in ML algorithms. We can gain a speedup in training, because the core is evolving along with evolving uncertainty.
+
+what does a thermodynamic core look like. Let's try to understand from 1st principles.
+
+
+## **Challenges that we encounter**
+
+### Noise
+
+In quantum computing, noise is more often considered to be a hindrance rather than a useful resource. A way in which quantum mechanical systems maintain their states in the face of external factors like thermalization, lossy compression during qubit interaction etc, is called quantum coherence. The loss of such coherence, can lead to noise becoming a hindrance to an algorithm rather than a resource. This is also partly a reason why quantum computers haven't really become commercially viable. A loss in coherence can lead to  otherwise efficient algorithms (with
+polynomial scaling) into inefficient algorithms (with exponential scaling). This essentially destroys
+whatever quantum speedup that one would hope for over classical methods.[[2]](https://arxiv.org/pdf/2302.06584) [[9]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F2303.09491-)
+
+
+
+### Interference with heat and entropy dynamics
+
+Thermodynamic systems are sensitive to heat. Heat,  in this case may cause the same problems in a thermodynamic computer just as we have in a quantum computer, therefore it needs to be well shielded. Refrigeration is also needed to maintain common entropy along with the local entropy of the system.[[2]](https://arxiv.org/pdf/2302.06584)
+
+In AI, generative modeling or Bayesian inference require complicated entropy dynamics. In generative modeling, a gaussian distribution is typically of higher entropy and we need to gradually move towards a structured prediction. Similarly, in Bayesian inference, the weights of the model must be
+transformed from a high uncertainty situation (the prior distribution) to a low uncertainty situation
+(the posterior distribution) as information about the data is introduced during training.
+
+## **Ways to counter noise**
+
+As mentioned above that loss in coherence can lead to inefficient algorithms, there are ways to counter it as well.
+
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Quantum_Annealing_Analogy.svg/495px-Quantum_Annealing_Analogy.svg.png"/>
+</p>
+
+<p style="text-align:center;">The blue line leverages quantum tunneling to find global minimum., source:- wiki</p>
+
+
+
+Thermal fluctuations in isolated systems can result in the system exploring different minima in the landscape before settling down
+in a high-quality minimum.
+
+
+
+
+## **An Updated Gradient Descent**
+
+One of the main issues facing  Neural networks is destructive interference. The addition of new training data leads to the forgetting of what was already learned. We need a new type of gradient descent which would represent the underlying geometry of a parametre space and is adjusted dimensionally by utilizing the [Fisher information matrix](https://en.wikipedia.org/wiki/Fisher_information#Matrix_form) , which is exactly what we were looking for when it is time to represent/learn atypical gaussian distributions [[15]](https://www.youtube.com/watch?v=QmM6_qBHuvM&t=5s).
+
+We can use it to represent a curvature of information on a riemannian manifold, and thus reduce the dimensionality issue and also provide an efficent optimizer to solve for computational overhead.
+
+A few points here,
+
+- Think about a normal gaussian distribution in d dimensions. In order to sample, we have to apply a squishing function which is the covariance matrix of the score and also make sure that prior learning remains intact.
+
+- We need to make the output of a network after applying the gradient function closer to that of the original network. For that, the gradient needs to move in a direction to preserve prior learning.
+
+- We also need to make sure that the dimensionality problem gets fixed.
+
+A way to do it is to estimate a cost function, followed by optimizing its loss function, then measure how different two models are using K-L divergence between the conditional probability distributions that they represent [[15]](https://www.youtube.com/watch?v=QmM6_qBHuvM&t=5s).
+
+
+Let's understand how to design one.
+
+We will divide it into three steps:-
+
+1.  Cost function and optimizing loss function
+2. Optimize cost function to parametre space and update.
+3.  Applying K-L divergence to observe change between conditional probability
+distribution and update.
+
+
+
+
+### Table of Notations
+
+|Notation | Description |
+| --- | --- |
+| $h$| Objective function |
+| $θ$| Network parametres|
+| $S$| training set|
+| $w$| weight gradient|
+| $x, y$| input, pairs|
+| $L$| Loss function|
+| $f$| Prediction function |
+| $F$| Fisher information matrix|
+| $ϵ$| Learning rate|
+| $ϵ_k$| step size parametre at iteration k|
+| $P_{x, y}$  | learned distribution $P_{x, y} (\theta)$|
+
+
+#### Step 1:-
+
+
+The goal of optimization is to find some setting for two paramteres $\theta$ , so that for each input $x$ , the output of the network matches closely with the given target output with some loss [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193). So, let's consider a cost function $h(\theta)$
+
+So,
+
+$h(\theta) = \frac{1}{\mid S \mid}\sum_{(x,y)\in S } L(y, f(x, \theta))$
+
+where, $f(x, \theta)$ is the prediction function measuring the disagreement and $L$ is the loss function.
+
+Now, the next step is to optimize the loss function.
+
+A couple of things to keep in mind, while we are optimizing the loss function, where
+$\epsilon$ is the learning rate.
+
+- If the learning schedule is small, then the covergence to minimum is also slow [[6]](https://www.google.com/url?q=https%3A%2F%2Fkatselis.web.engr.illinois.edu%2FECE586%2FLecture3.pdf).
+- If it is high, then the algorithm may
+be unstable,(i.e., oscillating) or even overshooting . There is a possibility, that it may diverge. If the rate is within $\epsilon_k = \epsilon > 0$, then we can say that there is good divergence.
+
+The goal here was to move the gradient in a direction that keeps the prior learning intact. So, the direction of motion of $d_k$ has to be in the opposite direction. Therefore, it must project towards the negative gradient , $- \nabla f(x)$. This is called steepest gradient descent that moves in the opposite direction [[6]](https://www.google.com/url?q=https%3A%2F%2Fkatselis.web.engr.illinois.edu%2FECE586%2FLecture3.pdf).
+
+So, the algorithm can be devised as :
+
+
+### Algo 1 (steepest descent):-
+
+---
+
+
+```
+
+$x ∈ R^{n}$
+
+$k =0, 1, 2...$
+
+$x_{k+1} \longleftarrow x_k - \epsilon_k\nabla f(x_k)$
+
+```
+
+---
+
+```
+
+### Algo 2 (Gradient Descent)
+
+ for $k =0, 1, 2...$
+
+$x_{k+1} \longleftarrow x_k + \epsilon_kd_k$
+
+```
+---
+
+
+where $R$, is the Riemannian manifold over the space of distributions
+
+So, the negative gradient function for the steepest descentcan be considered as the instantaneous rate of reduction in $h$ per unit change in $\theta$ [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193) .
+
+Therefore,
+
+the function at a point $x$ in the direction of $d$ can be written as,
+
+$\nabla_{d} f(x) = \lim_{\epsilon \to 0}  \frac{f(x + \epsilon d) - f(x)}{\epsilon}$
+
+So, at each step size k, the function will be:-
+
+
+$\lim_{\epsilon \to 0} f(x_k + \epsilon d_k)$
+
+And the optimal rate will be:
+
+
+
+$\epsilon_{k} = argmin_{\epsilon_{\ge 0}}f(x_k + \epsilon d_k)$
+
+
+But, this is a little bit costly, hence the Armijo rule to reduce complexity [[6]](https://www.google.com/url?q=https%3A%2F%2Fkatselis.web.engr.illinois.edu%2FECE586%2FLecture3.pdf).
+
 
 
