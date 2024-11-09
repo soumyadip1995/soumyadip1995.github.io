@@ -252,6 +252,8 @@ and thus the generalized second law as was given by jacob bekenstein. [[21]](htt
 
 
 
+
+
 <p align="center">
   <img src="https://www.researchgate.net/publication/308980984/figure/fig8/AS:473944387002368@1490008555147/Black-Hole-entropy-and-Bekeinstein-Hawking-idea.png"/>
 </p>
