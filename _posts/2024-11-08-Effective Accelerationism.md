@@ -367,7 +367,7 @@ $x_{k+1} \longleftarrow x_k + \epsilon_kd_k$
 
 where $R$, is the Riemannian manifold over the space of distributions
 
-So, the negative gradient function for the steepest descentcan be considered as the instantaneous rate of reduction in $h$ per unit change in $\theta$ [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193) .
+So, the negative gradient function for the steepest descent can be considered as the instantaneous rate of reduction in $h$ per unit change in $\theta$ [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193) .
 
 Therefore,
 
@@ -393,13 +393,13 @@ But, this is a little bit costly, hence the Armijo rule to reduce complexity [[6
 
 The second step is to optimize $h$ with respect to negative gradient $-\nabla_h$ , and thus represent it on a geomteric paramtere space. It will look something like this [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193),
 
-$\frac{-\nabla h}{||\nabla h||} = \lim_{\epsilon \gets 0} \frac{1}{e} e_k$
+$\frac{-\nabla h}{\mid\mid \nabla h \mid\mid} = \lim_{\epsilon \gets 0} \frac{1}{e} e_k$
 
 
 Or,
 
 
-$\frac{-\nabla h}{\mid\mid\nabla h||} = \lim_{\epsilon \gets 0} \frac{1}{\epsilon}argmin _{d:\mid\mid d \mid\mid ≤0}   h(\theta + d)$
+$\frac{-\nabla h}{\mid\mid\nabla h \mid\mid} = \lim_{\epsilon \gets 0} \frac{1}{\epsilon}argmin _{d:\mid\mid d \mid\mid ≤0}   h(\theta + d)$
 
 
 where,
@@ -426,4 +426,129 @@ $\nabla f_i(w_t)$ is the gradient log likelihood w.r.t $\theta$
 $\eta$ is the learning rate.
 
 
+## **Free Energy Systems**
+
+We can extend this thought process to  a probabilistic  system/ model where the prior distribution  not only remains intact, but there is a way to minimize the upper limit to the divergence. In the previous example, we were capping off the learning rate between  $\epsilon_k = \epsilon > 0$
+ so as to prevent too much divergence.
+
+In the following example, we can approximate an upper limit with respect to some input information, then the action can be characterized w.r.t the output. Therefore, a dual optimization can be aprroximated from active inference. This upper limit is called free energy.
+
+So, free energy can be used to characterize input perception to output action. Hence, there can be systems which can optimize this way as well.
+
+i/p perception ⟶ free energy minimization ⟶ o/p action.
+
+
+Once again, we have to estimate the weight change. Now, it is between prior probability distribution (i.e before the training data) and posterior probability distribution (i. e after the action).
+
+The flowchart for a model may look like:-
+
+Perception ⟶ Internal states ⟶ Action ⟶ External hidden states ⟶ perception
+
+
+
+![](https://www.dialecticalsystems.eu/wp-content/uploads/2023/10/dialectic-fig2-1024x512.png)
+Source:- dialectic systems.
+
+
+
+- Perception:- Some input distribution
+- Internal states:- internal hidden state , before getting perceived by an agent. $\mu$
+- Action state:- Possible Actions that can be made by the agent. $a$ and $s$
+- Hidden state:- external hidden state (not being directly accessible). $\psi$
+
+Now, if we consider the states indiviually, for a generative model.
+
+- External states and actions = $p_{ext}(s\mid \psi ,a, (\theta + d))$, where $s$ is the active state perceived by the agent. $d$ is the gradient direction.
+
+- Action state =  $p_{A}(a\mid \mu ,s, \theta)$ Agent's actions depend upon its internal states.
+
+- Hidden state =  $p_{int}(\mu \mid s, \theta)$ (internal state).
+- Model environment - Stochastic model of env  $p_{\Psi}({\dot {\psi }\mid \psi , a, \theta)}$
+
+and $\theta$ is the network parameter
+
+Therefore, the joint probability would be:-
+
+
+$p_{bayes}(\dot \psi ,s, a, \mu, \theta\mid\psi) = p_{int}(\mu \mid s, \theta)p_{\Psi}({\dot {\psi }\mid \psi , a, \theta)}p_{A}(a\mid \mu ,s, \theta)p_{ext}(s\mid \psi ,a, (\theta + d))$
+
+
+
+
+"Bayes rule" will determine "posterior probability". We can apply KL divergence to see the change between $q$ which is an approximation to  $p_{bayes}$ and
+$p_{bayes}$
+
+Now, since the objective function $KL(Q_{x,y} \mid\mid P_{x,y}(θ)) = \int  q(x, y) log \frac{ q(x, y)}{p(x, y|θ)}dxdy$
+
+is equivalent to ,
+
+$E_{Q_x} = KL(Q_{y|x} \mid\mid P_{y|x}(θ))$ [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193)
+
+
+
+
+So, free energy can be simplified into,
+
+
+
+$F(\mu, a, s, \theta) = E_{Q _(\dot\Psi)}[p_{bayes}(\dot \psi ,s, a, \theta, \mu\mid\psi)]$ - H(entropy)
+
+which is equal to
+
+
+
+$= -\log p_{ext} + KL(q(\dot\Psi \mid, \mu, a, s, \psi, \theta)] \mid\mid p_{bayes})$
+
+So,
+
+$F(\mu, a, s, \theta) \ge -\log p_{ext}$
+
+where, $\log p_{ext}$ is the surprise element. The surprise element is the self minimization.
+
+
+Free energy minimization techniques can be considered to be in direct correlation with counterfactual world modeling. A Counterfactual World Model, let's say $\psi$ ,
+
+
+takes an input  and constructs an internal representation of the scene. Just like we have internal hidden states in the generative model example above, this representation can be used
+to generate counterfactual simulations of what would happen if different events occured. It can be used to estimate the changes within the stochastic environment and compute the actions and external states. Predictions can also be made about the dynamical properties of the system.
+
+
+
+
+### Kardashev scale
+
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Consommations_%C3%A9nerg%C3%A9tiques_des_trois_types_de_l%27%C3%A9chelle_de_Kardashev.svg/440px-Consommations_%C3%A9nerg%C3%A9tiques_des_trois_types_de_l%27%C3%A9chelle_de_Kardashev.svg.png)
+
+Source:- wiki
+
+A log scale that determines the how far a civilization can progress depending on its energy usage.
+
+
+Carl Sagan defined intermediate values (not considered in Kardashev's original scale) by interpolating and extrapolating the values given for types I (1016 W), II (1026 W) and III (1036 W), which would produce the formula
+
+$K=(log P-6)/10$
+
+where K is a civilization's Kardashev rating and P is the power it consumes, in watts. Using this extrapolation, an early Type 0 civilization, not defined by Kardashev, would consume about 1 MW (106 W) of power.
+
+Type I
+
+A civilization that can harness all the energy that its home planet receives.  (like Earth)
+
+Type  II
+
+A civilization that can harness all the energy of its nearest star and
+
+Type III
+
+A civilization that can harness all the energy from its galaxy.
+
+Technological progress needs to advance to a point where we can be a type 3 civilization.
+The second law of thermodynamics states that the entropy of systems cannot decrease with time and must always arrive at a state of thermodynamic equilibrium. Simply put, the total amount of entropy (disorder or chaos) always increases.
+
+The Kardashev Scale looks at only energy usage but this raises the concern that any civilization that lets its energy grow out of control may commit suicide.
+
+Since the total disorder of the universe is going to continue to soar, an "entropy conservation" civilization and invest effectively in heat management and resourse management [[25]](https://www.google.com/url?q=https%3A%2F%2Fkardashev.fandom.com%2Fwiki%2F%2FEntropy%23%3A%7E%3Atext%3DThe%2520Kardashev%2520Scale%2520looks%2520at%2Cmust%2520be%2520taken%2520into%2520account).
+
+An “entropy wasteful” civilization continues to expand its energy consumption without limit. Eventually, when the home planet becomes uninhabitable, the civilization might try to flee its excesses by expanding to other planets. But, if the entropy grows faster than the civilization's ability to escape , it will destroy itself.
 
