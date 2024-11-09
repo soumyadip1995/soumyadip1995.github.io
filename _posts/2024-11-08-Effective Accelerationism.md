@@ -314,7 +314,7 @@ distribution and update.
 | $P_{x, y}$  | learned distribution $P_{x, y} (\theta)$|
 
 
-#### Step 1:-
+### Step 1:-
 
 
 The goal of optimization is to find some setting for two paramteres $\theta$ , so that for each input $x$ , the output of the network matches closely with the given target output with some loss [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193). So, let's consider a cost function $h(\theta)$
@@ -344,7 +344,7 @@ So, the algorithm can be devised as :
 ---
 
 
-```
+
 
 $x ∈ R^{n}$
 
@@ -352,11 +352,9 @@ $k =0, 1, 2...$
 
 $x_{k+1} \longleftarrow x_k - \epsilon_k\nabla f(x_k)$
 
-```
 
 ---
 
-```
 
 ### Algo 2 (Gradient Descent)
 
@@ -364,7 +362,6 @@ $x_{k+1} \longleftarrow x_k - \epsilon_k\nabla f(x_k)$
 
 $x_{k+1} \longleftarrow x_k + \epsilon_kd_k$
 
-```
 ---
 
 
@@ -391,6 +388,42 @@ $\epsilon_{k} = argmin_{\epsilon_{\ge 0}}f(x_k + \epsilon d_k)$
 
 
 But, this is a little bit costly, hence the Armijo rule to reduce complexity [[6]](https://www.google.com/url?q=https%3A%2F%2Fkatselis.web.engr.illinois.edu%2FECE586%2FLecture3.pdf).
+
+### Step 2
+
+The second step is to optimize $h$ with respect to negative gradient $-\nabla_h$ , and thus represent it on a geomteric paramtere space. It will look something like this [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193),
+
+$\frac{-\nabla h}{||\nabla h||} = \lim_{\epsilon \gets 0} \frac{1}{e} e_k$
+
+
+Or,
+
+
+$\frac{-\nabla h}{\mid\mid\nabla h||} = \lim_{\epsilon \gets 0} \frac{1}{\epsilon}argmin _{d:\mid\mid d \mid\mid ≤0}   h(\theta + d)$
+
+
+where,
+
+$d$ is the gradient direction.
+
+$\left\| \left\|  \right\| \right\|$  --> because we are considering the gradient on Eucledian space.
+
+Now, we need to adjust the gradient descent by accounting for the underlying geometry of the parameter space, as represented by the Fisher Information Matrix.
+
+This adjusted gradient descent is known as the Natural gradient Descent.
+So, weight gradient in a NN by inverse Fisher info, is represented by eqn (1):-
+
+$w_{t+1} = w_t - ηF(w_t)^{-1} \nabla f_i(w_t)$   
+
+for a mini batch $i$ where,
+
+$F(w_t)^{-1} \nabla f_i(w_t)$ is the natural gradient
+
+and,
+
+$\nabla f_i(w_t)$ is the gradient log likelihood w.r.t $\theta$
+
+$\eta$ is the learning rate.
 
 
 
