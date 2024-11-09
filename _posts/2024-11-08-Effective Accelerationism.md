@@ -13,7 +13,7 @@ Information theory/ thermodynamic approach suggests that you look at a problem a
 This might just be a point of contention for many and you are free to debate.
 Very rarely in my 29 years on planet earth, there have been a few days which has been significant in changing the way I think. I would like to list a few.
 
-$\mathrm{i}\hbar{\frac {d}{dt}}|\psi(t)\rangle ={\hat{H}}|\psi(t)\rangle$
+$\mathrm{i}\hbar{\frac{d}{dt}}\mid\psi(t)\rangle={\hat{H}}\mid\psi(t)\rangle$
 
 
 
