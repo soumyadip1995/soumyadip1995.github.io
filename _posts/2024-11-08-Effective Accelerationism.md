@@ -250,15 +250,6 @@ and thus the generalized second law as was given by jacob bekenstein. [[21]](htt
 
 
 
-
-
-<p align="center">
-  <img src="https://www.researchgate.net/publication/308980984/figure/fig8/AS:473944387002368@1490008555147/Black-Hole-entropy-and-Bekeinstein-Hawking-idea.png"/>
-</p>
-
-<p style="text-align:center;">Black hole entropy(bekenstein bound), source:- wiki, Research gate</p>
-
-
 Similarly in probabilistic systems,  uncertainty can be introduced as a measurement of efficiency. If we consider it to be a thermodynamic system, the measurement in statistical fluctutations in common entropy can give us an accurate estimation of training/inference in ML algorithms. We can gain a speedup in training, because the core is evolving along with evolving uncertainty.
 
 what does a thermodynamic core look like. Let's try to understand from 1st principles.
