@@ -1,4 +1,6 @@
-## **Effective Accelerationism :rocket:**
+## **Effective Accelerationism**
+
+:rocket:
 
 ## **Introduction**
 
@@ -32,7 +34,7 @@ Table of contents
    * [Challenges that we Encounter](#challenges-that-we-encounter)
    * [Ways to counter noise](#ways-to-counter-noise)
    * [A Thermodynamic core](#a-thermodynamic-core)
-   * [An upgraded gradient system](#an-upgraded-gradient-system)
+   * [An updated gradient system](#an-updated-gradient-system)
    * [Free Energy systems](#free-energy-systems)
    * [Kardashev scale](#kardashev-scale)
    * [References](#references)
@@ -211,7 +213,7 @@ Assume, that there are distributions of let's say 1 dimension. You can sample it
 A  leap is needed in terms of representing the exponential nature of complexity, and therefore we need a much more evolvable core, which would not only would can produce that sort of compute which is an order of magnitude higher than we what we have today , but also use the energy offset to its advantage. We will get to it down the line.
 
 
-## **Entropy and information theory**
+## **Entropy and Information theory**
 
 The connection between entropy and information theory is well known. As mentioned earlier,  the entropy of a system can be defined as the lack of information or uncertainty in the system. Assuming all that we know about the internal configuration of a system can be denoted by the probability $P_n$ for the nth state, then Shannon's entropy [[5]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1604.07450) would be:
 
@@ -296,6 +298,15 @@ As mentioned above that loss in coherence can lead to inefficient algorithms, th
 Thermal fluctuations in isolated systems can result in the system exploring different minima in the landscape before settling down
 in a high-quality minimum.
 
+## **A Thermodynamic core**
+
+In one of the previous sections , we had talked about how to design a thermodynamic core using first principles.
+
+Early classical computers followed the [Von-neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) architecture. Then as time went on, we evolved to a single bus system, thus "streamlining" the architecture using MCUs. These processors are scalar in nature.  Later on, we evolved to graphic processors which are very good at leveraging matrix multiplication orders of magnitude greater than CPUs. The streaming multiprocessors (SMs) of GPUs are effectively vector processors, and can process thousands of operations on a single clock cycle.
+
+A thermodynamic core has to follow [stochastic processes](https://en.wikipedia.org/wiki/Stochastic_process), because we are taking advantage of a d- dimensional Eucledian space and therefore utilizing uncertainty. The randomness in a system can generate many outcomes and thus, it will be easier to sample. Classifications become simpler if we use stochastic processes- the state space is easier to sample.
+
+We need to design a processor which will be able to solve Markov processes , and therefore relax a noisy harmonic oscillator, in the presence of thermal fluctuations. This is one way of doing it.
 
 
 
