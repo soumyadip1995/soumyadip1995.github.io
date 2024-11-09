@@ -426,6 +426,66 @@ $\nabla f_i(w_t)$ is the gradient log likelihood w.r.t $\theta$
 $\eta$ is the learning rate.
 
 
+
+
+
+#### Step 3:-
+
+
+We can apply K-L divergence over the learned distribution $P_{x, y} (\theta)$ to see how much the changing of the weights , changes the
+output of the neural net.
+
+Therefore,
+
+$KL(P(y; \theta) \mid\mid  P(y ; \theta + d)) \sim  \frac{1}{2}  d^{T} F d$
+
+This represents the changes in the gradient direction to 1 , because we are moving down the gradient , but changing the output if the weights as little as possible.
+
+
+$d$ is a dimensional weight vector which  is a  $d * d$ matrix. Therefore, it can be used to fix huge dimensions as was our goal.
+
+The Natural gradient descent can be defined as:-
+
+$\nabla ^{'}.h  = F^{-1} \nabla h(\theta)$
+
+Therefore, for a Natural gradient descent optimizer from eq (1) will be:
+
+
+
+$\theta_{t+1} = \theta_t - \eta F^{-1}  \nabla h(\theta_t)$ [[13]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F2405.13817)
+
+and this is the Update rule.
+
+Where F will be,
+
+
+$F = -E_{P_{(x,y)}}[H\ log_{P_{(x,y)|\theta)}}]$
+
+
+
+It is still a bit computationally expensive to implement NGD, but it provides us with a path to harness uncertainty in a gaussian distribution and reduce high dimensionality ( n^d). Solving the computational cost at every epoch needs to be the goal and thus we consider more sophisticated optimizers, which can easily coverge in highly oscillating systems.
+
+## **Beyond softmax**
+
+The role of softmax in DL is to convert a vector of logits into probability distributions. Softmax allows for the temperature parametre $\theta$ to adjust the probability.
+
+One limitation of the softmax function is that whenever there is an out-of-distribution input, it can mess up the probability. A higher logit can disrupt the probability distribution and thus hinder the sharpness of decisions made by a NN during inference time. This issue becomes more pronounced as the problem size increases with time.
+
+[This](https://arxiv.org/pdf/2410.01104) paper provides  an approach where the authors attempt to adjust the temperature parametre to control the entropy of input coefficients. Adaptive temperature increases the sharpness of decisions made by the NN.
+
+A theoretical limitation of softmax is that  sharpness diminishes as more items are added.
+
+
+One way to remedy such an issue would be to use the logits of the "prior distribution". We can come up with stochastic methods to sample those use $argmax$ to branch out $n$ -samples. When dimensionality of said samples are  high, a variance in entropy can be calculated to repurpose unused logits that were causing problems for larger distributions. [This](https://github.com/Pleias/Quest-Best-Tokens/blob/main/New%20physics%20of%20LLM.pdf) Github repo seems closest to that analysis.
+
+I will see if I can work out the math for it.
+
+
+
+
+
+
+
 ## **Free Energy Systems**
 
 We can extend this thought process to  a probabilistic  system/ model where the prior distribution  not only remains intact, but there is a way to minimize the upper limit to the divergence. In the previous example, we were capping off the learning rate between  $\epsilon_k = \epsilon > 0$
@@ -444,10 +504,12 @@ The flowchart for a model may look like:-
 
 Perception ⟶ Internal states ⟶ Action ⟶ External hidden states ⟶ perception
 
+<p align="center">
+  <img src="https://www.dialecticalsystems.eu/wp-content/uploads/2023/10/dialectic-fig2-1024x512.png"/>
+</p>
 
+<p style="text-align:center;"> Free energy system for a generative model, source:- dialectic systems</p>
 
-![](https://www.dialecticalsystems.eu/wp-content/uploads/2023/10/dialectic-fig2-1024x512.png)
-Source:- dialectic systems.
 
 
 
@@ -478,11 +540,11 @@ $p_{bayes}(\dot \psi ,s, a, \mu, \theta\mid\psi) = p_{int}(\mu \mid s, \theta)p_
 "Bayes rule" will determine "posterior probability". We can apply KL divergence to see the change between $q$ which is an approximation to  $p_{bayes}$ and
 $p_{bayes}$
 
-Now, since the objective function $KL(Q_{x,y} \mid\mid P_{x,y}(θ)) = \int  q(x, y) log \frac{ q(x, y)}{p(x, y|θ)}dxdy$
+Now, since the objective function $KL(Q_{x,y} \mid\mid P_{x,y}(θ)) = \int  q(x, y) log \frac{ q(x, y)}{p(x, y \mid \theta)}dxdy$
 
 is equivalent to ,
 
-$E_{Q_x} = KL(Q_{y|x} \mid\mid P_{y|x}(θ))$ [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193)
+$E_{Q_x} = KL(Q_{y \mid x} \mid\mid P_{y \mid x}(θ))$ [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193)
 
 
 
@@ -515,12 +577,15 @@ to generate counterfactual simulations of what would happen if different events 
 
 
 
-### Kardashev scale
+## **Kardashev scale**
 
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Consommations_%C3%A9nerg%C3%A9tiques_des_trois_types_de_l%27%C3%A9chelle_de_Kardashev.svg/440px-Consommations_%C3%A9nerg%C3%A9tiques_des_trois_types_de_l%27%C3%A9chelle_de_Kardashev.svg.png)
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Consommations_%C3%A9nerg%C3%A9tiques_des_trois_types_de_l%27%C3%A9chelle_de_Kardashev.svg/440px-Consommations_%C3%A9nerg%C3%A9tiques_des_trois_types_de_l%27%C3%A9chelle_de_Kardashev.svg.png"/>
+</p>
 
-Source:- wiki
+<p style="text-align:center;"> Kardashev scale, source:- dialectic systems</p>
+
 
 A log scale that determines the how far a civilization can progress depending on its energy usage.
 
@@ -552,3 +617,49 @@ Since the total disorder of the universe is going to continue to soar, an "entro
 
 An “entropy wasteful” civilization continues to expand its energy consumption without limit. Eventually, when the home planet becomes uninhabitable, the civilization might try to flee its excesses by expanding to other planets. But, if the entropy grows faster than the civilization's ability to escape , it will destroy itself.
 
+
+
+## **References**:
+
+1.  https://www.statlect.com/glossary/information-matrix
+
+
+2.  https://arxiv.org/pdf/2302.06584 - Thermodynamic AI and fluctuation frontier
+3.  https://arxiv.org/pdf/1412.1193 - New Insights and Perspectives on the Natural Gradient
+Method
+4.  https://news.ycombinator.com/item?id=40466826 - Thermodynamic natural gradient descent
+5.  https://arxiv.org/pdf/1604.07450 - Quantum information chapter 10- Shannon entropy
+
+6. https://katselis.web.engr.illinois.edu/ECE586/Lecture3.pdf - Steepest gradient descent algorithm
+
+7. https://geohot.github.io/blog/jekyll/update/2023/08/16/p-doom.html - p(doom)
+
+8. https://cba.mit.edu/docs/papers/96.isj.ent.pdf - Signal entropy and thermodynamics of computation
+
+9. https://arxiv.org/pdf/2303.09491- Challenges and Opportunities in Quantum Machine Learning
+
+10. https://forum.effectivealtruism.org/posts/hkKJF5qkJABRhGEgF/help-me-find-the-crux-between-ea-xr-and-progress-studies - Effective altruism
+
+11.  https://notesonai.com/kl+divergence - KL divergence
+12.  https://arxiv.org/pdf/2308.05660 - Thermodynamic linear algebra
+13.  https://arxiv.org/pdf/2405.13817 - Thermodynamic Natural Gradient descent
+14.  https://www.youtube.com/watch?v=pneluWj-U-o - Fisher Information
+15.  https://www.youtube.com/watch?v=QmM6_qBHuvM&t=5s - CIS 522 Natural gradients
+16.  https://www.youtube.com/watch?v=VqXnhcpiXZw&pp=ygUXdGhlcm1vZHluYW1pYyBjb21wdXRpbmc%3D -  Thermodynamic computing explained in 5 minutes
+17.  https://www.youtube.com/watch?v=OwDWOtFNsKQ&t=1898s&pp=ygUXdGhlcm1vZHluYW1pYyBjb21wdXRpbmc%3D - Thermodynamic computing extropic
+18.  https://www.normalcomputing.com/blog-posts/thermox-the-first-thermodynamic-computing-simulator#heading-7 - thermox: The First Thermodynamic Computing Simulator
+
+19.  https://www.normalcomputing.com/blog-posts/a-first-demonstration-of-thermodynamic-matrix-inversion-3#heading-3 - Matrix inversion
+20.  https://www.normalcomputing.com/ - Normal computing
+21. https://journals.aps.org/prd/abstract/10.1103/PhysRevD.7.2333 - Bekenstein Hawking entropy.
+
+22. https://arxiv.org/pdf/2106.10522#:~:text=In%20May%201981%2C%20Feynman%20spoke,using%20conventional%20classical%20digital%20computers. - Feynmann quantum computing
+
+23. https://lilianweng.github.io/posts/2018-06-24-attention/ - Attention Mechanism by Lilian weng.
+24. https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence- KL divergence wiki.
+
+25. https://kardashev.fandom.com/wiki//Entropy#:~:text=The%20Kardashev%20Scale%20looks%20at,must%20be%20taken%20into%20account.
+
+26. https://en.wikipedia.org/wiki/Free_energy_principle#Free_energy_minimisation_and_thermodynamics - Free energy principle.
+
+27. https://arxiv.org/pdf/2410.01104 - softmax is not enough
