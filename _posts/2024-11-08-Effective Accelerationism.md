@@ -1,4 +1,4 @@
-## **Effective Accelerationism**
+## **Effective Accelerationism :rocket:**
 
 ## **Introduction**
 
@@ -18,6 +18,37 @@ Even though I am trained as an engineer, my thought process has evolved in the l
 Information theory/ thermodynamic approach suggests that you look at a problem as an isolated system. You observe for gain or loss in entropy by depending on the probability of "states". The entropy of a system can be defined as the lack of information or uncertainty in the system. This is a post-modernist approach, where uncertainty of a system can be used to gain more information about the internal configuration of a system, rather than breaking it down by first principles.
 This might just be a point of contention for many and you are free to debate.
 Very rarely in my 29 years on planet earth, there have been a few days which has been significant in changing the way I think. I would like to list a few.
+
+
+
+Table of contents
+=================
+
+<!--ts-->
+   * [A few significant days](#a-few-significant-days)
+   * [A refresher on quantum mechanics and Quantum computing](#a-refresher-on-quantum-mechanics-and-quantum-computing)
+   * [Deterministic vs Probabilistic systems](#deterministic-vs-probabilistic-systems)
+   * [Entropy and Information theory](#entropy-and-information-theory)
+   * [Challenges that we Encounter](#challenges-that-we-encounter)
+   * [Ways to counter noise](#ways-to-counter-noise)
+   * [A Thermodynamic core](#a-thermodynamic-core)
+   * [An upgraded gradient system](#an-upgraded-gradient-system)
+   * [Free Energy systems](#free-energy-systems)
+   * [Kardashev scale](#kardashev-scale)
+   * [References](#references)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## **A few significant days**
 
@@ -553,7 +584,10 @@ So, free energy can be simplified into,
 
 
 
-$F(\mu, a, s, \theta) =   E_{Q _(\dot\Psi)} [p_{bayes}(\dot \psi ,s, a, \mu, \theta \mid\psi)]   -  H(entropy)
+
+$F(\mu, a, s, \theta) = E_{Q _(\dot\Psi)}$ 
+
+$*p_{bayes}(\dot \psi ,s, a, \mu, \theta\mid\psi)$ - H(entropy)
 
 which is equal to,
 
