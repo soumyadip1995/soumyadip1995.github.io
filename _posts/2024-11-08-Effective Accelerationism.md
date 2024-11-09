@@ -459,7 +459,7 @@ and this is the Update rule.
 Where F will be,
 
 
-$F = -E_{P_{(x,y)}}[H\ log_{P_{(x,y)|\theta)}}]$
+$F = -E_{P_{(x,y)}}[H\ log_{P_{(x,y)\mid\theta)}}]$
 
 
 
@@ -553,9 +553,9 @@ So, free energy can be simplified into,
 
 
 
-$F(\mu, a, s, \theta) = E_{Q _(\dot\Psi)}[p_{bayes}(\dot \psi ,s, a, \theta, \mu\mid\psi)]$ - H(entropy)
+$F(\mu, a, s, \theta) =   E_{Q _(\dot\Psi)} [p_{bayes}(\dot \psi ,s, a, \mu, \theta \mid\psi)]   -  H(entropy)
 
-which is equal to
+which is equal to,
 
 
 
