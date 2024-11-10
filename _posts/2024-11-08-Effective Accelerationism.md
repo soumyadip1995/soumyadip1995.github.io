@@ -8,7 +8,7 @@
 
 
 
-The main idea for Accelerationism comes from Nick Land. One of my all time favourite quotes from him - "Nothing human makes it out of the near-future". For me, it is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ, cognitive abilities and therefore, we no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy. It is just our minds will be transferred into a different evolving vessel. But then again, this is all wishful thinking. It is also terrifying thinking that we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
+The main idea for Accelerationism comes from Nick Land. One of my all time favourite quotes from him - "Nothing human makes it out of the near-future". It is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ, cognitive abilities and therefore, we would no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy. Our minds will be transferred into a different evolving vessel . But then again, this is all wishful thinking. It is also terrifying if we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
 
 Since I am a hopeful optimist, I would like to believe in the former. As of now, I am leaning towards a post modernist point of view when I think about acceleration. An information theory/thermodynamic approach.
 
@@ -32,9 +32,10 @@ Table of contents
    * [Challenges that we Encounter](#challenges-that-we-encounter)
    * [Ways to counter noise](#ways-to-counter-noise)
    * [A Thermodynamic core](#a-thermodynamic-core)
-   * [An updated gradient system](#an-updated-gradient-system)
+   * [An updated gradient descent](#an-updated-gradient-descent)
    * [Free Energy systems](#free-energy-systems)
    * [Kardashev scale](#kardashev-scale)
+   * [Conclusion](#conclusion)
    * [References](#references)
 
 
@@ -191,7 +192,7 @@ The advantage of deep learning is that it can take the randomness of a multi dim
 
  Higher Dimensionality reduction still remains a problem. As we will see later, I will outline a way to use sophisticated  optimizers to solve just that.
 
-The only thing I can compare it with was when during the early days of RNNs, LSTMs and transformer models, was that of number of parametres was the talk of the town. The focus was solely on building bigger brains. Who could come up with models with more parametres.   The parameter count between GPT, GPT-2 and other models  were the primary focus. As the years went on , we developed better attention mechanisms with the transformer models, found out ways to perform inference on 70B, 405B parameter models by using different kinds of approximation methods,  precision methods, FLOP utilization techniques and the focus shifted from just the number of parametres to performance on  benchmarks.  It has also helped us to build and understand GPTs on a much more granular level.
+The only thing I can compare it with was when during the early days of RNNs, LSTMs and transformer models, was that of number of parametres was the talk of the town. The focus was solely on building bigger brains. Who could come up with models with more parametres.   The parameter count between GPT, GPT-2 and other models  were the primary focus. As the years went on , we developed better attention mechanisms with the transformer models, found out ways to perform inference on 70B, 405B parameter models by using different kinds of approximation methods,  precision methods, FLOP utilization techniques and the focus shifted from just the number of parametres to performance on  benchmarks.  It has also helped us to build and understand GPTs on a much more granular level. As I have also learned building [BabyGPT](https://github.com/soumyadip1995/BabyGPT)
 
 
 This is the same kind of attention shift that we need from using deterministic systems to probabilistic systems.
@@ -608,7 +609,7 @@ Free energy minimization techniques can be considered to be in direct correlatio
 
 
 takes an input  and constructs an internal representation of the scene. Just like we have internal hidden states in the generative model example above, this representation can be used
-to generate counterfactual simulations of what would happen if different events occured. It can be used to estimate the changes within the stochastic environment and compute the actions and external states. Predictions can also be made about the dynamical properties of the system.
+to generate counterfactual simulations of what would happen if different events occured. It can be used to estimate the changes within the stochastic environment and compute the actions and external states. Predictions can also be made about the dynamical properties of the system. [Here](https://arxiv.org/pdf/2306.01828) is a paper that touches upon it somewhat.
 
 
 
@@ -649,9 +650,25 @@ The second law of thermodynamics states that the entropy of systems cannot decre
 
 The Kardashev Scale looks at only energy usage but this raises the concern that any civilization that lets its energy grow out of control may commit suicide.
 
-Since the total disorder of the universe is going to continue to soar, an "entropy conservation" civilization and invest effectively in heat management and resourse management [[25]](https://www.google.com/url?q=https%3A%2F%2Fkardashev.fandom.com%2Fwiki%2F%2FEntropy%23%3A%7E%3Atext%3DThe%2520Kardashev%2520Scale%2520looks%2520at%2Cmust%2520be%2520taken%2520into%2520account).
+Since the total disorder of the universe is going to continue to soar, an "entropy conservation" civilization needs to invest effectively in heat management and resourse management [[25]](https://www.google.com/url?q=https%3A%2F%2Fkardashev.fandom.com%2Fwiki%2F%2FEntropy%23%3A%7E%3Atext%3DThe%2520Kardashev%2520Scale%2520looks%2520at%2Cmust%2520be%2520taken%2520into%2520account).
 
 An “entropy wasteful” civilization continues to expand its energy consumption without limit. Eventually, when the home planet becomes uninhabitable, the civilization might try to flee its excesses by expanding to other planets. But, if the entropy grows faster than the civilization's ability to escape , it will destroy itself.
+
+## **Conclusion**
+
+We started off by talking about the difference in a modernist(first principle's approach) vs a post-modernist approach, which is information theory. The best of both worlds are currently in use as we saw recently with Elon Musk's and SpaceX's [milestone accomplishment](https://www.youtube.com/watch?v=XGC31lmdS6s), when they caught the booster in the 1st attempt.  When we use the post modernist approach we get thermodynamic computing/probabilistic computing. [Extropic](https://twitter.com/extropic_ai?lang=en) and [Normal Computing](https://www.google.com/url?q=https%3A%2F%2Fwww.normalcomputing.com%2F) are two great pioneers in the field right now. 
+
+We move on towards e/acc and talk extensively about game theory. A lot of AI doomers believe that Prisoner's dilemma cannot be solved, because every one is aiming for a dominant winning strategy, but in can be optimized. E/acc in parts, should be , in my opinion steering towards the optimal winning strategy and that is what makes it slightly different than accelerationism. 
+
+We continue our journey into the more technical side of e/acc. Starting from QM and the need for a probabilistic system over  deterministic systems. We discusss some of its challenges as well. A new optimizer is introduced which will help us to work with higher dimensions and also free energy systems has been touched upon, which provides deeper intuition about a dual approximation techniques in generative modeling.
+
+
+As I had mentioned in the beginning about ascending up the Kardashev scale, a post-modernist way of thinking can help our civilization to achieve just that. As far as e/acc is concerned, it is just one of many such philosophies. I haven't gone deep into acceleration, yet.  There's a lot to cover with Land, deleuze, post-humanism, techno optimism etc. It is still in the cards, and one day there may be a post. 
+
+Since, I am keen on e/acc and thermodynamic computing , this has been a sort of introduction on how I would like to contribute to e/acc going forward. I would like leave you with this
+
+> "Not to withdraw from the process, but to go further, to ‘accelerate the process’, as Nietzsche put it: in this matter, the truth is that we haven’t seen anything yet."
+-- Deleuze and Guattari, Anti-Oedipus
 
 
 
