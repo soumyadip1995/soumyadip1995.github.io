@@ -489,7 +489,7 @@ $d$ is a dimensional weight vector which  is a  $d * d$ matrix. Therefore, it ca
 
 The Natural gradient descent can be defined as:-
 
-$\nabla ^ {.}.h  = F^{-1} \nabla h(\theta)$
+$\nabla ^ {'}.h  = F^{-1} \nabla h(\theta)$
 
 Therefore, for a Natural gradient descent optimizer from eq (1) will be:
 
