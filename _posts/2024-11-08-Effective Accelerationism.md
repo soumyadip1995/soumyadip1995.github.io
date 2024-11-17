@@ -8,7 +8,7 @@
 
 
 
-The main idea for Accelerationism comes from Nick Land. One of my all time favourite quotes from him - "Nothing human makes it out of the near-future". It is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ(dynamic understanding), cognitive abilities and therefore, we would no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy. Our minds will be transferred into a different evolving vessel . But then again, this is all wishful thinking. It is also terrifying if we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
+The main idea for Accelerationism comes from Nick Land. One of my all time favourite quotes from him - "Nothing human makes it out of the near-future". It is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ(dynamic understanding), cognitive abilities(coffee test by steve wozniak) and therefore, we would no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy. Our minds will be transferred into a different evolving vessel . But then again, this is all wishful thinking. It is also terrifying if we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
 
 Since I am a hopeful optimist, I would like to believe in the former. As of now, I am leaning towards a post modernist point of view when I think about acceleration. An information theory/thermodynamic approach.
 
@@ -33,7 +33,7 @@ Table of contents
    * [Ways to counter noise](#ways-to-counter-noise)
    * [A Thermodynamic core](#a-thermodynamic-core)
    * [An updated gradient descent](#an-updated-gradient-descent)
-   * [Free Energy systems](#free-energy-systems)
+   * [Dual approximation](#dual-approximation)
    * [Kardashev scale](#kardashev-scale)
    * [Conclusion](#conclusion)
    * [References](#references)
@@ -520,7 +520,7 @@ I will see if I can work out the math for it.
 
 
 
-## **Free Energy Systems**
+## **Dual approximation**
 
 We can extend this thought process to  a probabilistic  system/ model where the prior distribution  not only remains intact, but there is a way to minimize the upper limit to the divergence. In the previous example, we were capping off the learning rate between  $\epsilon_k = \epsilon > 0$
  so as to prevent too much divergence.
