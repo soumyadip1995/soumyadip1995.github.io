@@ -1,5 +1,10 @@
 ## **Effective Accelerationism**
 
+
+
+- 1st draft - [08-11-2024]()
+- 2nd draft - [17-11-2024]()
+
 ## **Introduction**
 
 <p align="center">
@@ -8,11 +13,15 @@
 
 
 
-The main idea for Accelerationism comes from Nick Land. One of my all time favourite quotes from him - "Nothing human makes it out of the near-future". It is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ(dynamic understanding), cognitive abilities(coffee test by steve wozniak) and therefore, we would no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy. Our minds will be transferred into a different evolving vessel . But then again, this is all wishful thinking. It is also terrifying if we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
+The main idea for Accelerationism comes from Nick Land. One of my all time favourite quotes from him 
+
+> "Nothing human makes it out of the near-future" 
+
+ It is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ(dynamic understanding), cognitive abilities(coffee test by steve wozniak) and therefore, we would no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy. Our minds will be transferred into a different evolving vessel . But then again, this is all wishful thinking. It is also terrifying if we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
 
 Since I am a hopeful optimist, I would like to believe in the former. As of now, I am leaning towards a post modernist point of view when I think about acceleration. An information theory/thermodynamic approach.
 
-A lot of progress in our modern day engineering comes from 20th century physics. Think about how first principles works. As you traverse down the binary tree (i.e., pick something apart - bare bones), you gain more intuition and then you work your way up to the root node. Most of our modern day engineering accomplishments come from thinking from first principles theory. As we gain more intuition, we apply engineering skills to make something more efficient. This is a modernist approach.
+A lot of progress in our modern day engineering comes from 20th century physics. Think about how first principles works. As you traverse down the binary tree (i.e., pick apart the child nodes), you gain more intuition and then you work your way up to the root node. Most of our modern day engineering accomplishments come from thinking from first principles theory. As we gain more intuition, we apply engineering skills to make something more efficient. This is a modernist approach.
 
 Even though I am trained as an engineer, my thought process has evolved in the last few years. I got into AI and information theory right out of college and it has definitely had a profound impact on how I approach solving problems.
 Information theory/ thermodynamic approach suggests that you look at a problem as an isolated system. You observe for gain or loss in entropy by depending on the probability of "states". The entropy of a system can be defined as the lack of information or uncertainty in the system. This is a post-modernist approach, where uncertainty of a system can be used to gain more information about the internal configuration of a system, rather than breaking it down by first principles.
@@ -444,20 +453,20 @@ $\left\| \left\|  \right\| \right\|$  --> because we are considering the gradien
 
 Now, we need to adjust the gradient descent by accounting for the underlying geometry of the parameter space, as represented by the Fisher Information Matrix.
 
-This adjusted gradient descent is known as the Natural gradient Descent.
+This adjusted gradient descent is known as the **Natural gradient Descent.**
 So, weight gradient in a NN by inverse Fisher info, is represented by eqn (1):-
 
 $w_{t+1} = w_t - ηF(w_t)^{-1} \nabla f_i(w_t)$   
 
 for a mini batch $i$ where,
 
-$F(w_t)^{-1} \nabla f_i(w_t)$ is the natural gradient
+- $F(w_t)^{-1} \nabla f_i(w_t)$ is the natural gradient
 
 and,
 
-$\nabla f_i(w_t)$ is the gradient log likelihood w.r.t $\theta$
+- $\nabla f_i(w_t)$ is the gradient log likelihood w.r.t $\theta$
 
-$\eta$ is the learning rate.
+- $\eta$ is the learning rate.
 
 
 
@@ -480,7 +489,7 @@ $d$ is a dimensional weight vector which  is a  $d * d$ matrix. Therefore, it ca
 
 The Natural gradient descent can be defined as:-
 
-$\nabla ^{'}.h  = F^{-1} \nabla h(\theta)$
+$\nabla ^ {.}.h  = F^{-1} \nabla h(\theta)$
 
 Therefore, for a Natural gradient descent optimizer from eq (1) will be:
 
