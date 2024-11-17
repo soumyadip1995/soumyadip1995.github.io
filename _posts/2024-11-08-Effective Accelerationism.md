@@ -425,7 +425,7 @@ But, this is a little bit costly, hence the Armijo rule to reduce complexity [[6
 
 ### Step 2
 
-The second step is to optimize $h$ with respect to negative gradient $-\nabla_h$ , and thus represent it on a geomteric paramtere space. It will look something like this [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193),
+The second step is to optimize $h$ with respect to negative gradient $-\nabla h$ , and thus represent it on a geomteric paramtere space. It will look something like this [[3]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F1412.1193),
 
 $\frac{-\nabla h}{\mid\mid \nabla h \mid\mid} = \lim_{\epsilon \gets 0} \frac{1}{e} e_k$
 
