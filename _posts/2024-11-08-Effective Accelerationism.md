@@ -313,7 +313,7 @@ We need to design a processor which will be able to solve Markov processes , and
 
 ## **An Updated Gradient Descent**
 
-One of the main issues facing  Neural networks is destructive interference. The addition of new training data leads to the forgetting of what was already learned. We need a new type of gradient descent which would represent the underlying geometry of a parametre space and is adjusted dimensionally by utilizing the [Fisher information matrix](https://en.wikipedia.org/wiki/Fisher_information#Matrix_form) , which is exactly what we were looking for when it is time to represent/learn atypical gaussian distributions [[15]](https://www.youtube.com/watch?v=QmM6_qBHuvM&t=5s).
+One of the main issues facing  Neural networks is destructive interference. The addition of new training data leads to the forgetting of what was already learned. We need a new type of gradient descent which would represent the underlying geometry of a parametre space and is adjusted dimensionally(i.e, rescaling prior distribution) by utilizing the [Fisher information matrix](https://en.wikipedia.org/wiki/Fisher_information#Matrix_form) , which is exactly what we were looking for when it is time to represent/learn atypical gaussian distributions [[15]](https://www.youtube.com/watch?v=QmM6_qBHuvM&t=5s).
 
 We can use it to represent a curvature of information on a riemannian manifold, and thus reduce the dimensionality issue and also provide an efficent optimizer to solve for computational overhead.
 
@@ -485,7 +485,7 @@ $KL(P(y; \theta) \mid\mid  P(y ; \theta + d)) \sim  \frac{1}{2}  d^{T} F d$
 This represents the changes in the gradient direction to 1 , because we are moving down the gradient , but changing the output of the weights as little as possible.
 
 
-$d$ is a dimensional weight vector which  is a  $d * d$ matrix. Therefore, it can be used to fix huge dimensions as was our goal.
+$d$ is a dimensional weight vector which  is a  $d * d$ matrix. Therefore, it can be used to fix huge dimensions(millions..!!) as was our goal.
 
 The Natural gradient descent can be defined as:-
 
