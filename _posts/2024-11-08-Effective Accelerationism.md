@@ -473,7 +473,7 @@ Therefore,
 
 $KL(P(y; \theta) \mid\mid  P(y ; \theta + d)) \sim  \frac{1}{2}  d^{T} F d$
 
-This represents the changes in the gradient direction to 1 , because we are moving down the gradient , but changing the output if the weights as little as possible.
+This represents the changes in the gradient direction to 1 , because we are moving down the gradient , but changing the output of the weights as little as possible.
 
 
 $d$ is a dimensional weight vector which  is a  $d * d$ matrix. Therefore, it can be used to fix huge dimensions as was our goal.
