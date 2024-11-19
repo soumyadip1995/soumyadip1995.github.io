@@ -3,7 +3,7 @@
 
 
 - 1st draft - [08-11-2024]()
-- 2nd draft - [17-11-2024]()
+- 2nd draft - [19-11-2024]()
 
 ## **Introduction**
 
@@ -37,6 +37,7 @@ Table of contents
    * [A few significant days](#a-few-significant-days)
    * [A refresher on quantum mechanics and Quantum computing](#a-refresher-on-quantum-mechanics-and-quantum-computing)
    * [Deterministic vs Probabilistic systems](#deterministic-vs-probabilistic-systems)
+   * [A Thermodynamic limit](#a-thermodynamic-limit)
    * [Entropy and Information theory](#entropy-and-information-theory)
    * [Challenges that we Encounter](#challenges-that-we-encounter)
    * [Ways to counter noise](#ways-to-counter-noise)
@@ -220,6 +221,91 @@ Assume, that there are distributions of let's say 1 dimension. You can sample it
 
 A  leap is needed in terms of representing the exponential nature of complexity, and therefore we need a much more evolvable core, which would not only would can produce that sort of compute which is an order of magnitude higher than we what we have today , but also use the energy offset to its advantage. We will get to it down the line.
 
+But first, Let's talk about a constraint that we need to consider before moving forward.
+
+
+
+## A Thermodynamic limit
+
+
+As we train an AI model, its loss slowly drops and then it levels off. If we train a larger model, it will have a lower error rate, but it will require more compute. When we train larger and larger models, we come up with a family of curves. Switching to a log scale, get a graph, where no model can come cross the dotted line known as **Compute Efficient Frontier** as evidenced below.
+
+
+<p align="center">
+  <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F480062a6-d670-4259-a805-e9dd529b4447_1400x845.png"/>
+</p>
+
+<p style="text-align:center;">Source:- https://arxiv.org/pdf/2005.14165 - Language models are few shot learners(2020).(GPT-3)</p>
+
+
+
+
+
+This seems to indicate that there is a fundamental limit in error-rate beyond which no model can surpass, regardless of data or atype of architecture.
+
+This has been observed through model-scaling, datset scaling and compute scaling, as you can see from the power law equations as shown below. The team was quoted in the paper saying:- "We observe no signs of deviation from these trends on the upper end, though performance
+must flatten out eventually before reaching zero loss".
+
+
+<p align="center">
+  <img src="https://media.licdn.com/dms/image/D4D12AQFDkkVKYpkZdA/article-cover_image-shrink_720_1280/0/1688060240812?e=2147483647&v=beta&t=bF6b7ClSaJX5n0UhDygJwZwsDKLIWfku5AYCGj0Xx1g"/>
+</p>
+
+<p style="text-align:center;">Source:- Neural Scaling laws paper (2020) </p>
+
+
+
+The question here is given bigger models, can we get an error rate of zero ?
+
+
+Plotting the cross -entropy loss vs the L1 loss, we can see that as the model's probability of correctly predicting the next word in an LLM goes to zero, the cross entropy loss will be very high. [Welch lab](https://www.youtube.com/watch?v=5eqRuVp65eY&t=162s) made a great video about it. Basically, the more confident a model is predicting the correct word in a test set, the closer to zero the average cross entropy becomes.
+
+
+[Scaling Laws for Autoregressive Generative Modeling](https://arxiv.org/pdf/2010.14701) tried to find out the same using Text-to-Image Loss vs Compute, Video Compute Scaling, language modeling etc.
+
+
+When we compare GPT-3 vs GPT-4 scale, we get a sort of curvature in GPT-4 vs a straight line in GPT-3.(Its close- when you convert the linear scale below, to a logarithmic scale)
+
+
+<p align="center">
+  <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe0296e6f-3261-49cc-8c6a-3839659a64d8_1880x1190.png"/>
+</p>
+
+<p style="text-align:center;">Source:- gpt4 technical report</p>
+
+
+It has been found since that the scaling laws hold for 13 orders of magnitude. But, we still need to find the best match for the next word in natural language. This uncertainty is called the **Entropy of Natural Language**. The scaling laws for autoregressive generative modeling paper above, found out just that, by adding a constant error term. But even with the largest language models, the entropy could not be calculated.
+
+The [chinchilla](https://arxiv.org/pdf/2203.15556) paper found out that the cross-entropy loss could get close to 1.69 and level off , but not exactly zero.
+
+
+### The limit
+
+
+When viewed through the lens of information theory,
+when we plot cross entropy , we are essentially plotting the missing information.
+
+$H(P,Q)= - \sum_{x} P(x)\log Q(x)$
+
+
+where, $P(x)$ = true distribution and $Q(x)$ is predicted distribution.
+
+The Entropy  $H$ indicates, quantifies the average amount of information (or uncertainty) in a probability distribution $P$.
+
+- Higher entropy means more uncertainty or missing information.
+- Lower entropy implies a more predictable system.
+
+Minimizing cross-entropy reduces The K-L divergence , which reduces the missing information.
+
+Similarly, when you plot compute, you're also plotting energy, which is directly proportional to the information and therefore should produce a straight line. Since all models aren't equally efficient, therein lies a thermodynamic limit where increases in compute should increase overall entropy but should decrease with model learning. This is a breakdown of the 2nd law.
+
+So, basically the other side of curvature in the scaling graph represents an impossibilty and an open problem. Considering the fact that the model overfitting could be seen as analogous to a local decrease in entropy. It needs to counterbalance elswewhere, for eg:- when there is poor performance on unseen data.
+
+A generalized second law of entropy could be a remedy to such an issue where local entropy gain/loss from small amounts of statistical fluctuations could be counterbalanced non-locally.
+
+In the next section, we can get a priliminary  idea of what I am getting into.
+
+
 
 ## **Entropy and Information theory**
 
@@ -260,9 +346,15 @@ and thus the generalized second law as was given by jacob bekenstein. [[21]](htt
 
 
 
-Similarly in probabilistic systems,  uncertainty can be introduced as a measurement of efficiency. If we consider it to be a thermodynamic system, the measurement in statistical fluctutations in common entropy can give us an accurate estimation of training/inference in ML algorithms. We can gain a speedup in training, because the core is evolving along with evolving uncertainty.
+Similarly in probabilistic systems,  uncertainty can be introduced as a measurement of efficiency. If we consider it to be a thermodynamic system, the measurement in statistical fluctutations in common entropy can give us an accurate estimation of training/inference in ML algorithms.
 
-what does a thermodynamic core look like. Let's try to understand from 1st principles.
+Because, the model weights, including the unused weights will be taken into account. If we can do that, we can close the significant trade-off between  compute and memory usage, especially in bigger models.
+
+We may also gain a speedup in training, because the core is evolving along with evolving uncertainty.
+
+What does a thermodynamic core look like ?.
+
+Let's try to understand from 1st principles.
 
 
 ## **Challenges that we encounter**
@@ -577,7 +669,7 @@ Therefore, the joint probability would be:-
 
 $p_{bayes}(\dot \psi ,s, a, \mu, \theta\mid\psi) = p_{int}(\mu \mid s, \theta)p_{\Psi}({\dot {\psi }\mid \psi , a, \theta)}p_{A}(a\mid \mu ,s, \theta)p_{ext}(s\mid \psi ,a, (\theta + d))$
 
-
+[*Note:- By adding $d$, we are essentially considering an ordered distribution - a slight deviation from the example given on wiki*]
 
 
 "Bayes rule" will determine "posterior probability". We can apply KL divergence to see the change between $q$ which is an approximation to  $p_{bayes}$ and
@@ -606,6 +698,10 @@ which is equal to,
 
 
 $= -\log p_{ext} + KL(q(\dot\Psi \mid, \mu, a, s, \psi, \theta)] \mid\mid p_{bayes})$
+
+
+
+where $H(entropy)$ is the missing information. 
 
 So,
 
