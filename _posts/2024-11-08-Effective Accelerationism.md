@@ -225,7 +225,7 @@ But first, Let's talk about a constraint that we need to consider before moving 
 
 
 
-## A Thermodynamic limit
+## **A Thermodynamic limit**
 
 
 As we train an AI model, its loss slowly drops and then it levels off. If we train a larger model, it will have a lower error rate, but it will require more compute. When we train larger and larger models, we come up with a family of curves. Switching to a log scale, get a graph, where no model can come cross the dotted line known as **Compute Efficient Frontier** as evidenced below.
