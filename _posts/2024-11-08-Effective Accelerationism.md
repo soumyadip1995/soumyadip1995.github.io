@@ -26,7 +26,7 @@ A lot of progress in our modern day engineering comes from 20th century physics.
 Even though I am trained as an engineer, my thought process has evolved in the last few years. I got into AI and information theory right out of college and it has definitely had a profound impact on how I approach solving problems.
 Information theory/ thermodynamic approach suggests that you look at a problem as an isolated system. You observe for gain or loss in entropy by depending on the probability of "states". The entropy of a system can be defined as the lack of information or uncertainty in the system. This is a post-modernist approach, where uncertainty of a system can be used to gain more information about the internal configuration of a system, rather than breaking it down by first principles.
 This might just be a point of contention for many and you are free to debate.
-Very rarely in my 29 years on planet earth, there have been a few days which has been significant in changing the way I think. I would like to list a few.
+Very rarely in my 29 years on planet earth, I have had days which has been significant in changing the way I think. Would like to list a few below.
 
 
 
@@ -141,7 +141,7 @@ Game theory suggests that we have two prisoners, A and B. Now, given a choice th
 
 As a proponent for e/acc , I would want both the AI agents to align itself into finding the optimal strategy and thus solve the prisoner's dilemma.  But at the same time, also considering the point of view for the existentialists, anytime there is a higher probability for doom (both defecting), the agents need to radically search for solutions that would lead us to get to the optimal strategy.
 
-My solution initially was to set the exploiter up to maximum and have the agents search the environment , because the other agents are other human beings and LLMs...!!. Counterfactual learning or reinforcement learning on the entire world. This will have the search time offset any type of negative growth encountered when we are going through a less than optimal growth phase.  Since then muzero has made great strides in dynamic learning.
+My solution initially was to set the exploiter up to maximum and have the agents search the environment , because the other agents are other LLMs...!!. Counterfactual learning or reinforcement learning on the world environment. This will have the search time offset any type of negative growth encountered when we are going through a less than optimal growth phase.  Since then [muzero](https://arxiv.org/abs/1911.08265) has made tremendous strides in dynamic learning.
 
 
 ### Day 4:
@@ -196,11 +196,11 @@ But, we shouldn't be using quantum computers to simulate classical machine learn
 
 Now, if you think about how NNs work, at its core it is probabilistic and  meanwhile classical computers at its core, are deterministic systems. Deterministic systems lacks the randomness, the transistors are either firing a 0 or a 1. This becomes kind of frustrating especially during error correction when a transistor misfires. Another drawback of a deterministic Turing machine is that there is only one possible action. This seems highly inefficient.
 
-The advantage of deep learning is that it can take the randomness of a multi dimensional data and give a concise probabilistic prediction of what the data represents. Whether it be text classification , feature analysis etc [[17]](https://www.youtube.com/watch?v=OwDWOtFNsKQ&t=1898s&pp=ygUXdGhlcm1vZHluYW1pYyBjb21wdXRpbmc%3D) .
+The advantage of deep learning is that it can take the randomness of a multi dimensional data and give a concise probabilistic prediction of what the data represents. Whether it be text classification , feature analysis etc [[17]](https://www.youtube.com/watch?v=OwDWOtFNsKQ&t=1898s&pp=ygUXdGhlcm1vZHluYW1pYyBjb21wdXRpbmc%3D) . Like encoder decoder models would do by utlizing a latent space(old school VAEs).
 
  There seems to be an energy cost, if we consider deterministic systems especially if there is noise or any adversarial element. GPUs have solved this issue to a certain  degree by leveraging  matrix multiplication ( the matmul function) , until you are encountering atypical distributions , GPUs won't be good at sampling those unless you are willing to throw a lot of compute at it. GPUs are pretty good at accelerating matmul , but more complex distributions need a more top down vertical kind of acceleration instead of limiting ourselves to a horizontal left to right sort of acceleration.
 
- Higher Dimensionality reduction still remains a problem. As we will see later, I will outline a way to use sophisticated  optimizers to solve just that.
+Higher Dimensionality reduction still remains a problem. As we will see later, I will outline a way to use sophisticated  optimizers to solve just that.
 
 The only thing I can compare it with was when during the early days of RNNs, LSTMs and transformer models, was that of number of parametres was the talk of the town. The focus was solely on building bigger brains. Who could come up with models with more parametres.   The parameter count between GPT, GPT-2 and other models  were the primary focus. As the years went on , we developed better attention mechanisms with the transformer models, found out ways to perform inference on 70B, 405B parameter models by using different kinds of approximation methods,  precision methods, FLOP utilization techniques and the focus shifted from just the number of parametres to performance on  benchmarks.  It has also helped us to build and understand GPTs on a much more granular level. As I have also learned building [BabyGPT](https://github.com/soumyadip1995/BabyGPT)
 
