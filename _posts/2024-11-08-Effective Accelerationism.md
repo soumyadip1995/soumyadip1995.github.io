@@ -2,8 +2,8 @@
 
 
 
-- 1st draft - [08-11-2024]()
-- 2nd draft - [19-11-2024]()
+*1st draft - 08-11-2024*
+*2nd draft - 19-11-2024*f
 
 ## **Introduction**
 
@@ -66,7 +66,7 @@ Table of contents
 
 ### Day 0:-
 
-Back  when I was just a lowly undergrad , logic gates were incredibly revolutionary to me. Given two inputs you could perform an operation like AND, OR, NOR and you could get a single output "state".  Also, you could try so many different combinations and get a result.  The applications knew no bounds. If only I had a clue what I would stumble upon..!
+Back  when I was just a lowly undergrad , logic gates  were incredibly interesting to me. Given two inputs you could perform an operation like AND, OR, NOR and you could get a single output "state".  Also, you could try so many different combinatorial logic and get a result.  Later on, the applications with counters and flip-flops  knew no bounds.
 
 ### Day 1:-
 
