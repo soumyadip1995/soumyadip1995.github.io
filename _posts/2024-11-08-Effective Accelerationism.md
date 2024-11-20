@@ -2,8 +2,8 @@
 
 
 
-*1st draft - 08-11-2024*
-*2nd draft - 19-11-2024*f
+- *1st draft - 08-11-2024*
+- *2nd draft - 19-11-2024*
 
 ## **Introduction**
 
