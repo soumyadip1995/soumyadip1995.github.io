@@ -18,7 +18,7 @@ The main idea for Accelerationism comes from Nick Land. One of my all time favou
 
 > "Nothing human makes it out of the near-future" 
 
- It is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ(dynamic understanding), cognitive abilities(coffee test by steve wozniak) and therefore, we would no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy. Our minds will be transferred into a different evolving vessel . But then again, this is all wishful thinking. It is also terrifying if we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
+ It is both interesting and terrifying. Interesting in the sense that there is a good possibility that evolution of AI will one day catch upto human evolution in terms of IQ(dynamic understanding), cognitive abilities(coffee test by steve wozniak) and therefore, we would no longer have to depend on our deteriorating limbic and cortical systems to make technological progress. Our consciousness can merge at will with AI, climb up the Kardashev scale and live till the end of entropy(maybe something to the likes of Isaac Asimov's Last question). Our minds will be transferred into a different evolving vessel . But then again, this is all wishful thinking. It is also terrifying if we don't get out at all and become a mere control point in the feedback loop of capitalism that Nick land mentions. The human element disappears all together.
 
 Since I am a hopeful optimist, I would like to believe in the former. As of now, I am leaning towards a post modernist point of view when I think about acceleration. An information theory/thermodynamic approach.
 
@@ -67,7 +67,7 @@ Table of contents
 
 ### Day 0:-
 
-Back  when I was just a lowly undergrad , logic gates  were incredibly interesting to me. Given two inputs you could perform an operation like AND, OR, NOR and you could get a single output "state".  Also, you could try so many different combinatorial logic and get a result.  Later on, the applications with counters and flip-flops  knew no bounds.
+Back  when I was just a lowly undergrad , logic gates  were incredibly interesting. Given two inputs you could perform an operation like AND, OR, NOR and you could get a single output "state".  Also, you could try so many different combinatorial logic and get a result.  Later on, the applications with counters and flip-flops  knew no bounds.
 
 ### Day 1:-
 
