@@ -21,7 +21,7 @@ The main idea for Accelerationism comes from Nick Land. One of my all time favou
 
 Since I am a hopeful optimist, I would like to believe in the former. As of now, I am leaning towards a post modernist point of view when I think about acceleration. An information theory/thermodynamic approach.
 
-A lot of progress in our modern day engineering comes from 20th century physics. Think about how first principles works. As you traverse down the binary tree (i.e., pick apart the child nodes), you gain more intuition and then you work your way up to the root node. Most of our modern day engineering accomplishments come from thinking from first principles theory. As we gain more intuition, we apply engineering skills to make something more efficient. This is a modernist approach.
+A lot of progress in our modern day engineering comes from modernist ideas. Think about how first principles works. As you traverse down the binary tree (i.e., pick apart the child nodes), you gain more intuition and then you work your way up to the root node. A lot  of our modern day engineering accomplishments come from thinking from first principles theory. As we gain more intuition, we apply engineering skills to make something more efficient. This is a modernist approach.
 
 Even though I am trained as an engineer, my thought process has evolved in the last few years. I got into AI and information theory right out of college and it has definitely had a profound impact on how I approach solving problems.
 Information theory/ thermodynamic approach suggests that you look at a problem as an isolated system. You observe for gain or loss in entropy by depending on the probability of "states". The entropy of a system can be defined as the lack of information or uncertainty in the system. This is a post-modernist approach, where uncertainty of a system can be used to gain more information about the internal configuration of a system, rather than breaking it down by first principles.
@@ -155,7 +155,7 @@ I would like to have a few more significant days like these.
 
 ## **A refresher on Quantum mechanics and Quantum computing**
 
-Let's think about a quantum mechanical system, and how to measure the state of a Quantum system. We can guess a wave function which is evolving with time, in this case a time dependent schrodinger equation according to some energy operator/ hamiltonian.
+Let's think about a quantum mechanical system, and how to measure the state of a Quantum system. We can guess a wave function which is evolving with time, in this case a time dependent schrodinger equation, which is evolving according to some energy operator/ hamiltonian.
 
 
 $\mathrm{i}\hbar{\frac{d}{dt}}\mid\psi(t)\rangle={\hat{H}}\mid\psi(t)\rangle$
@@ -183,7 +183,7 @@ $\mid\psi⟩ = \alpha\mid 00⟩ + \beta\mid 01⟩ + \gamma\mid 10⟩ + ...$
 
 where, we basically mean, that if we want to know the probability of the 1st particle , we don't need to know what the other particles are doing . When we have separable states, measuring one Qbit says nothing about the next Qbit.
 
-Now, let's think about a classical computer that works on a binary 0 or 1 bits. So, if we wanted to represent N number of bits,  ${0, 1}^N$  will be the word length represented by the processor. Let's say we want to build a system where we take a string of binary bits 0011 and apply an inverter NOT gate to it, we will get 1100. The word length will be 16 bits.
+Now, let's think about a classical computer that works on a binary 0 or 1 bits. So, if we wanted to represent N number of bits,  ${0, 1} ^ {N}$  will be the word length represented by the processor. Let's say we want to build a system where we take a string of binary bits 0011 and apply an inverter NOT gate to it, we will get 1100. The word length will be 16 bits.
 
 If we want to build a quantum system to represent N number of quantum bits or Qubits, we have to represent $2^N$ complex numbers.  So, if we wanted to simulate the quantum configuration of a system which has N number of bits on a classical system , it presents a frustrating reality  in terms of memory , because we have to represent $2^N$ complex numbers. Richard Feynman in the 1980s had addressed this specific  problem [[22]](https://www.google.com/url?q=https%3A%2F%2Farxiv.org%2Fpdf%2F2106.10522%23%3A%7E%3Atext%3DIn%2520May%25201981%252C%2520Feynman%2520spoke%2Cusing%2520conventional%2520classical%2520digital%2520computers).
 
