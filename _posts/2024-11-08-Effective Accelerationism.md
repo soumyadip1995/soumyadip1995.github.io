@@ -4,6 +4,7 @@
 
 - *1st draft - 08-11-2024*
 - *2nd draft - 19-11-2024*
+- *3rd draft - 27-11-2024*
 
 ## **Introduction**
 
@@ -297,11 +298,12 @@ The Entropy  $H$ indicates, quantifies the average amount of information (or unc
 
 Minimizing cross-entropy reduces The K-L divergence , which reduces the missing information.
 
-Similarly, when you plot compute, you're also plotting energy, which is directly proportional to the information and therefore should produce a straight line. Since all models aren't equally efficient, therein lies a thermodynamic limit where increases in compute should increase overall entropy but should decrease with model learning. This is a breakdown of the 2nd law.
+Similarly, when you plot compute, you're also plotting energy, which is directly proportional to the information and therefore should produce a straight line. Since all models aren't equally efficient, there-in lies a thermodynamic limit where increases in compute should increase overall entropy but should decrease with model learning. This is a breakdown of the 2nd law.
 
 So, basically the other side of curvature in the scaling graph represents an impossibilty and an open problem. Considering the fact that the model overfitting could be seen as analogous to a local decrease in entropy. It needs to counterbalance elswewhere, for eg:- when there is poor performance on unseen data.
 
-A generalized second law of entropy could be a remedy to such an issue where local entropy gain/loss from small amounts of statistical fluctuations could be counterbalanced non-locally.
+A generalized second law of entropy could be a remedy to such an issue where local entropy gain/loss from small amounts of statistical fluctuations could be counterbalanced non-locally. 
+
 
 In the next section, we can get a priliminary  idea of what I am getting into.
 
