@@ -228,7 +228,7 @@ But first, Let's talk about a constraint that we need to consider before moving 
 ## **A Thermodynamic limit**
 
 
-As we train an AI model, its loss slowly drops and then it levels off. If we train a larger model, it will have a lower error rate, but it will require more compute. When we train larger and larger models, we come up with a family of curves. Switching to a log scale, get a graph, where no model can come cross the dotted line known as **Compute Efficient Frontier** as evidenced below.
+As we train an AI model, its loss slowly drops and then it levels off. If we train a larger model, it will have a lower error rate, but it will require more compute. When we train larger and larger models, we come up with a family of curves. Switching to a log scale, we get a graph, where no model can cross below the dotted line known as **Compute Efficient Frontier** as evidenced here.
 
 
 <p align="center">
@@ -241,9 +241,9 @@ As we train an AI model, its loss slowly drops and then it levels off. If we tra
 
 
 
-This seems to indicate that there is a fundamental limit in error-rate beyond which no model can surpass, regardless of data or atype of architecture.
+This seems to indicate that there is a fundamental limit in error-rate beyond which no model can surpass, regardless of data or type of architecture.
 
-This has been observed through model-scaling, datset scaling and compute scaling, as you can see from the power law equations as shown below. The team was quoted in the paper saying:- "We observe no signs of deviation from these trends on the upper end, though performance
+This has been observed through model-scaling, dataset scaling and compute scaling, as you can see from the power law equations as shown below. The team was quoted in the paper saying:- "We observe no signs of deviation from these trends on the upper end, though performance
 must flatten out eventually before reaching zero loss".
 
 
