@@ -4,7 +4,7 @@
 (Written:- February- March, 2025)
 
 
- [Strong interaction part 1](https://github.com/soumyadip1995/soumyadip1995.github.io/images/writeups/Strong_interaction__part_1.pdf)
+ [Strong interaction part 1](https://soumyadip1995.github.io/images/writeups/Strong_interaction__part_1.pdf)
 
 ## **Abstract**
 
