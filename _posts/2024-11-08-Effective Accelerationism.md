@@ -1,10 +1,11 @@
 ## **Effective Accelerationism - Looking into thermodynamic computing**
 
-
+[Download pdf](https://soumyadip1995.github.io/images/writeups/2024-11-08-Effective%20Accelerationism.pdf)
 
 - *1st draft - 08-11-2024*
 - *2nd draft - 19-11-2024*
 - *3rd draft - 27-11-2024*
+
 
 ## **Introduction**
 
@@ -823,3 +824,6 @@ Method
 26. https://en.wikipedia.org/wiki/Free_energy_principle#Free_energy_minimisation_and_thermodynamics - Free energy principle.
 
 27. https://arxiv.org/pdf/2410.01104 - softmax is not enough
+
+
+** Diagrams could not be included in the pdf **
