@@ -1,4 +1,4 @@
-## **Effective Accelerationism**
+## **Effective Accelerationism - Looking into thermodynamic computing**
 
 
 
@@ -12,7 +12,7 @@
   <img src="https://pbs.twimg.com/profile_images/1747680364531785728/Ph1LX3zl_400x400.jpg" />
 </p>
 
-
+### Looking into Thermodynamic computing
 
 The main idea for Accelerationism comes from Nick Land. One of my all time favourite quotes from him 
 
