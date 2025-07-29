@@ -5,4 +5,4 @@
 - E-mail:- elatednandi@gmail.com, 
 
 <p align="center">
-<img src="assets/pic3.jpg" alt="My Banner" width="30%" />
+<img src="assets/pic%202.jpg" alt="My Banner" width="25%" />
