@@ -4,8 +4,24 @@
 
 - E-mail:- elatednandi@gmail.com, 
 
-<p align="center">
-<img src="https://github.com/soumyadip1995/soumyadip1995.github.io/blob/master/images/pic%201.png" width="150" height="150">
+
+
+<p align="center" width="100%">
+    <img width="33%" src="https://github.com/soumyadip1995/soumyadip1995.github.io/blob/master/images/pic%201.png">
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ![GitHub followers](https://img.shields.io/github/followers/soumyadip1995?label=follow&style=social)
 
