@@ -3,17 +3,17 @@
 #### Introduction
 
 
-Fields, where and how do we begin with fields ?.  
+Fields,  how do we think about fields ?.  
 
 
 When one mentions the word fields, a green pasture over a curvature on a hill , is the first thing to come to mind. I know it was for me when I had heard of it. However, in the context of mathematics and physics, similar curvatures   in space are formed by our brains when we are told to visualize it. Fields in this very context can be thought of as having dynamic values at every point in space and time.
 As far as the physical implications of fields goes by virtue of a source object, it can be traced back to the ancient Greeks.  Empedocles, the greek philosopher had tried to provide an explanation of magnetism by introducing the concept of  "effluences" which are emitted from  iron.  Later on during the renaissance period, Descartes mentioned that these "effluences" moved around in closed loops.
-In the early years of the nineteenth century, Coulomb and Ampere had  developed mostly Newtonian definitions of electric force and electric currents. But we still needed a solid understanding between the relationship between electric and magnetic fields.
+In the early years of the nineteenth century, Coulomb and Ampere had  developed mostly Newtonian definitions of electric force and electric currents. But we still needed a solid understanding of the relationship between electric and magnetic fields.
 As our scientific understanding began to evolve and our knowledge became more precise, it was Michael Faraday who demonstrated that a change in the magnetic field produced an electric field.
 In his experiment, Faraday wrapped two insulated coils of wire around an iron ring and upon passing current through one coil, a momentary magnetic field was induced  in the second coil , which is called a solenoid. This phenomenon is known today as inductance.  Then, as he moved  the smaller coil around through the larger coil, something incredible happened ! . An electric current started to flow.  The Galvanometer showed a voltage !
 This relation became one of the foundational equations of Maxwell, who named it Faraday's law. It is one of the four equations of Maxwell's equations.  Faraday's experiment remains as one of the most consequential works for the development of field theory.  
 
-Physicists, think about fields slightly differently. From here on, moving forward we need to think about fields as dynamical objects in space  whose constituents evolve depending on locality, scale, energy, time , invariance etc. They cannot be seen , but their effects are very real.
+Physicists  think about fields slightly differently. From here on, moving forward we need to think about fields as dynamical objects in space  whose constituents evolve depending on locality, scale, energy, time , invariance etc. They cannot be seen , but their effects are very real.
 Over the years, field theory has developed our understanding of how we look at our universe. In our context of Quantum fields, the particles which make up our universe are merely excitations of such fields.  We are going to get to it down the line.
 
 
