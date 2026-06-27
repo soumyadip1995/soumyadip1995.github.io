@@ -1,6 +1,8 @@
 
 
-*Hello there..!! This is Soumyadip. Welcome to the Blog.* Feel free to contact me via E-mail.  For all published papers, notes, Blog posts.
+*Hello there..!! This is Soumyadip. Welcome to the Blog.* 
+Feel free to contact me via E-mail.  
+For all published papers, notes, Blog posts, updates on my research.
 
 - E-mail:- elatednandi@gmail.com,
 
