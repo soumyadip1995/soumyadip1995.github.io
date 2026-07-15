@@ -307,10 +307,11 @@ figure out the family of ground states, and the wave functions can be
 constructed from them.
 
 The Hamiltonian from the two supercharges was
-$H = \frac{1}{2}\\{Q, Q^{\dagger}\\}$, which gives us:
+$H = \frac{1}{2}\\{Q, Q^{\dagger}\\}$, 
 
-$$H = \frac{1}{2}\\{QQ^{\dagger} + Q^{\dagger}Q\\}
-= \frac{1}{2}\bigl(p^2 + (h')^2\bigr)\,\mathbb{I} - \frac{1}{2}h'' \sigma_3$$
+which gives us:
+
+$H = \frac{1}{2}\\{QQ^{\dagger} + Q^{\dagger}Q\\} = \frac{1}{2}\bigl(p^2 + (h')^2\bigr)\,\mathbb{I} - \frac{1}{2}h'' \sigma^3$
 
 where $(h')^2$ denotes $\bigl(h'(x)\bigr)^2$. The first factor is the
 Hamiltonian for a particle with unit mass moving on a line with
