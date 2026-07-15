@@ -417,7 +417,7 @@ target manifold in field theory generalizations \[1, 2\].
 Upon expanding the right side of $\mathrm{Tr}\,(-1)^F e^{-\beta H}$, it
 can be represented as a functional integral:
 
-$$I_W \propto \int \prod_{j} dq_j(\tau) \prod_{\alpha} d\psi_{\alpha}(\tau)\, d\overline{\psi}_{\alpha}(\tau)\;\exp\\{ -\int_{0}^{\beta} L_E [q_j(\tau), \psi_{\alpha}(\tau), \overline{\psi}_{\alpha}(\tau)]\, d\tau\\}$$
+$$I_W \propto \int \prod_{j} dq_j(\tau) \prod_{\alpha} d\psi_{\alpha}(\tau)\, d\overline{\psi}_{\alpha}(\tau)\;\exp\\{\\ -\int_{0}^{\beta} L_E [q_j(\tau), \psi_{\alpha}(\tau), \overline{\psi}_{\alpha}(\tau)]\, d\tau\\}$$
 
 where $L_E$ is the Euclidean Lagrangian depending on the bosonic ($q_j$)
 and fermionic $(\psi_\alpha, \overline{\psi}_{\alpha})$ dynamic
