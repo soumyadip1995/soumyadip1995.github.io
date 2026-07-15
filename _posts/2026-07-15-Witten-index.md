@@ -16,7 +16,7 @@ example, and finally sketch its path-integral representation.
 
 The supercharges $Q$ and $Q^{\dagger}$ are fermionic operators that
 generate supersymmetry transformations, and they satisfy the
-anti-commutation relation $$\\{ Q, Q^{\dagger}\\} = \\{QQ^{\dagger} + Q^{\dagger}\\} = 2H$$
+anti-commutation relation $\\{ Q, Q^{\dagger}\\} = {QQ^{\dagger} + Q^{\dagger}} = 2H$
 
 Along with the nilpotency conditions $\\{Q, Q\\} = 0$ and
 $\\{Q^{\dagger}, Q^{\dagger}\\} = 0$, this tells us that the Hamiltonian
@@ -58,9 +58,9 @@ $$H|\psi\rangle = E|\psi\rangle.$$
 
 It is simple to check from the supersymmetry algebra that
 $[H, Q] = [H, Q^{\dagger}] = 0$, which requires us to also use
-$Q^{2} = {Q^{\dagger}}^{2} = 0$. This means that the operators $Q$ and
+$Q^{2} = {\\Q^{\dagger}\\}^{2} = 0$. This means that the operators $Q$ and
 $Q^{\dagger}$ act within an energy eigenspace. If the energy $E \neq 0$,
-we have $$\\{Q, Q^{\dagger}\\} = 2E \implies \\{c, c^{\dagger}\\} = 1 \quad \text{with} \quad c = \frac{Q}{\sqrt{2E}}.$$
+we have $\\{Q, Q^{\dagger}\\} = 2E \implies \\{c, c^{\dagger}\\} = 1 \quad \text{with} \quad c = \frac{Q}{\sqrt{2E}}$
 
 We also have $c^{2} = {c^{\dagger}}^{2} = 0$. This is the same algebra
 formed by fermionic creation and annihilation operators. The algebra has
