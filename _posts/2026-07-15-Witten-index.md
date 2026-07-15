@@ -439,7 +439,7 @@ $$I_W = \lim_{\beta \to 0} \int \prod_{j} \frac{dp_j\, dq_j}{2\pi} \prod_{\alpha
 Calculating this integral allows one to evaluate the index in the
 original theory, or simply \[4\]:
 
-$$\mathrm{Tr}\,(-1)^F e^{-\beta H} = \int_{\mathrm{PBC}} d\phi(t)\, d\psi(t)\;\exp\\{ -S_E(\phi, \psi) \\}$$
+$$\mathrm{Tr}\,(-1)^F e^{-\beta H} = \int_{\mathrm{PBC}} d\phi(t)\, d\psi(t)\exp\\{{ -S_E(\phi, \psi)}\\}$$
 
 This is $eqn(3)$ , where PBC, as mentioned, denotes periodic boundary conditions with
 period $\beta$, and $S_E$ is the Euclidean action of the theory.
