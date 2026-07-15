@@ -417,7 +417,7 @@ target manifold in field theory generalizations \[1, 2\].
 Upon expanding the right side of $\mathrm{Tr}\,(-1)^F e^{-\beta H}$, it
 can be represented as a functional integral:
 
-$$I_W \propto \int \prod_{j} dq_j(\tau) \prod_{\alpha} d\psi_{\alpha}(\tau)\, d\overline{\psi}_{\alpha}(\tau)\exp\\{ -\int_{0}^{\beta} L_E [q_j(\tau), \psi_{\alpha}(\tau), \overline{\psi}_{\alpha}(\tau)]\, d\tau\\}$$
+$$I_W \propto \int \prod_{j} dq_j(\tau) \prod_{\alpha} d\psi_{\alpha}(\tau)\, d\overline{\psi}_{\alpha}(\tau)\exp[ -\int_{0}^{\beta} L_E [q_j(\tau), \psi_{\alpha}(\tau), \overline{\psi}_{\alpha}(\tau)]\, d\tau]$$
 
 where $L_E$ is the Euclidean Lagrangian depending on the bosonic ($q_j$)
 and fermionic $(\psi_\alpha, \overline{\psi}_{\alpha})$ dynamic
@@ -439,7 +439,7 @@ $$I_W = \lim_{\beta \to 0} \int \prod_{j} \frac{dp_j\, dq_j}{2\pi} \prod_{\alpha
 Calculating this integral allows one to evaluate the index in the
 original theory, or simply \[4\]:
 
-$$\mathrm{Tr}\,(-1)^F e^{-\beta H} = \int_{\mathrm{PBC}} d\phi(t)\, d\psi(t)\exp\\{{ -S_E(\phi, \psi)}\\}$$
+$$\mathrm{Tr}\,(-1)^F e^{-\beta H} = \int_{\mathrm{PBC}} d\phi(t)\, d\psi(t)\exp [{ -S_E(\phi, \psi)}]$$
 
 This is $eqn(3)$ , where PBC, as mentioned, denotes periodic boundary conditions with
 period $\beta$, and $S_E$ is the Euclidean action of the theory.
