@@ -422,7 +422,7 @@ $$I_W \propto \int \prod_{j} dq_j(\tau) \prod_{\alpha} d\psi_{\alpha}(\tau)\, d\
 where $L_E$ is the Euclidean Lagrangian depending on the bosonic ($q_j$)
 and fermionic $(\psi_\alpha, \overline{\psi}_{\alpha})$ dynamic
 variables in the reduced mechanical system, which satisfies periodic
-boundary conditions (PBC) in the imaginary time $\tau$:
+boundary conditions (PBC) in the imaginary time $\tau$: This is $eq(1)$
 
 $$q_j(\beta) = q_j(0); \quad \psi_\alpha(\beta) = \psi_\alpha(0); \quad \overline{\psi}_{\alpha}(\beta) = \overline{\psi}_{\alpha}(0).$$
 
@@ -432,7 +432,7 @@ $$q_j(\tau) = \sum_{n} q_j^{(n)}\, e^{2\pi i n \tau/\beta}, \quad \psi_\alpha(\t
 
 can, for small $\beta$, be effectively integrated out. The functional
 integral is then reduced to an ordinary phase-space integral over the
-constant (zero-mode) field configurations:
+constant (zero-mode) field configurations: This is $eq(2)$
 
 $$I_W = \lim_{\beta \to 0} \int \prod_{j} \frac{dp_j\, dq_j}{2\pi} \prod_{\alpha} d\psi_{\alpha}\, d\overline{\psi}_{\alpha}\; e^{-\beta H(p_j, q_j;\, \psi_\alpha, \overline{\psi}_{\alpha})}$$
 
@@ -441,7 +441,7 @@ original theory, or simply \[4\]:
 
 $$\mathrm{Tr}\,(-1)^F e^{-\beta H} = \int_{\mathrm{PBC}} d\phi(t)\, d\psi(t)\;\exp\\{ -S_E(\phi, \psi) \\}$$
 
-where PBC, as mentioned, denotes periodic boundary conditions with
+This is $eqn(3)$ , where PBC, as mentioned, denotes periodic boundary conditions with
 period $\beta$, and $S_E$ is the Euclidean action of the theory.
 Expanding eq. (3) yields eq. (1), and eq. (2) is the reduced functional
 integral after integrating out the higher Fourier modes.
