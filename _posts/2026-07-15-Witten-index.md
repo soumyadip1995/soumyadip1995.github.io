@@ -1,4 +1,4 @@
-# Witten Index
+# The Witten Index
 
 
 Supersymmetric quantum mechanics possesses a remarkably rigid structure:
@@ -18,7 +18,8 @@ The supercharges $Q$ and $Q^{\dagger}$ are fermionic operators that
 generate supersymmetry transformations, and they satisfy the
 anti-commutation relation
 
-$$\\{ Q, Q^{\dagger}\\} = {QQ^{\dagger} + Q^{\dagger}} = 2H$$
+$$\\{ Q, Q^{\dagger}\\} 
+= {QQ^{\dagger} + Q^{\dagger}} = 2H$$
 
 Along with the nilpotency conditions $\{Q, Q\} = 0$ and
 $\{Q^{\dagger}, Q^{\dagger}\} = 0$, this tells us that the Hamiltonian
@@ -311,7 +312,8 @@ constructed from them.
 The Hamiltonian from the two supercharges was
 $H = \frac{1}{2}\\{Q, Q^{\dagger}\\}$, which gives us:
 
-$$H = \frac{1}{2}\\{QQ^{\dagger} + Q^{\dagger}Q\\} = \frac{1}{2}\bigl(p^2 + (h')^2\bigr)\,\mathbb{I} - \frac{1}{2}h'' \sigma_3$$
+$$H = \frac{1}{2}\\{QQ^{\dagger} + Q^{\dagger}Q\\}
+= \frac{1}{2}\bigl(p^2 + (h')^2\bigr)\,\mathbb{I} - \frac{1}{2}h'' \sigma_3$$
 
 where $(h')^2$ denotes $\bigl(h'(x)\bigr)^2$. The first factor is the
 Hamiltonian for a particle with unit mass moving on a line with
