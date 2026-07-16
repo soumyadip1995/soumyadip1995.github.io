@@ -1,5 +1,8 @@
 # The Witten Index
 
+Published on:- July 15th, 2026. 
+
+Download pdf [here](https://soumyadip1995.github.io/images/writeups/witten-index.pdf)
 
 Supersymmetric quantum mechanics possesses a remarkably rigid structure:
 the energy spectrum is non-negative, and non-zero energy states come in
@@ -19,7 +22,7 @@ generate supersymmetry transformations, and they satisfy the
 anti-commutation relation $\\{ Q, Q^{\dagger}\\} = {QQ^{\dagger} + Q^{\dagger}} = 2H$
 
 Along with the nilpotency conditions $\\{Q, Q\\} = 0$ and
-$\\{Q^{\dagger}, Q^{\dagger}\\} = 0$, this tells us that the Hamiltonian
+$\\{Q^{\dagger}, Q^{\dagger}\\} = 0$. The anti-commutation  relation $\\{Q, Q^{\dagger}\\} = 2H$,  tells us that the Hamiltonian
 is the "square" of the supersymmetry generator, ensuring that all energy
 values are non-negative, $E \geq 0$. Meanwhile, the commutation
 $[H, Q] = 0$ guarantees that supercharges map energy eigenstates into
