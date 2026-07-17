@@ -359,8 +359,7 @@ state lives in $\mathcal{H}_F$. Now, if $h$ has neither of these
 properties (i.e. $h$ is not bounded in either direction in a way that
 makes one component normalisable), then there is no $E = 0$ ground state
 and SUSY is broken. In this case, the ground state energy is
-non-degenerate (there is a unique ground state at $E > 0$ in each
-sector, paired by supersymmetry).
+non-degenerate. 
 
 Therefore, the wave function we discussed can be constructed from two
 linearly independent parameters $\alpha$ and $\beta$ (a two-parameter
