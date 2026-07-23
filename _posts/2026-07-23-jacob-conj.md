@@ -144,8 +144,7 @@ At $(-1, \frac{3}{2}, \frac{13}{2})$:
 $$\det(J_F)\big|_{(-1,\frac{3}{2},\frac{13}{2})} = -2$$
 
 This satisfies Keller's core condition for the [conjecture](https://en.wikipedia.org/wiki/Jacobian_conjecture).
-Now, despite having a non-vanishing constant determinant, 
-the map is non-injective. Specifically, three distinct input 
+Specifically, three distinct input 
 points collapse to a single output $(-\frac{1}{4}, 0, 0)$. We verify this by direct substitution.
 
 At $(0, 0, -\frac{1}{4})$:
