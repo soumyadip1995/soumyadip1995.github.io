@@ -1,7 +1,7 @@
 ## The Jacobian Conjecture - (CounterExample)
 
 **Note:** The following concerns a counterexample to the Jacobian Conjecture announced by Levent Alpöge on [X](https://x.com/__alpoge__/status/2079028340955197566?s=46) on July 19–20, 2026. 
-As of July 23, 2026, no formal paper has appeared, and I have not independently verified the calculation.
+As of July 23, 2026, no formal paper , apart from [this](https://www.ulam.ai/research/jacobian.pdf) has appeared, 
 The arithmetic has been checked by multiple independent [sources](https://community.wolfram.com/groups/-/m/t/3766129). I have provided
 one hand-checked verification below.
 The $n=2$  case remains open. This note presents the announced example and its structure; 
