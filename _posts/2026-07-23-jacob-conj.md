@@ -189,7 +189,7 @@ Thus:
 
 $$F(0, 0, -\tfrac{1}{4}) = F(1, -\tfrac{3}{2}, \tfrac{13}{2}) = F(-1, \tfrac{3}{2}, \tfrac{13}{2}) = (-\tfrac{1}{4}, 0, 0)$$
 
-The polynomial $F$ has seven degrees of freedom (upon expanding, the first part $((1 + z_1z_2)^3)z_3$ gives terms up to degree 7, and so on for each part), 
+The polynomial $F$ has seven degrees of freedom (upon expanding, the first part gives terms up to degree 7, and so on for each part), 
 so a priori the Jacobian $\det(J_F)$ ought to be a polynomial in three variables of degree as large as $3 \times 6 = 18$, 
 so the fact that all non-constant coefficients of this polynomial vanish looks like a massive cancellation involving 
 
