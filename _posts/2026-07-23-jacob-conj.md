@@ -6,7 +6,7 @@ The arithmetic has been checked by multiple independent [sources](https://commun
 one hand-checked verification below.
 The $n=2$  case remains open. This note presents the announced example and its structure; 
 it will be revised as formal publications appear.
-This post is also part of a detailed post about how Frontier models have contributed to solving Open Problems across disciplines.
+This post is also part of another  detailed [post](https://soumyadip1995.github.io/2026/07/24/OP-AI.html), I made  about how Frontier models have contributed to solving Open Problems across disciplines.
 
 Formulated by German mathematician Ott-Heinrich Keller in 1939, the Jacobian Conjecture stood as an open problem for 87 years. 
 
