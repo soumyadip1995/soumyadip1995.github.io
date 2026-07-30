@@ -36,6 +36,7 @@ plugins:
   - jekyll-gist
   - jekyll-octicons
   - jekyll-github-metadata
+  - jekyll-paginate
 
 paginate: 9
 
