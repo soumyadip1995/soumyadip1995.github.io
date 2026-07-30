@@ -1,4 +1,7 @@
-## **Effective Accelerationism - Looking into thermodynamic computing**
+## **Effective Accelerationism - Looking into Thermodynamic Computing**
+
+
+"Nothing human makes it out of the near-future"
 
 [Download pdf](https://soumyadip1995.github.io/images/writeups/2024-11-08-Effective%20Accelerationism.pdf)
 
