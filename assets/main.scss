@@ -63,6 +63,15 @@
 .social.svg-icon {
   width: 21px !important;
 }
+.post-list h3 a {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.post-list h3 a:hover {
+  border-bottom-color: transparent;
+}
 
 @media (prefers-color-scheme: dark) {
   body, .wrapper { background-color: #262322 !important; color: #E8E6E1 !important; }
