@@ -21,10 +21,12 @@ use_math: true
 # Add your Google Analytics ID here if you have one and want to use it
 google_analytics:
 
-minima:
-  skin: auto
+
 # Everything below here can be ignored, unless you want to change the theme entirely
-theme: jekyll-theme-primer
+theme: minima
+
+minima:
+  skin: dark
 plugins:
   - jekyll-feed
   - jekyll-gist
