@@ -28,7 +28,9 @@ theme: minima
 minima:
   skin: auto
   show_excerpts: true
-  
+
+show_excerpts: true
+
 plugins:
   - jekyll-feed
   - jekyll-gist
