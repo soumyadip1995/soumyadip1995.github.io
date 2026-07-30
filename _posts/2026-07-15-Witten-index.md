@@ -1,12 +1,5 @@
 # The Witten Index
 
-
-<!--more-->
-
-Published on:- July 15th, 2026. 
-
-Download pdf [here](https://soumyadip1995.github.io/images/writeups/witten-index.pdf)
-
 Supersymmetric quantum mechanics possesses a remarkably rigid structure:
 the energy spectrum is non-negative, and non-zero energy states come in
 boson--fermion pairs. This pairing suggests a natural topological
@@ -17,6 +10,10 @@ we build up to the definition of the Witten index starting from the
 supersymmetry algebra, explain why it is a robust diagnostic for
 spontaneous supersymmetry breaking, illustrate it with a concrete
 example, and finally sketch its path-integral representation.
+
+Published on:- July 15th, 2026. 
+
+Download pdf [here](https://soumyadip1995.github.io/images/writeups/witten-index.pdf)
 
 # 1. The SUSY Algebra and the Positive-Definite Spectrum 
 
