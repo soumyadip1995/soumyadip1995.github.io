@@ -64,3 +64,14 @@
   width: 21px !important;
 }
 
+@media (prefers-color-scheme: dark) {
+  body, .wrapper { background-color: #111 !important; color: #ddd !important; }
+  .site-header, .site-footer { background-color: #111 !important; border-color: #333 !important; }
+  .site-title, .site-title:visited { color: #fff !important; }
+  .site-nav .page-link { color: #ddd !important; }
+  a { color: #7db8ff !important; }
+  .post-title, h1, h2, h3, h4 { color: #fff !important; }
+  pre, code { background-color: #1c1c1c !important; color: #eee !important; }
+  .footer-col-wrapper { color: #aaa !important; }
+}
+
