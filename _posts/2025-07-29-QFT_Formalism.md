@@ -1,5 +1,7 @@
 ### QFT Formalism
 
+An introduction to Quantum field Theory formalism from relativistic fields. Symmetries and Noether's theorem and interacting fields are the focal point of discussion.
+
 #### Introduction
 
 
