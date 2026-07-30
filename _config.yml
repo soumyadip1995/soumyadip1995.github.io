@@ -37,8 +37,7 @@ plugins:
   - jekyll-octicons
   - jekyll-github-metadata
 
-paginate: 8
-paginate_path: "/page:num/"
+paginate: 9
 
 titles_from_headings:
   enabled:     true
