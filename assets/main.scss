@@ -63,9 +63,15 @@
 .social.svg-icon {
   width: 21px !important;
 }
+
 .post-list h3 a {
-  text-decoration: underline;
- 
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.post-list h3 a:hover {
+  border-bottom-color: transparent;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -77,15 +83,34 @@
   .post-title, h1, h2, h3, h4 { color: #F4F3EE !important; }
   pre, code { background-color: #1E1B1A !important; color: #E8E6E1 !important; border-color: #3A3634 !important; }
   .footer-col-wrapper { color: #B1ADA1 !important; }
-        
+
   .post-list h3 a,
   .post-list h3 a:visited {
-    color: #F2C78F !important;
+    color: #EDEBE6 !important;
   }
 
   .post-list h3 a:hover {
     color: #D97757 !important;
   }
+
+  .post-content table {
+    color: #F4F3EE !important;
+    border-color: #3A3634 !important;
+  }
+
+  .post-content table th,
+  .post-content table td {
+    color: #F4F3EE !important;
+    border-color: #3A3634 !important;
+    background-color: transparent !important;
+  }
+
+  .post-content table th {
+    background-color: #1E1B1A !important;
+    font-weight: 600;
+  }
+
+  .post-content table tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+  }
 }
-
-
